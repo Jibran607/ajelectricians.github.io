@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://ajelectricians.co.uk/</loc>
   </url>
+
   <url>
-    <loc>https://ajelectricians.co.uk/Evchargers.html</loc>
+    <loc>https://ajelectricians.co.uk/about</loc>
   </url>
+
   <url>
-    <loc>https://ajelectricians.co.uk/cctv.html</loc>
+    <loc>https://ajelectricians.co.uk/contact</loc>
   </url>
+
   <url>
-    <loc>https://ajelectricians.co.uk/eicr.html</loc>
+    <loc>https://ajelectricians.co.uk/services</loc>
   </url>
+
   <url>
-    <loc>https://ajelectricians.co.uk/alarm.html</loc>
+    <loc>https://ajelectricians.co.uk/blog</loc>
   </url>
+
   <url>
-    <loc>https://ajelectricians.co.uk/electricianleeds.html</loc>
+    <loc>https://ajelectricians.co.uk/ev-chargers</loc>
   </url>
+
   <url>
-    <loc>https://ajelectricians.co.uk/electrician-halifax.html</loc>
+    <loc>https://ajelectricians.co.uk/alarms</loc>
   </url>
+
   <url>
-    <loc>https://ajelectricians.co.uk/electrician-bradford.html</loc>
+    <loc>https://ajelectricians.co.uk/electrician-bradford</loc>
   </url>
-  <url>
-    <loc>https://ajelectricians.co.uk/blog.html</loc>
-  </url>
+
 </urlset>
