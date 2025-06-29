@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://a-j-electricians.neocities.org/sitemap.xml
+Sitemap: https://ajelectricians.co.uk/sitemap.xml
