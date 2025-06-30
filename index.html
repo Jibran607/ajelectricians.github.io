@@ -21,7 +21,13 @@
   <!-- Robots and Sitemap -->
   <meta name="robots" content="index, follow"/>
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
-
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https://ajelectricians.co.uk;
+  script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+  connect-src 'self' https://www.google-analytics.com;
+  style-src 'self' 'unsafe-inline';
+  frame-src https://www.google.com;">
   <style>/* Minified CSS for performance */
     body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#333;line-height:1.6}
     nav{background:#0047AB;display:flex;justify-content:center;flex-wrap:wrap;padding:10px 0}
