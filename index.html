@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="NAPIT‑registered electricians serving Bradford, Leeds, Halifax. Specialists in EV chargers, CCTV, alarm systems & EICR tests since 2007.">
   <title>A & J Electricians | Electricians in Bradford, Leeds & Halifax</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
@@ -20,22 +20,29 @@
     });
   </script>
 
-  <!-- Open Graph & Twitter -->
+  <!-- Open Graph & Twitter meta tags -->
   <meta property="og:title" content="A & J Electricians | Bradford, Leeds & Halifax"/>
   <meta property="og:description" content="NAPIT-registered electricians in Bradford, Leeds & Halifax — EV chargers, CCTV, alarms & EICR testing by trusted pros since 2007."/>
   <meta property="og:image" content="https://ajelectricians.co.uk/logo.png"/>
+  <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://ajelectricians.co.uk/"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="A & J Electricians | Bradford, Leeds & Halifax"/>
-  <meta name="twitter:description" content="NAPIT-registered electricians in Bradford, Leeds & Halifax — EV chargers, CCTV, alarms & EICR testing."/>
+  <meta name="twitter:description" content="NAPIT-registered electricians in Bradford, Leeds & Halifax — EV chargers, CCTV, alarms & EICR testing. Call 07837 184 672 today."/>
   <meta name="twitter:image" content="https://ajelectricians.co.uk/logo.png"/>
 
-  <!-- Security and SEO -->
-  <meta name="robots" content="index, follow" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://ajelectricians.co.uk; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; frame-src https://www.google.com;">
+  <!-- Robots and Sitemap -->
+  <meta name="robots" content="index, follow"/>
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
 
-  <!-- Styles -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https://ajelectricians.co.uk;
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+    connect-src 'self' https://www.google-analytics.com;
+    style-src 'self' 'unsafe-inline';
+    frame-src https://www.google.com;">
+
   <style>
     body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#333;line-height:1.6}
     nav{background:#0047AB;display:flex;justify-content:center;flex-wrap:wrap;padding:10px 0}
@@ -54,7 +61,7 @@
     .service{background:#f4f4f4;padding:20px;border-left:4px solid #0047AB}
     .service img{width:100%;height:180px;object-fit:cover;margin-bottom:10px}
     .service a{color:#0047AB;text-decoration:none;font-weight:bold}
-    .testimonials,.contact,.contact-form{margin-top:50px}
+    .testimonials,.contact,.contact-form,.faq,.benefits{margin-top:50px}
     .testimonial{background:#f9f9f9;padding:20px;margin-bottom:20px;border-left:4px solid #0047AB}
     .testimonial p{font-style:italic;margin:8px 0}
     .testimonial strong{display:block;margin-top:10px}
@@ -71,17 +78,44 @@
     .contact-form button{background:#0047AB;color:#fff;border:none;padding:12px 20px;margin-top:15px;cursor:pointer;border-radius:4px;font-weight:bold}
     .contact-form button:hover{background:#00337f}
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Electrician",
+    "name":"A & J Electricians",
+    "image":"https://ajelectricians.co.uk/logo.png",
+    "url":"https://ajelectricians.co.uk/",
+    "telephone":"07837 184672",
+    "email":"ajelectriciansbradford@gmail.com",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"6 Crestville Close",
+      "addressLocality":"Bradford",
+      "addressRegion":"West Yorkshire",
+      "postalCode":"BD14 6DZ",
+      "addressCountry":"GB"
+    },
+    "areaServed":["Bradford","Leeds","Halifax"],
+    "priceRange":"££",
+    "description":"NAPIT-registered electricians installing EV chargers, CCTV, alarms & more across Bradford, Leeds & Halifax.",
+    "foundingDate":"2007",
+    "legalName":"A & J Electricians",
+    "openingHours":"Mo-Fr 09:00-17:00"
+  }
+  </script>
 </head>
 <body>
   <nav>
-    <a href="index.html" title="Home">Home</a>
-    <a href="Evchargers.html" title="EV Chargers">EV Chargers</a>
-    <a href="eicr.html" title="EICR Testing">EICR</a>
-    <a href="cctv.html" title="CCTV Installation">CCTV</a>
-    <a href="alarm.html" title="Alarm Systems">Alarms</a>
-    <a href="blog.html" title="Blog">Blog</a>
+    <a href="tel:07837184672">07837 184672</a>
+    <a href="index.html">Home</a>
+    <a href="Evchargers.html">EV Chargers</a>
+    <a href="eicr.html">EICR</a>
+    <a href="cctv.html">CCTV</a>
+    <a href="alarm.html">Alarms</a>
+    <a href="blog.html">Blog</a>
     <div class="dropdown">
-      <span title="Areas We Cover ▾">Areas We Cover ▾</span>
+      <span>Areas We Cover ▾</span>
       <div class="dropdown-content">
         <a href="electrician-bradford.html">Bradford</a>
         <a href="electricianleeds.html">Leeds</a>
@@ -91,7 +125,7 @@
   </nav>
 
   <div class="top-bar">
-    <img src="logo.png" alt="A & J Electricians logo – professional electricians since 2007">
+    <img src="logo.png" alt="A & J Electricians logo">
     <a class="call-btn" href="tel:07837184672">📞 Call 07837 184 672</a>
   </div>
 
@@ -101,27 +135,46 @@
 
     <h2>Our Services</h2>
     <div class="services">
-      <!-- Repeat these service blocks for each service -->
       <div class="service">
-        <img src="ev1.jpg" alt="EV charger being installed at a home in Bradford">
+        <img src="ev1.jpg" alt="EV charger installation">
         <h3><a href="Evchargers.html">EV Charger Installation</a></h3>
         <p>Fast and compliant EV charger installations for homes and businesses.</p>
       </div>
       <div class="service">
-        <img src="cctv.jpg" alt="CCTV camera installed on a Halifax property by A & J Electricians">
+        <img src="cctv.jpg" alt="CCTV installation">
         <h3><a href="cctv.html">CCTV Installation</a></h3>
         <p>Secure your property 24/7 with professional CCTV and video doorbell systems.</p>
       </div>
       <div class="service">
-        <img src="alarm.jpg" alt="Alarm system keypad installed by A & J Electricians">
+        <img src="alarm.jpg" alt="Alarm systems">
         <h3><a href="alarm.html">Alarm Systems</a></h3>
         <p>Wired or wireless alarm solutions starting from £300.</p>
       </div>
       <div class="service">
-        <img src="eicr1.jpg" alt="Electrician conducting an EICR inspection in Leeds">
+        <img src="eicr1.jpg" alt="EICR inspection">
         <h3><a href="eicr.html">EICR Testing</a></h3>
         <p>Certified electrical safety reports for landlords and homeowners.</p>
       </div>
+    </div>
+
+    <div class="benefits">
+      <h2>Why Choose A & J Electricians?</h2>
+      <ul>
+        <li>✅ NAPIT Registered & Fully Insured</li>
+        <li>✅ 5‑Star Rated by Local Clients</li>
+        <li>✅ No Call‑Out Fee</li>
+        <li>✅ Same‑Day Service Available</li>
+        <li>✅ Serving Bradford, Leeds & Halifax</li>
+        <li>✅ Honest Advice — No Hard Selling</li>
+      </ul>
+    </div>
+
+    <div class="faq">
+      <h2>FAQ</h2>
+      <h3>Do you cover my area?</h3><p>We serve Bradford, Leeds, Halifax, Keighley, Pudsey & surrounding locations—just ask!</p>
+      <h3>Are you certified?</h3><p>Yes—we’re fully NAPIT‑registered, insured, and compliant with UK regs.</p>
+      <h3>Do you offer same‑day call‑outs?</h3><p>Usually, yes! Call us on <a href="tel:07837184672">07837 184 672</a> for fast support.</p>
+      <h3>Can I get a free quote?</h3><p>Definitely—call or email for a no‑obligation quote today!</p>
     </div>
 
     <div class="testimonials">
