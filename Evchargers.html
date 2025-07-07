@@ -2,39 +2,46 @@
 <html lang="en">
 <head>
 
-<!-- Google Analytics & Google Ads Tags -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  // Google Analytics
-  gtag('config', 'G-OBCD8VOZJ9');
-
-  // Google Ads base tag
-  gtag('config', 'AW-432117426');
-
-  // Google Ads conversion tracking for phone calls
-  gtag('config', 'AW-432117426/BbVOCKHY5ucaELKths4B', {
-    'phone_conversion_number': '07837 184672'
-  });
-</script>
-
-  
-  
+  <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EV Charger Installation in Bradford, Leeds & Halifax | A & J Electricians</title>
   <meta name="description" content="NAPIT‑certified EV charger installation in Bradford, Leeds & Halifax. We install Zappi, Pod Point, Rolec & more. Prices from £599. Call 07837 184 672 today." />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="canonical" href="https://ajelectricians.co.uk/Evchargers.html" />
 
-  <!-- Open Graph / Twitter Tags -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="EV Charger Installation in Bradford, Leeds & Halifax | A & J Electricians" />
   <meta property="og:description" content="Trusted, NAPIT‑certified EV charger installs from £599. Serving Bradford, Leeds & Halifax. Get a free quote today." />
   <meta property="og:image" content="https://ajelectricians.co.uk/ev2.jpg" />
   <meta property="og:url" content="https://ajelectricians.co.uk/Evchargers.html" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // GA
+    gtag('config', 'G-OBCD8VOZJ9');
+
+    // Google Ads
+    gtag('config', 'AW-432117426');
+    gtag('config', 'AW-432117426/BbVOCKHY5ucaELKths4B', {
+      'phone_conversion_number': '07837 184672'
+    });
+  </script>
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' https://ajelectricians.co.uk data:;
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+    style-src 'self' 'unsafe-inline';
+    connect-src 'self' https://www.google-analytics.com;
+    frame-src https://www.google.com;">
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -68,6 +75,7 @@
   }
   </script>
 
+  <!-- Styles -->
   <style>
     body { margin:0; font-family:Arial,sans-serif; background:#fff; color:#333; line-height:1.6; }
     nav { background:#0047AB; display:flex; justify-content:center; flex-wrap:wrap; padding:10px 0; }
@@ -76,7 +84,7 @@
     .dropdown { position:relative; }
     .dropdown-content { display:none; position:absolute; background:#0047AB; top:36px; padding:5px 0; min-width:150px; }
     .dropdown:hover .dropdown-content { display:block; }
-    .dropdown-content a { color:white; padding:8px 20px; display:block; }
+    .dropdown-content a { color:white; padding:8px 20px; display:block; text-decoration:none; }
     header img { width:100%; max-height:350px; object-fit:cover; }
     .social-icons { text-align:center; margin:15px 0; }
     .social-icons a img { width:32px; margin:0 8px; vertical-align:middle; }
@@ -87,8 +95,10 @@
     .cta-button.secondary { background:#666; }
     .faq, .benefits { background:#f9f9f9; padding:30px 20px; margin-top:40px; border-left:4px solid #0047AB; }
     .faq h2, .benefits h2 { margin-top:0; }
-    .logo-footer img { height:80px; margin:20px auto; display:block; }
+    .logo-footer { text-align:center; margin:30px 0; }
+    .logo-footer img { height:80px; margin:0 15px; vertical-align:middle; }
   </style>
+
 </head>
 <body>
 
@@ -114,13 +124,13 @@
 
 <div class="social-icons">
   <a href="https://maps.app.goo.gl/GTsdcny2zrW5gYjKA" target="_blank" title="Our Google Business Profile">
-    <img src="googlelogo.png" alt="Google Business Profile link">
+    <img src="googlelogo.png" alt="Google Business Profile">
   </a>
   <a href="https://www.facebook.com/share/18TTXHTfv7/" target="_blank" title="Follow us on Facebook">
-    <img src="facebook.png" alt="Facebook page link">
+    <img src="facebook.png" alt="Facebook">
   </a>
   <a href="https://www.instagram.com/ajelectricians" target="_blank" title="Follow us on Instagram">
-    <img src="instagram.png" alt="Instagram profile link">
+    <img src="instagram.png" alt="Instagram">
   </a>
 </div>
 
@@ -176,6 +186,7 @@
 
   <div class="logo-footer">
     <img src="napit.jpg" alt="NAPIT certified electrician logo">
+    <img src="part-p.png" alt="Part‑P compliance badge">
   </div>
 </div>
 
