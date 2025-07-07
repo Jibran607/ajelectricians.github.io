@@ -20,18 +20,27 @@
   <meta name="twitter:description" content="Safe, compliant fuseboard upgrades from £300, rewires from £2,000. Bradford’s trusted NAPIT electricians."/>
   <meta name="twitter:image" content="https://ajelectricians.co.uk/logo.png"/>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-OBCD8VOZJ9');
-  gtag('config', 'AW-432117426');
-  gtag('config', 'AW-432117426/BbVOCKHY5ucaELKths4B', {
-    'phone_conversion_number': '07837184672'
-  });
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-OBCD8VOZJ9');
+    gtag('config', 'AW-432117426');
+    gtag('config', 'AW-432117426/BbVOCKHY5ucaELKths4B', {
+      'phone_conversion_number': '07837184672'
+    });
+  </script>
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https://ajelectricians.co.uk;
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+    connect-src 'self' https://www.google-analytics.com;
+    style-src 'self' 'unsafe-inline';
+    frame-src https://www.google.com;">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -75,7 +84,7 @@
     .faq dt{font-weight:bold; margin-top:10px;}
     .faq dd{margin:0 0 10px 20px;}
     form label{display:block;margin:10px 0 5px;font-weight:bold;}
-    form input, form textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;}
+    form input, form textarea, form select{width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;}
     form button{margin-top:15px;padding:12px 20px;border:none;border-radius:4px;background:#0047AB;color:#fff;font-weight:bold;cursor:pointer;}
     form button:hover{background:#00337f;}
     .logos{padding:20px;text-align:center;}
@@ -92,7 +101,7 @@
   <div class="dropdown"><span>Services ▾</span>
     <div class="dropdown-content">
       <a href="Evchargers.html">EV Chargers</a>
-      <a href="fusebox.html">Fusebox & Rewires</a>
+      <a href="fusebox-rewire.html">Fusebox & Rewires</a>
       <a href="cctv.html">CCTV</a>
       <a href="alarm.html">Alarms</a>
       <a href="eicr.html">EICR</a>
@@ -125,7 +134,7 @@
       <li>Dual RCD boards protect zones, reducing power loss if one trips.</li>
       <li>RCBOs protect individual circuits for easier troubleshooting.</li>
       <li>Improved electrical safety—reducing fire and shock risk.</li>
-      <li>New units meet BS 7671 standards & pass EICR tests.</li>
+      <li>New units meet BS 7671 standards & pass EICR tests.</li>
     </ul>
     <div class="pricing"><p>🔧 Starting from <strong>£300</strong> (board, installation & certification included).</p></div>
   </section>
@@ -152,7 +161,7 @@
     <dt>Do I really need an inspection?</dt>
     <dd>Yes—EICRs are required periodically (landlords every 5 years, homeowners when selling or after an incident).</dd>
     <dt>Is it disruptive?</dt>
-    <dd>We work section-by-section. Most rewires take 1 day depending on home size.</dd>
+    <dd>We work section-by-section. Most rewires take 1–3 days depending on home size.</dd>
     <dt>Will my insurance accept it?</dt>
     <dd>Absolutely—our rewires & fuseboard installs are compliant with Part‑P and fully certified.</dd>
     <dt>What about fuseboard noise?</dt>
@@ -160,18 +169,18 @@
   </dl>
 
   <h2>Request a Free Quote</h2>
-  <form action="mailto:ajelectriciansbradford@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label><input type="text" id="name" name="Name" required/>
-    <label for="email">Email:</label><input type="email" id="email" name="Email" required/>
-    <label for="phone">Phone:</label><input type="tel" id="phone" name="Phone"/>
-    <label for="address">Address/Postcode:</label><input type="text" id="address" name="Address"/>
+  <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+    <label for="name">Name:</label><input type="text" id="name" name="name" required>
+    <label for="email">Email:</label><input type="email" id="email" name="email" required>
+    <label for="phone">Phone:</label><input type="tel" id="phone" name="phone">
+    <label for="address">Address/Postcode:</label><input type="text" id="address" name="address">
     <label for="service">Interested in:</label>
-    <select id="service" name="Service">
+    <select id="service" name="service">
       <option>Fusebox Replacement</option>
       <option>Full House Rewire</option>
       <option>Both</option>
     </select>
-    <label for="message">Additional info:</label><textarea id="message" name="Message" rows="4"></textarea>
+    <label for="message">Additional info:</label><textarea id="message" name="message" rows="4"></textarea>
     <button type="submit">Send Quote Request</button>
   </form>
 
