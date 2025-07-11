@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com;
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com;
-  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com;
-  style-src 'self' 'unsafe-inline';
-  frame-src https://www.google.com https://www.googletagmanager.com;">
-  
 <head>
-
-<!-- Google Tag Manager -->
-<script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-T84QRD6J');
-</script>
-
-<!-- gtag.js for Google Ads + GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-OBCD8VOZJ9');
-  gtag('config', 'AW-432117426');
-</script>
-
-  
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Electrician in Bradford & Surrounding Areas | A & J Electricians</title>
-  <meta name="description" content="A & J Electricians are your local Bradford electricians, serving BD1–BD15 including Great Horton & Barkerend. We install EV chargers, EICRs, CCTV and alarms. Fast, friendly, NAPIT certified."/>
+  <meta name="description" content="A & J Electricians are your local Bradford electricians, serving BD1–BD15 including Great Horton & Barkerend. We install EV chargers, EICRs, CCTV and alarms. Fast, friendly, NAPIT certified.">
 
-  <!-- Open Graph & Twitter -->
+  <!-- ✅ Content‑Security‑Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https://ajelectricians.co.uk https://www.google.com https://www.googletagmanager.com;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
+    frame-src https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net;
+    style-src 'self' 'unsafe-inline';
+  "/>
+
+  <!-- ✅ Google Tag Manager (head) -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl = l!='dataLayer'?'&l='+l:'';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T84QRD6J');
+  </script>
+
+  <!-- ✅ GA4 & Google Ads via gtag.js -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-OBCD8VOZJ9');                        // GA4
+    gtag('config', 'AW-432117426');                        // Google Ads
+  </script>
+
+  <!-- ✅ Open Graph & Twitter Tags (keep as before) -->
   <meta property="og:title" content="Bradford Electrician – Serving BD1–BD15 | A & J Electricians"/>
   <meta property="og:description" content="Local Bradford electricians covering Great Horton, Barkerend, Clayton, Denholme & beyond. EV chargers, EICR safety reports, CCTV & alarms."/>
   <meta property="og:image" content="https://ajelectricians.co.uk/logo.webp"/>
@@ -46,107 +48,142 @@
   <meta name="twitter:description" content="Local Bradford electricians covering Great Horton, Barkerend, Clayton, Denholme & beyond. EV chargers, EICR, CCTV, alarms."/>
   <meta name="twitter:image" content="https://ajelectricians.co.uk/logo.webp"/>
 
-  <!-- LocalBusiness Schema -->
+  <!-- ✅ LocalBusiness Schema (keep as before) -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org","@type":"LocalBusiness",
-    "name":"A & J Electricians","telephone":"07837184672",
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"A & J Electricians",
+    "telephone":"07837184672",
     "email":"ajelectriciansbradford@gmail.com",
-    "address":{"@type":"PostalAddress","streetAddress":"6 Crestville Close","addressLocality":"Bradford","addressRegion":"West Yorkshire","postalCode":"BD14 6DZ","addressCountry":"GB"},
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"6 Crestville Close",
+      "addressLocality":"Bradford",
+      "addressRegion":"West Yorkshire",
+      "postalCode":"BD14 6DZ",
+      "addressCountry":"GB"
+    },
     "areaServed":["Bradford","Great Horton","Clayton","Barkerend","Denholme","BD1","BD2","BD3","BD4","BD5","BD6","BD7","BD8","BD9","BD10","BD11","BD12","BD13","BD14","BD15"],
     "url":"https://ajelectricians.co.uk/electrician-bradford.html",
-    "openingHours":"Mo-Su 07:00-22:00","priceRange":"££",
-    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","bestRating":"5","ratingCount":"17"}
+    "openingHours":"Mo-Su 07:00-22:00",
+    "priceRange":"££",
+    "aggregateRating": {
+      "@type":"AggregateRating",
+      "ratingValue":"5",
+      "bestRating":"5",
+      "ratingCount":"17"
+    }
   }
   </script>
 
-  <style>body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#333;line-height:1.6}nav{background:#0047AB;padding:10px 0;text-align:center}nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold} .container{max-width:1000px;margin:auto;padding:30px 20px}h1,h2,h3{color:#0047AB;margin-top:1em}p,ul{margin-bottom:1em}ul{padding-left:20px}.cta-button{display:inline-block;background:#0047AB;color:#fff;padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:bold;margin-top:20px}.highlight{background:#f9f9f9;border-left:4px solid #0047AB;padding:20px;margin:30px 0}.footer-cert{background:#f9f9f9;border-left:4px solid #0047AB;padding:20px;margin:30px 0;text-align:center;font-size:0.9em}img{max-width:100%;height:auto;display:block;margin:20px auto;border:1px solid #ccc}.review-cta{text-align:center;margin:20px 0;font-size:0.9em}.review-cta img{vertical-align:middle;width:24px;margin-right:8px}.service-details{background:#f4f4f4;padding:15px;border-left:4px solid #0047AB;margin-bottom:20px}.cert-badges img{margin:0 10px;width:80px}</style>
+  <!-- ✅ Inline Styles -->
+  <style>
+    body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#333;line-height:1.6;}
+    nav{background:#0047AB;padding:10px 0;text-align:center;}
+    nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold;}
+    .container{max-width:1000px;margin:auto;padding:30px 20px;}
+    h1,h2,h3{color:#0047AB;margin-top:1em;}
+    p,ul{margin-bottom:1em;}
+    ul{padding-left:20px;}
+    .cta-button{display:inline-block;background:#0047AB;color:#fff;padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:bold;margin-top:20px;}
+    .highlight{background:#f9f9f9;border-left:4px solid #0047AB;padding:20px;margin:30px 0;}
+    .footer-cert{background:#f9f9f9;border-left:4px solid #0047AB;padding:20px;margin:30px 0;text-align:center;font-size:0.9em;}
+    img{max-width:100%;height:auto;display:block;margin:20px auto;border:1px solid #ccc;}
+    .review-cta{text-align:center;margin:20px 0;font-size:0.9em;}
+    .review-cta img{vertical-align:middle;width:24px;margin-right:8px;}
+    .service-details{background:#f4f4f4;padding:15px;border-left:4px solid #0047AB;margin-bottom:20px;}
+    .cert-badges img{margin:0 10px;width:80px;}
+  </style>
 </head>
-<body>
 
+<body>
+  <!-- ✅ Google Tag Manager (noscript fallback) -->
   <noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-  <a href="tel:07837184672">07837 184672</a>
+  <!-- ✅ Body Content -->
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="Evchargers.html">EV Chargers</a>
+    <a href="eicr.html">EICR</a>
+    <a href="cctv.html">CCTV</a>
+    <a href="alarm.html">Alarms</a>
+    <a href="blog.html">Blog</a>
+    <a href="service-areas.html">Areas We Cover</a>
+  </nav>
 
-<nav aria-label="Main navigation">
-  <a href="index.html">Home</a>
-  <a href="Evchargers.html">EV Chargers</a>
-  <a href="eicr.html">EICR</a>
-  <a href="cctv.html">CCTV</a>
-  <a href="alarm.html">Alarms</a>
-  <a href="blog.html">Blog</a>
-  <a href="service-areas.html">Areas We Cover</a>
-</nav>
+  <div class="container">
+    <h1>Electrician in Bradford & Surrounding Areas</h1>
+    <p>Trusted <strong>Bradford electricians</strong> serving <strong>West Yorkshire</strong> since 2007. We cover <strong>all BD1–BD15</strong>, including Great Horton, Barkerend, Clayton, Denholme and beyond.</p>
+    <a class="cta-button" href="tel:07837184672">📞 Call for a Local Quote</a>
+    <a class="cta-button" href="https://wa.me/447837184672" style="background:#25D366">📱 WhatsApp Us</a>
 
-<div class="container">
-  <h1>Electrician in Bradford & Surrounding Areas</h1>
-  <p>Trusted <strong>Bradford electricians</strong> serving <strong>West Yorkshire</strong> since 2007. We cover <strong>all BD1–BD15</strong>, including Great Horton, Barkerend, Clayton, Denholme and beyond.</p>
-  <a class="cta-button" href="tel:07837184672">📞 Call for a Local Quote</a>
-  <a class="cta-button" href="https://wa.me/447837184672" style="background:#25D366">📱 WhatsApp Us</a>
+    <p class="highlight">🏆 <strong>BD1–BD5 Customers:</strong> Free EV charger assessment this month!</p>
 
-  <p class="highlight">🏆 <strong>BD1–BD5 Customers:</strong> Free EV charger assessment this month!</p>
+    <h2>Areas We Cover</h2>
+    <ul>
+      <li>Great Horton (BD7), Barkerend (BD3)</li>
+      <li>Clayton, Denholme & Shipley—all across BD1–BD15 postcodes</li>
+    </ul>
 
-  <h2>Areas We Cover</h2>
-  <ul><li>Great Horton (BD7), Barkerend (BD3)</li><li>Clayton, Denholme & Shipley—all across BD1–BD15 postcodes</li></ul>
+    <h2>Services We Provide</h2>
+    <div class="service-details">
+      <h3><a href="Evchargers.html">🔌 EV Charger Installations</a></h3>
+      <p>Domestic and workplace charger installs — fully compliant, app‑ready. Starting from <strong>£499 supply & fit</strong> in Bradford. Includes consultation and site assessment.</p>
+    </div>
+    <div class="service-details">
+      <h3><a href="eicr.html">📄 EICR Safety Certificates</a></h3>
+      <p>Electrical Installation Condition Reports with <em>24–48‑hour digital certification</em>. Ideal for rentals or safety checks. Includes full report and remedial quotes.</p>
+    </div>
+    <div class="service-details">
+      <h3><a href="cctv.html">📹 CCTV & Smart Doorbells</a></h3>
+      <p>From Hikvision to Ring/Eufy — we design, install and integrate systems with mobile access and secure setup.</p>
+    </div>
+    <div class="service-details">
+      <h3><a href="alarm.html">🔔 Burglar Alarm Systems</a></h3>
+      <p>Smart alarm installs — choose between wired Texecom or wireless Ajax. Professionally fitted and integrated with home systems.</p>
+    </div>
 
-  <h2>Services We Provide</h2>
+    <h2>Why Choose A & J Electricians?</h2>
+    <ul>
+      <li>✅ Bradford-based—fast calls across all BD postcodes</li>
+      <li>✅ Honest, inclusive quotes—no hard sell</li>
+      <li>✅ Trusted with 5★ Google reviews</li>
+      <li>✅ Over 15 years' experience in local projects</li>
+      <li>✅ Full NAPIT certification & insurance</li>
+    </ul>
 
-  <div class="service-details" aria-labelledby="ev-charger-heading">
-    <h3 id="ev-charger-heading"><a href="Evchargers.html">🔌 EV Charger Installations</a></h3>
-    <p>Domestic and workplace charger installs — fully compliant, app-ready. Starting from <strong>£499 supply & fit</strong> in Bradford. Includes consultation and site assessment.</p>
+    <div class="review-cta">
+      <a href="https://maps.app.goo.gl/cSBbFpBbLnHyvesw9" target="_blank">
+        <img src="googlelogo.png" alt="Google reviews logo"/> Read our Bradford-area Google reviews
+      </a>
+    </div>
+    <div class="review">
+      <p>"Reliable electrician in BD7 – fixed our fuse box same day!" ★★★★★</p>
+    </div>
+
+    <h2>Serving Bradford Postcodes With Pride</h2>
+    <ul>
+      <li>BD1, BD2, BD3 – Central Bradford & Barkerend</li>
+      <li>BD4, BD5 – Great Horton & City Centre</li>
+      <li>BD6, BD7 – Clayton, Horton Park</li>
+      <li>BD8–BD15 – From Manningham to Bingley & Denholme</li>
+    </ul>
+
+    <h2>Local Map & Coverage</h2>
+    <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18..."></iframe>
+
+    <div class="cert-badges">
+      <img src="napit-badge.png" alt="NAPIT Certified"/>
+      <img src="insured-badge.png" alt="Fully Insured"/>
+    </div>
+
+    <div class="footer-cert">
+      NAPIT Certified | Fully Insured | Bradford BD1–BD15 & Suburbs | A & J Electricians | Est. 2007
+    </div>
   </div>
-
-  <div class="service-details" aria-labelledby="eicr-heading">
-    <h3 id="eicr-heading"><a href="eicr.html">📄 EICR Safety Certificates</a></h3>
-    <p>Electrical Installation Condition Reports with <em>24–48‑hour digital certification</em>. Ideal for rentals or safety checks. Includes full report and remedial quotes.</p>
-  </div>
-
-  <div class="service-details" aria-labelledby="cctv-heading">
-    <h3 id="cctv-heading"><a href="cctv.html">📹 CCTV & Smart Doorbells</a></h3>
-    <p>From Hikvision to Ring/Eufy — we design, install and integrate systems with mobile access and secure setup.</p>
-  </div>
-
-  <div class="service-details" aria-labelledby="alarm-heading">
-    <h3 id="alarm-heading"><a href="alarm.html">🔔 Burglar Alarm Systems</a></h3>
-    <p>Smart alarm installs — choose between wired Texecom or wireless Ajax. Professionally fitted and integrated with home systems.</p>
-  </div>
-
-  <h2>Why Choose A & J Electricians?</h2>
-  <ul><li>✅ Bradford-based—fast calls across all BD postcodes</li><li>✅ Honest, inclusive quotes—no hard sell</li><li>✅ Trusted with 5★ Google reviews</li><li>✅ Over 15 years' experience in local projects</li><li>✅ Full NAPIT certification & insurance</li></ul>
-
-  <div class="review-cta">
-    <a href="https://maps.app.goo.gl/cSBbFpBbLnHyvesw9" target="_blank">
-      <img src="googlelogo.png" alt="Google reviews logo"/> Read our Bradford-area Google reviews
-    </a>
-  </div>
-
-  <div class="review">
-    <p>"Reliable electrician in BD7 - fixed our fuse box same day!" ★★★★★</p>
-  </div>
-
-  <h2>Serving Bradford Postcodes With Pride</h2>
-  <ul>
-    <li>BD1, BD2, BD3 – Central Bradford & Barkerend</li>
-    <li>BD4, BD5 – Great Horton & City Centre</li>
-    <li>BD6, BD7 – Clayton, Horton Park</li>
-    <li>BD8–BD15 – From Manningham to Bingley & Denholme</li>
-  </ul>
-
-  <h2>Local Map & Coverage</h2>
-  <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38042.28497814711!2d-1.800824!3d53.79302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7d4df2f4bafd0e38!2sA%20%26%20J%20Electricians!5e0!3m2!1sen!2suk!4v1653042345678" width="100%" height="300" style="border:0;" allowfullscreen aria-label="Map showing A & J Electricians coverage in Bradford"></iframe>
-
-  <div class="cert-badges">
-    <img src="napit-badge.png" alt="NAPIT Certified"/>
-    <img src="insured-badge.png" alt="Fully Insured"/>
-  </div>
-
-  <div class="footer-cert">
-    NAPIT Certified | Fully Insured | Bradford BD1–BD15 & Suburbs | A & J Electricians | Est. 2007
-  </div>
-</div>
-
 </body>
 </html>
