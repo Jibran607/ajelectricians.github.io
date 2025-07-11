@@ -29,11 +29,11 @@
 
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
-  img-src 'self' data: https://ajelectricians.co.uk;
-  script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
-  connect-src 'self' https://www.google-analytics.com;
+  img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com;
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com;
+  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com;
   style-src 'self' 'unsafe-inline';
-  frame-src https://www.google.com;">
+  frame-src https://www.google.com https://www.googletagmanager.com;">
   
   <!-- Open Graph / Twitter Meta Tags -->
   <meta property="og:title" content="EICR Electrical Safety Reports | Bradford, Leeds & Halifax" />
