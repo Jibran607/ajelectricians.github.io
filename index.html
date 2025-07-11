@@ -36,10 +36,10 @@
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
   img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com;
-  script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
   connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com;
   style-src 'self' 'unsafe-inline';
-  frame-src https://www.google.com;">
+  frame-src https://www.google.com https://www.googletagmanager.com;">
 
   <style>
     body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#333;line-height:1.6}
