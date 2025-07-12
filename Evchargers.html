@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,39 +16,39 @@
   <meta property="og:url" content="https://ajelectricians.co.uk/Evchargers.html" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- ✅ Content‑Security‑Policy (unified) -->
   <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com;
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com;
-  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com;
-  style-src 'self' 'unsafe-inline';
-  frame-src https://www.google.com https://www.googletagmanager.com;">
+    default-src 'self';
+    img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.com/ccm/collect;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com;
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.google.com/ccm/collect;
+    style-src 'self' 'unsafe-inline';
+    frame-src https://www.google.com https://www.googletagmanager.com;
+  " />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T84QRD6J');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Ads + GA4 (gtag) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    // GA
-    gtag('config', 'G-OBCD8VOZJ9');
-
-    // Google Ads
-    gtag('config', 'AW-432117426');
-    gtag('config', 'AW-432117426/BbVOCKHY5ucaELKths4B', {
-      'phone_conversion_number': '07837 184672'
-    });
+    gtag('config', 'G-OBCD8VOZJ9');                    // GA4
+    gtag('config', 'AW-432117426');                    // Google Ads base
+    gtag('config', 'AW-432117426/BbVOCKHY5ucaELKths4B', { phone_conversion_number: '07837 184 672' });
   </script>
-
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    img-src 'self' https://ajelectricians.co.uk data:;
-    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
-    style-src 'self' 'unsafe-inline';
-    connect-src 'self' https://www.google-analytics.com;
-    frame-src https://www.google.com;">
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -106,97 +105,105 @@
     .logo-footer { text-align:center; margin:30px 0; }
     .logo-footer img { height:80px; margin:0 15px; vertical-align:middle; }
   </style>
-
 </head>
-<body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="Evchargers.html" aria-current="page">EV Chargers</a>
-  <a href="eicr.html">EICR</a>
-  <a href="cctv.html">CCTV</a>
-  <a href="alarm.html">Alarms</a>
-  <a href="blog.html">Blog</a>
-  <div class="dropdown">
-    <span>Areas We Cover ▾</span>
-    <div class="dropdown-content">
-      <a href="electricianleeds.html">Leeds</a>
-      <a href="electrician-halifax.html">Halifax</a>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Evchargers.html" aria-current="page">EV Chargers</a>
+    <a href="eicr.html">EICR</a>
+    <a href="cctv.html">CCTV</a>
+    <a href="alarm.html">Alarms</a>
+    <a href="blog.html">Blog</a>
+    <div class="dropdown">
+      <span>Areas We Cover ▾</span>
+      <div class="dropdown-content">
+        <a href="electricianleeds.html">Leeds</a>
+        <a href="electrician-halifax.html">Halifax</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <img src="ev3.jpg" alt="EV charger installation at a Bradford home by A & J Electricians">
+  </header>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="https://maps.app.goo.gl/GTsdcny2zrW5gYjKA" target="_blank" title="Our Google Business Profile">
+      <img src="googlelogo.png" alt="Google Business Profile">
+    </a>
+    <a href="https://www.facebook.com/share/18TTXHTfv7/" target="_blank" title="Follow us on Facebook">
+      <img src="facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/ajelectricians" target="_blank" title="Follow us on Instagram">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>EV Charger Installation in Bradford, Leeds & Halifax</h1>
+    <p>As NAPIT‑certified electricians, we install premium EV charge points in Bradford, Leeds, Halifax, Keighley & Pudsey—whether home or commercial, we ensure clean, safe, certified work.</p>
+
+    <a class="cta-button" href="tel:07837184672">📞 Call 07837 184 672</a>
+    <a class="cta-button secondary" href="mailto:ajelectriciansbradford@gmail.com">📧 Get a Free Quote</a>
+
+    <h2>Installation Prices</h2>
+    <p>From <strong>£599 fully installed</strong> for a standard home EV charger (subject to survey and parts).</p>
+
+    <div class="section-img">
+      <img src="ev2.jpg" alt="Wall-mounted EV charger installed in a Leeds home by A & J Electricians">
+    </div>
+
+    <h2>Brands We Install</h2>
+    <ul>
+      <li>Zappi (Myenergi)</li>
+      <li>Rolec EV</li>
+      <li>Pod Point (smart app enabled)</li>
+      <li>Wallbox, EO, Andersen, Project EV & more</li>
+    </ul>
+
+    <div class="benefits">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✅ NAPIT‑certified & fully insured</li>
+        <li>✅ No call‑out fee & same‑day service options</li>
+        <li>✅ Experienced since 2007</li>
+        <li>✅ Clear pricing & honest advice</li>
+      </ul>
+    </div>
+
+    <h2>Our 3‑Step Installation Process</h2>
+    <h3>1. Free Survey & Consultation</h3>
+    <p>We assess your location, electrical capacity, parking layout—and advise the right charger to meet your daily mileage.</p>
+    <h3>2. Expert Installation</h3>
+    <p>Installed to UK standards, including fuse‑board upgrades if needed and fully NAPIT‑certified.</p>
+    <h3>3. Testing & Support</h3>
+    <p>We test the unit, provide user training, hand over documentation, and leave your premises clean.</p>
+
+    <div class="faq">
+      <h2>FAQs</h2>
+      <h3>How long does installation take?</h3>
+      <p>Typically 3–4 hours for a domestic charger.</p>
+      <h3>Can I get a quote without obligation?</h3>
+      <p>Yes—call or email for a free consultation and estimate.</p>
+      <h3>Do you install commercial EV chargers?</h3>
+      <p>Absolutely. We fit multi-point systems for offices, car parks, and landlords.</p>
+    </div>
+
+    <div class="logo-footer">
+      <img src="napit.jpg" alt="NAPIT certified electrician logo">
+      <img src="part-p.png" alt="Part‑P compliance badge">
     </div>
   </div>
-</nav>
-
-<header>
-  <img src="ev3.jpg" alt="EV charger installation at a Bradford home by A & J Electricians">
-</header>
-
-<div class="social-icons">
-  <a href="https://maps.app.goo.gl/GTsdcny2zrW5gYjKA" target="_blank" title="Our Google Business Profile">
-    <img src="googlelogo.png" alt="Google Business Profile">
-  </a>
-  <a href="https://www.facebook.com/share/18TTXHTfv7/" target="_blank" title="Follow us on Facebook">
-    <img src="facebook.png" alt="Facebook">
-  </a>
-  <a href="https://www.instagram.com/ajelectricians" target="_blank" title="Follow us on Instagram">
-    <img src="instagram.png" alt="Instagram">
-  </a>
-</div>
-
-<div class="container">
-  <h1>EV Charger Installation in Bradford, Leeds & Halifax</h1>
-  <p>As NAPIT‑certified electricians, we install premium EV charge points in Bradford, Leeds, Halifax, Keighley & Pudsey—whether home or commercial, we ensure clean, safe, certified work.</p>
-
-  <a class="cta-button" href="tel:07837184672">📞 Call 07837 184 672</a>
-  <a class="cta-button secondary" href="mailto:ajelectriciansbradford@gmail.com">📧 Get a Free Quote</a>
-
-  <h2>Installation Prices</h2>
-  <p>From <strong>£599 fully installed</strong> for a standard home EV charger (subject to survey and parts).</p>
-
-  <div class="section-img">
-    <img src="ev2.jpg" alt="Wall-mounted EV charger installed in a Leeds home by A & J Electricians">
-  </div>
-
-  <h2>Brands We Install</h2>
-  <ul>
-    <li>Zappi (Myenergi)</li>
-    <li>Rolec EV</li>
-    <li>Pod Point (smart app enabled)</li>
-    <li>Wallbox, EO, Andersen, Project EV & more</li>
-  </ul>
-
-  <div class="benefits">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>✅ NAPIT‑certified & fully insured</li>
-      <li>✅ No call‑out fee & same‑day service options</li>
-      <li>✅ Experienced since 2007</li>
-      <li>✅ Clear pricing & honest advice</li>
-    </ul>
-  </div>
-
-  <h2>Our 3‑Step Installation Process</h2>
-  <h3>1. Free Survey & Consultation</h3>
-  <p>We assess your location, electrical capacity, parking layout—and advise the right charger to meet your daily mileage.</p>
-  <h3>2. Expert Installation</h3>
-  <p>Installed to UK standards, including fuse‑board upgrades if needed and fully NAPIT‑certified.</p>
-  <h3>3. Testing & Support</h3>
-  <p>We test the unit, provide user training, hand over documentation, and leave your premises clean.</p>
-
-  <div class="faq">
-    <h2>FAQs</h2>
-    <h3>How long does installation take?</h3>
-    <p>Typically 3–4 hours for a domestic charger.</p>
-    <h3>Can I get a quote without obligation?</h3>
-    <p>Yes—call or email for a free consultation and estimate.</p>
-    <h3>Do you install commercial EV chargers?</h3>
-    <p>Absolutely. We fit multi-point systems for offices, car parks, and landlords.</p>
-  </div>
-
-  <div class="logo-footer">
-    <img src="napit.jpg" alt="NAPIT certified electrician logo">
-    <img src="part-p.png" alt="Part‑P compliance badge">
-  </div>
-</div>
-
 </body>
 </html>
