@@ -8,35 +8,47 @@
   <link rel="canonical" href="https://ajelectricians.co.uk/eicr-bradford.html"/>
   <link rel="icon" href="favicon.ico"/>
 
-  
-  <!-- Google tag (gtag.js) -->
+  <!-- ✅ Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect;
+    frame-src https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net;
+    style-src 'self' 'unsafe-inline';
+  ">
+
+  <!-- ✅ Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T84QRD6J');
+  </script>
+
+  <!-- ✅ Google Analytics + Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
   <script>
-    window.dataLayer = window.dataLayer||[];
+    window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js',new Date());
-    gtag('config','G-OBCD8VOZJ9');
-    gtag('config','AW-432117426/BbVOCKHY5ucaELKths4B',{ phone_conversion_number:'07837184672' });
-
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect;
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
-  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect;
-  frame-src https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net;
-  style-src 'self' 'unsafe-inline';
-">
-
-    
+    gtag('js', new Date());
+    gtag('config', 'G-OBCD8VOZJ9');
+    gtag('config', 'AW-432117426');
+    gtag('config', 'AW-432117426/BbVOCKHY5ucaELKths4B', {
+      'phone_conversion_number': '07837184672'
+    });
   </script>
-  <!-- Open Graph & Twitter -->
+
+  <!-- ✅ Open Graph & Twitter -->
   <meta property="og:title" content="Bradford EICR Testing – A & J Electricians"/>
   <meta property="og:description" content="EICR testing in Bradford from £80. Digital reports in 24‑48h, remedial fixes included."/>
   <meta property="og:image" content="https://ajelectricians.co.uk/eicr1.jpg"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://ajelectricians.co.uk/eicr-bradford.html"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <!-- Structured Data -->
+
+  <!-- ✅ Structured Data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -72,6 +84,12 @@
 </head>
 <body>
 
+  <!-- ✅ Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="eicr-bradford.html">Bradford EICR</a>
@@ -79,12 +97,8 @@
   </nav>
 
   <div class="logo-bar">
-    <a href="https://www.facebook.com/share/16g3Q98gZ7/" target="_blank">
-      <img src="facebook.png" alt="Facebook logo">
-    </a>
-    <a href="https://www.instagram.com/ajelectricians" target="_blank">
-      <img src="instagram.png" alt="Instagram logo">
-    </a>
+    <a href="https://www.facebook.com/share/16g3Q98gZ7/" target="_blank"><img src="facebook.png" alt="Facebook logo"></a>
+    <a href="https://www.instagram.com/ajelectricians" target="_blank"><img src="instagram.png" alt="Instagram logo"></a>
     <img src="napit.jpg" alt="NAPIT Registered logo">
     <img src="part-p.png" alt="Part P Compliance logo">
   </div>
