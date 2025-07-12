@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!-- Google Analytics & Google Ads Tags -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  // Google Analytics
-  gtag('config', 'G-OBCD8VOZJ9');
-
-  // Google Ads base tag
-  gtag('config', 'AW-432117426');
-
-  // Google Ads conversion tracking for phone calls
-  gtag('config', 'AW-432117426/BbVOCKHY5ucaELKths4B', {
-    'phone_conversion_number': '07837 184672'
-  });
-</script>
   
   <meta charset="UTF-8" />
 
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com;
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com;
-  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com;
-  style-src 'self' 'unsafe-inline';
-  frame-src https://www.google.com https://www.googletagmanager.com;">
+  <!-- ✅ Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect;
+    frame-src https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net;
+    style-src 'self' 'unsafe-inline';
+  ">
+
+  <!-- ✅ Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T84QRD6J');
+  </script>
+
+  <!-- ✅ Google Analytics + Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-OBCD8VOZJ9');
+    gtag('config', 'AW-432117426');
+    gtag('config', 'AW-432117426/BbVOCKHY5ucaELKths4B', {
+      'phone_conversion_number': '07837184672'
+    });
+  </script>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alarm Installations in Bradford, Leeds & Halifax | A & J Electricians</title>
