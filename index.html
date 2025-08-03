@@ -163,15 +163,28 @@
     </div>
 
     <div class="contact-form">
-      <h2>Quick Contact Form</h2>
-      <form action="https://formspree.io/f/xqaldnbl" method="POST">
-        <label for="cname">Name:</label><input id="cname" type="text" name="Name" required>
-        <label for="cphone">Phone:</label><input id="cphone" type="tel" name="Phone">
-        <label for="cservice">Service needed:</label><input id="cservice" type="text" name="Service">
-        <label for="clocation">Location:</label><input id="clocation" type="text" name="Location">
-        <label for="cmessage">Message:</label><textarea id="cmessage" name="Message" rows="4"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+  <h2>Quick Contact Form</h2>
+  <form action="https://formspree.io/f/xqaldnbl" method="POST">
+    <label for="cname">Name:</label>
+    <input id="cname" type="text" name="name" required>
+
+    <label for="cemail">Email:</label>
+    <input id="cemail" type="email" name="email" required>
+
+    <label for="cphone">Phone:</label>
+    <input id="cphone" type="tel" name="phone">
+
+    <label for="cservice">Service needed:</label>
+    <input id="cservice" type="text" name="service">
+
+    <label for="clocation">Location:</label>
+    <input id="clocation" type="text" name="location">
+
+    <label for="cmessage">Message:</label>
+    <textarea id="cmessage" name="message" rows="4"></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
     </div>
 
     <div class="cta">
@@ -189,4 +202,5 @@
   <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW‑432117426/ui2RCM3I0u0aELKths4B'});">📞 Call 07837 184 672</a>
 </body>
 </html>
+
 
