@@ -154,8 +154,10 @@
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'formsubmission' });
 
-      // Fire Google Ads conversion
-      gtag('event', 'conversion', { 'send_to': 'AW-432117426/aCeJpzFQaELKths4B' });
+      // Fire Google Ads conversion for contact form (separate label)
+      gtag('event', 'conversion', {
+        'send_to': 'AW-432117426/KAR5CNMWW4DlELkths4B'
+      });
 
       document.getElementById('form-message').style.display = 'block';
       setTimeout(() => {
@@ -174,3 +176,4 @@
   </script>
 </body>
 </html>
+
