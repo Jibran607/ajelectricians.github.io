@@ -124,37 +124,27 @@
     form label { font-weight:bold; display:block; margin-top:15px; }
     form button { background:#0047AB; color:#fff; border:none; padding:12px 20px; border-radius:4px; font-weight:bold; margin-top:10px; cursor:pointer; }
 
-    /* Floating CTAs – alignment + safe-area + mobile width fixes */
+    /* Floating CTAs – smaller and pinned on the right */
     .floating-contact, .sticky-cta {
       position:fixed;
-      right: max(16px, env(safe-area-inset-right));
+      right:16px;
       text-decoration:none;
-      font-weight:bold;
+      font-weight:700;
       box-shadow:0 4px 8px rgba(0,0,0,0.2);
-      border-radius:30px;
-      padding:12px 20px;
+      border-radius:999px;
+      padding:10px 14px;            /* smaller */
+      font-size:14px;               /* smaller */
       color:#fff;
       z-index:1100;
       white-space:nowrap;
-      transform: translateZ(0);
     }
     .floating-contact { 
-      bottom: calc(20px + env(safe-area-inset-bottom));
+      bottom:20px;
       background:#FFD700; color:#333;
     }
     .sticky-cta { 
-      bottom: calc(80px + env(safe-area-inset-bottom));
+      bottom:70px;
       background:#0047AB;
-    }
-    /* On small screens, keep buttons fully on-screen and consistent */
-    @media (max-width:480px){
-      .floating-contact, .sticky-cta {
-        right: max(12px, env(safe-area-inset-right));
-        left: max(12px, env(safe-area-inset-left));
-        width: auto;
-        max-width: calc(100% - (max(12px, env(safe-area-inset-right)) + max(12px, env(safe-area-inset-left))));
-        display:flex; justify-content:center; align-items:center; text-align:center;
-      }
     }
 
     .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#f8f8f8; color:#444; }
@@ -287,16 +277,15 @@
 
       <div class="divider"></div>
 
+      <!-- postcode only (removed button) -->
       <div class="fieldset">
         <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Property Postcode</legend>
-        <div class="inline">
-          <input type="text" id="postcode" placeholder="Enter full postcode">
-          <button type="button" id="findAddressBtn">Find Address</button>
-        </div>
+        <input type="text" id="postcode" placeholder="Enter full postcode">
       </div>
 
+      <!-- address only (removed Clear Address) -->
       <div class="fieldset">
-        <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Property Address <span id="clearAddr" style="font-weight:normal; margin-left:8px; cursor:pointer; text-decoration:underline;">Clear Address</span></legend>
+        <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Property Address</legend>
         <input type="text" id="address" placeholder="Enter full address here">
       </div>
 
@@ -488,12 +477,7 @@
       residentialBtn.addEventListener('click', () => toggleMode('res'));
       commercialBtn.addEventListener('click', () => toggleMode('com'));
 
-      document.getElementById('findAddressBtn').addEventListener('click', () => {
-        document.getElementById('address').focus();
-      });
-      document.getElementById('clearAddr').addEventListener('click', () => {
-        document.getElementById('address').value = '';
-      });
+      /* Removed listeners for findAddressBtn and clearAddr since those controls were removed */
 
       const finalPriceBtn = document.getElementById('finalPriceBtn');
       const finalPriceBox = document.getElementById('finalPriceBox');
@@ -528,35 +512,31 @@
 
         if (!type) {
           alert('Please choose a property type to get a price.');
-          return;
-        }
-        if (mode !== 'com' && !bedsVal) {
+        } else if (mode !== 'com' && !bedsVal) {
           alert('Please choose number of bedrooms to get a price.');
-          return;
+        } else {
+          const price = calcPrice(mode, bedsVal);
+          finalPriceBox.style.display = 'block';
+          finalPriceBox.textContent = `Estimated EICR Price: £${price}.00`;
+
+          const messageField = document.querySelector('#contact-form textarea[name="message"]');
+          const lines = [
+            `Instant Quote Request`,
+            `Category: ${mode === 'com' ? 'Commercial' : 'Residential'}`,
+            `Property Type: ${type.value}`,
+            mode === 'com' ? null : `Bedrooms: ${bedsVal}`,
+            `Postcode: ${postcode || '(not provided)'}`,
+            `Address: ${address || '(not provided)'}`,
+            `Name: ${qName || '(not provided)'}`,
+            `Email: ${qEmail || '(not provided)'}`,
+            qMore ? `More Info: ${qMore}` : null,
+            `Estimated Price: £${price}.00`
+          ].filter(Boolean);
+          if (messageField && !messageField.value) {
+            messageField.value = lines.join('\n');
+          }
+          document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
         }
-
-        const price = calcPrice(mode, bedsVal);
-        finalPriceBox.style.display = 'block';
-        finalPriceBox.textContent = `Estimated EICR Price: £${price}.00`;
-
-        const messageField = document.querySelector('#contact-form textarea[name="message"]');
-        const lines = [
-          `Instant Quote Request`,
-          `Category: ${mode === 'com' ? 'Commercial' : 'Residential'}`,
-          `Property Type: ${type.value}`,
-          mode === 'com' ? null : `Bedrooms: ${bedsVal}`,
-          `Postcode: ${postcode || '(not provided)'}`,
-          `Address: ${address || '(not provided)'}`,
-          `Name: ${qName || '(not provided)'}`,
-          `Email: ${qEmail || '(not provided)'}`,
-          qMore ? `More Info: ${qMore}` : null,
-          `Estimated Price: £${price}.00`
-        ].filter(Boolean);
-        if (messageField && !messageField.value) {
-          messageField.value = lines.join('\n');
-        }
-
-        document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
       });
     });
   </script>
