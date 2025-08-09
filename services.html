@@ -139,12 +139,16 @@
       white-space:nowrap;
     }
     .floating-contact { 
-      bottom:20px;
+      bottom:180px; /* was 20px */
       background:#FFD700; color:#333;
     }
     .sticky-cta { 
-      bottom:70px;
+      bottom:240px; /* was 70px */
       background:#0047AB;
+    }
+    @media (max-width: 480px){
+      .floating-contact { bottom:140px; }
+      .sticky-cta { bottom:200px; }
     }
 
     .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#f8f8f8; color:#444; }
