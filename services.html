@@ -6,6 +6,7 @@
   <title>A & J Electricians | EICR</title>
   <meta name="description" content="NAPIT‑certified EICR service in Bradford. Get your Electrical Safety Certificate from £80 with fixed pricing and fast delivery." />
   <meta name="keywords" content="Electrical safety certificate, Electrical Installation Condition Report, EICR certificate, book EICR, EICR cost, Bradford, Leeds, Halifax, Keighley, Skipton, Huddersfield" />
+
   <!-- Updated CSP to allow Elfsight (and its CDN), plus required Google image domains -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
@@ -17,9 +18,13 @@
     font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
     form-action 'self' https://formspree.io;
   " />
+
+  <!-- GTM / GA -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-T84QRD6J'+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T84QRD6J');</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-OBCD8VOZJ9');gtag('config','AW-432117426');</script>
+
+  <!-- LocalBusiness schema -->
   <script type="application/ld+json">
     {
       "@context":"https://schema.org",
@@ -34,3 +39,526 @@
       "priceRange":"££",
       "image":"https://ajelectricians.co.uk/eicr1.jpg",
       "openingHours":"Mo-Su 08:00-20:00",
+      "makesOffer":{"@type":"Offer","name":"EICR Certificate","price":"80","priceCurrency":"GBP"}
+    }
+  </script>
+
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; color:#333; background:#fff; line-height:1.6; }
+    header { display:flex; align-items:center; padding:20px; position:relative; background:#fff; z-index:1000; }
+    .logo img { height:90px; width:auto; }
+    button.burger { background:none; border:none; font-size:28px; cursor:pointer; color:#000; position:absolute; right:20px; top:50%; transform:translateY(-50%); z-index:1003; }
+    nav.desktop-menu { margin-left:20px; display:flex; }
+    nav.desktop-menu > * { margin:0 15px; position:relative; }
+    nav.desktop-menu a { text-decoration:none; font-weight:bold; color:#000; }
+    nav.desktop-menu .dropdown-content { display:none; position:absolute; top:100%; left:0; background:#fff; box-shadow:0 4px 8px rgba(0,0,0,0.1); min-width:180px; }
+    nav.desktop-menu .dropdown:hover .dropdown-content { display:block; }
+    nav.desktop-menu .dropdown-content a { display:block; padding:10px; color:#000; text-decoration:none; }
+    @media(max-width:768px){ nav.desktop-menu { display:none; } }
+
+    nav.mobile-menu { display:none; position:fixed; top:0; left:0; width:100%; height:100vh; background:#fff; flex-direction:column; overflow-y:auto; z-index:1002; }
+    nav.mobile-menu.open { display:flex; }
+    nav.mobile-menu a, nav.mobile-menu span { padding:20px; border-bottom:1px solid #ccc; font-size:1.1em; color:#000; text-decoration:none; display:flex; justify-content:space-between; }
+    .has-sub .submenu { display:none; flex-direction:column; }
+    .has-sub.open .submenu { display:flex; }
+    .has-sub span { width:100%; cursor:pointer; }
+    .has-sub span::after { content:'▾'; margin-left:6px; }
+    .has-sub.open span::after { content:'▴'; }
+
+    .social-bar { background:#f4f4f4; padding:10px; text-align:center; }
+    .social-bar img { height:40px; margin:0 12px; vertical-align:middle; }
+
+    .headline {
+      max-width:1000px;
+      margin:40px auto;
+      font-size:1.4em;
+      text-align:center;
+      color:#fff;
+      font-weight:800;
+      background:#0b2e57;
+      padding:14px 18px;
+      border-radius:14px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.12);
+    }
+
+    .container { max-width:1000px; margin:auto; padding:20px; }
+    .quote-wrap { max-width:1000px; margin:20px auto 10px; padding:0 20px; }
+    .quote-hero { background:#2b3a4b; color:#fff; border-radius:8px; padding:22px; box-shadow:0 10px 24px rgba(0,0,0,0.12); text-align:center; }
+    .quote-hero h1 { margin:0; font-size:1.4em; letter-spacing:1px; }
+    .quote-sub { text-align:center; margin:18px auto 22px; max-width:760px; font-size:1.1em; }
+    .quote-grid { display:grid; grid-template-columns:1fr; gap:16px; }
+    .quote-choice { 
+      border:0; border-radius:10px; padding:18px 20px; 
+      display:flex; align-items:center; justify-content:center; gap:12px; 
+      cursor:pointer; font-weight:800; 
+      background:linear-gradient(180deg,#ffffff, #f3f6fb); 
+      box-shadow:0 6px 16px rgba(0,0,0,0.08), inset 0 0 0 2px #e3e8ef; 
+      transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
+      font-size:1.05em;
+      text-transform:uppercase;
+    }
+    .quote-choice span.emoji { font-size:1.2em; }
+    .quote-choice .label { letter-spacing:.3px; }
+    .quote-choice.active { background:#c8d100; box-shadow:0 10px 24px rgba(0,0,0,0.12), inset 0 0 0 2px #9aa300; }
+    .quote-choice:hover { transform:translateY(-1px); }
+    .quote-cta { background:#c8d100; color:#111; font-weight:800; border:none; padding:16px 20px; border-radius:6px; cursor:pointer; width:100%; letter-spacing:.5px; }
+    .quote-cta:disabled { opacity:.6; cursor:not-allowed; }
+    .quote-section { background:#fff; border-radius:8px; padding:24px; box-shadow:0 6px 16px rgba(0,0,0,0.08); margin-top:20px; }
+    .quote-section h2 { color:#2b3a4b; margin-top:10px; font-size:1.6em; font-weight:800; }
+    .fieldset { margin:18px 0; }
+    .fieldset legend { font-weight:bold; font-size:1.2em; margin-bottom:10px; color:#2b3a4b; }
+    .options { display:grid; grid-template-columns:1fr; gap:12px; }
+    .option { display:flex; align-items:center; gap:10px; }
+    .option input { transform:scale(1.1); }
+    .inline { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .inline input[type="text"], .inline input[type="email"] { flex:1 1 220px; padding:10px; border:1px solid #ccc; border-radius:4px; }
+    .inline button { padding:11px 16px; border:none; background:#2b3a4b; color:#fff; border-radius:4px; cursor:pointer; }
+    .divider { height:1px; background:#e7e7e7; margin:18px 0; }
+    .final-price { text-align:center; padding:18px; background:#f7faff; border:1px solid #dfe7f5; border-radius:6px; font-weight:bold; display:none; }
+    @media(min-width:640px){
+      .quote-grid{ grid-template-columns:1fr 1fr; }
+      .options{ grid-template-columns:1fr 1fr; }
+    }
+
+    form input, form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
+    form label { font-weight:bold; display:block; margin-top:15px; }
+    form button { background:#0047AB; color:#fff; border:none; padding:12px 20px; border-radius:4px; font-weight:bold; margin-top:10px; cursor:pointer; }
+
+    /* Floating CTAs – alignment + safe-area + mobile width fixes */
+    .floating-contact, .sticky-cta {
+      position:fixed;
+      right: max(16px, env(safe-area-inset-right));
+      text-decoration:none;
+      font-weight:bold;
+      box-shadow:0 4px 8px rgba(0,0,0,0.2);
+      border-radius:30px;
+      padding:12px 20px;
+      color:#fff;
+      z-index:1100;
+      white-space:nowrap;
+      transform: translateZ(0);
+    }
+    .floating-contact { 
+      bottom: calc(20px + env(safe-area-inset-bottom));
+      background:#FFD700; color:#333;
+    }
+    .sticky-cta { 
+      bottom: calc(80px + env(safe-area-inset-bottom));
+      background:#0047AB;
+    }
+    /* On small screens, keep buttons fully on-screen and consistent */
+    @media (max-width:480px){
+      .floating-contact, .sticky-cta {
+        right: max(12px, env(safe-area-inset-right));
+        left: max(12px, env(safe-area-inset-left));
+        width: auto;
+        max-width: calc(100% - (max(12px, env(safe-area-inset-right)) + max(12px, env(safe-area-inset-left))));
+        display:flex; justify-content:center; align-items:center; text-align:center;
+      }
+    }
+
+    .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#f8f8f8; color:#444; }
+
+    .quote-section input[type="text"],
+    .quote-section input[type="email"],
+    .quote-section textarea {
+      width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; margin-top:6px;
+    }
+    .quote-section label { font-weight:bold; display:block; margin-top:12px; color:#2b3a4b; }
+
+    .eicr-info { max-width:1000px; margin:25px auto 10px; padding:0 20px; }
+    .eicr-info p { margin:10px 0; }
+    .eicr-info p strong { font-size:1.25em; display:block; margin:14px 0 6px; color:#0b2e57; }
+    .codes-grid { display:grid; grid-template-columns:1fr; gap:12px; margin-top:10px; }
+    .code-intro { margin:6px 0 10px; }
+    .code-card { padding:12px 14px; border-radius:6px; color:#fff; font-weight:bold; }
+    .code-card small { display:block; opacity:.95; font-weight:normal; margin-top:6px; color:#fff; }
+    @media(min-width:640px){ .codes-grid{ grid-template-columns:1fr 1fr; } }
+    .c1 { background:#d32f2f; }
+    .c2 { background:#f57c00; }
+    .c3 { background:#388e3c; }
+    .fi { background:#1976d2; }
+    .areas { margin-top:16px; padding:12px 14px; background:#f7faff; border:1px solid #dfe7f5; border-radius:6px; }
+    .areas strong { display:block; margin-bottom:6px; color:#0b2e57; }
+    .areas ul { margin:6px 0 0 18px; }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header>
+    <div class="logo"><a href="https://ajelectricians.co.uk/"><img src="Logo1.png" alt="A & J Electricians"></a></div>
+    <button class="burger" id="burger" aria-label="Menu Toggle">☰</button>
+    <nav class="desktop-menu">
+      <a href="https://ajelectricians.co.uk/">Home</a>
+      <div class="dropdown"><span>Services ▾</span>
+        <div class="dropdown-content">
+          <a href="https://ajelectricians.co.uk/eicr.html">EICR</a>
+          <a href="https://ajelectricians.co.uk/Evchargers.html">EV Chargers</a>
+          <a href="https://ajelectricians.co.uk/cctv.html">CCTV</a>
+          <a href="https://ajelectricians.co.uk/alarm.html">Security Alarm</a>
+          <a href="https://ajelectricians.co.uk/fusebox-rewire.html">Rewires &amp; Fusebox</a>
+        </div>
+      </div>
+      <a href="https://ajelectricians.co.uk/blog.html">Blog</a>
+      <div class="dropdown"><span>Areas We Cover ▾</span>
+        <div class="dropdown-content">
+          <a href="https://ajelectricians.co.uk/electrician-bradford.html">Bradford</a>
+          <a href="https://ajelectricians.co.uk/electricianleeds.html">Leeds</a>
+          <a href="https://ajelectricians.co.uk">Halifax</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="https://ajelectricians.co.uk/">Home</a>
+    <div class="has-sub"><span>Services</span>
+      <div class="submenu">
+        <a href="https://ajelectricians.co.uk/eicr.html">EICR</a>
+        <a href="https://ajelectricians.co.uk/Evchargers.html">EV Chargers</a>
+        <a href="https://ajelectricians.co.uk/cctv.html">CCTV</a>
+        <a href="https://ajelectricians.co.uk/alarm.html">Security Alarm</a>
+        <a href="https://ajelectricians.co.uk/fusebox-rewire.html">Rewires &amp; Fusebox</a>
+      </div>
+    </div>
+    <a href="https://ajelectricians.co.uk/blog.html">Blog</a>
+    <div class="has-sub"><span>Areas We Cover</span>
+      <div class="submenu">
+        <a href="https://ajelectricians.co.uk/electrician-bradford.html">Bradford</a>
+        <a href="https://ajelectricians.co.uk/electricianleeds.html">Leeds</a>
+        <a href="https://ajelectricians.co.uk">Halifax</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="social-bar">
+    <a href="https://maps.app.goo.gl/xieRqMHPDTwpFpJm7" target="_blank" rel="noopener"><img src="googlelogo.png" alt="Google"></a>
+    <a href="https://www.facebook.com/share/15Mex3aarf/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/ajelectricians?igsh=MXVxZTNxM2kweTd6Mw==" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
+    <img src="napit.jpg" alt="NAPIT Badge"><img src="part-p.png" alt="Part P Badge">
+  </div>
+
+  <div class="headline">Electrical Installation Condition Report (EICR)</div>
+
+  <!-- =================== INSTANT QUOTE SECTION =================== -->
+  <div class="quote-wrap" id="quote">
+    <div class="quote-hero">
+      <h1>GET FREE INSTANT QUOTE</h1>
+    </div>
+    <p class="quote-sub">Pick your property to see your EICR price instantly — no obligation, no faff.</p>
+
+    <div class="quote-grid" aria-label="Choose property category">
+      <button type="button" class="quote-choice" id="residentialBtn" aria-pressed="false">
+        <span class="emoji">🏠</span><span class="label">Residential Property</span>
+      </button>
+      <button type="button" class="quote-choice" id="commercialBtn" aria-pressed="false">
+        <span class="emoji">🏢</span><span class="label">Commercial Property</span>
+      </button>
+    </div>
+
+    <!-- Quote wizard -->
+    <div class="quote-section" id="quoteWizard" style="display:none;">
+      <h2 id="wizardHeading">Property Information:</h2>
+
+      <fieldset class="fieldset" id="typeFieldset">
+        <legend>Property Type:</legend>
+        <div class="options" id="propertyTypeOptions">
+          <label class="option"><input type="radio" name="propType" value="Mid Terraced House"> Mid Terraced House</label>
+          <label class="option"><input type="radio" name="propType" value="End Terraced / Semi House"> End Terraced / Semi House</label>
+          <label class="option"><input type="radio" name="propType" value="Detached House"> Detached House</label>
+          <label class="option"><input type="radio" name="propType" value="Detached Bungalow"> Detached Bungalow</label>
+          <label class="option"><input type="radio" name="propType" value="Semi Detached Bungalow"> Semi Detached Bungalow</label>
+          <label class="option"><input type="radio" name="propType" value="Flat / Maisonette / Other"> Flat / Maisonette / Other</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset" id="bedFieldset">
+        <legend>Number of Bedrooms:</legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="bedrooms" value="Studio"> Studio</label>
+          <label class="option"><input type="radio" name="bedrooms" value="1"> 1 Bedroom</label>
+          <label class="option"><input type="radio" name="bedrooms" value="2"> 2 Bedrooms</label>
+          <label class="option"><input type="radio" name="bedrooms" value="3"> 3 Bedrooms</label>
+          <label class="option"><input type="radio" name="bedrooms" value="4"> 4 Bedrooms</label>
+          <label class="option"><input type="radio" name="bedrooms" value="5+"> 5+ Bedrooms</label>
+        </div>
+      </fieldset>
+
+      <div class="divider"></div>
+
+      <div class="fieldset">
+        <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Property Postcode</legend>
+        <div class="inline">
+          <input type="text" id="postcode" placeholder="Enter full postcode">
+          <button type="button" id="findAddressBtn">Find Address</button>
+        </div>
+      </div>
+
+      <div class="fieldset">
+        <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Property Address <span id="clearAddr" style="font-weight:normal; margin-left:8px; cursor:pointer; text-decoration:underline;">Clear Address</span></legend>
+        <input type="text" id="address" placeholder="Enter full address here">
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="fieldset">
+        <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Your Details</legend>
+        <label for="qName">Name</label>
+        <input type="text" id="qName" placeholder="Your full name">
+        <label for="qEmail">Email Address</label>
+        <input type="email" id="qEmail" placeholder="name@example.com">
+        <label for="qMore">More Info</label>
+        <textarea id="qMore" rows="4" placeholder="Anything we should know (access, parking, preferred times, etc.)"></textarea>
+      </div>
+
+      <div class="divider"></div>
+
+      <button class="quote-cta" id="finalPriceBtn">GET FINAL PRICE</button>
+
+      <div class="final-price" id="finalPriceBox" aria-live="polite"></div>
+    </div>
+  </div>
+  <!-- ================= END INSTANT QUOTE SECTION ===================== -->
+
+  <!-- ===== Google Reviews Widget (moved up just above “What is an EICR?”) ===== -->
+  <section id="google-reviews" style="max-width:1000px;margin:10px auto 0;padding:0 20px;">
+    <div class="elfsight-app-9413762b-e33b-478a-b7eb-99378643a156">
+      <p style="text-align:center;opacity:.7">Google Reviews loading… If you don’t see them, please disable any ad blocker.</p>
+    </div>
+  </section>
+  <!-- ===== End Google Reviews Widget ===== -->
+
+  <!-- =================== EICR INFO (SEO-FRIENDLY) =================== -->
+  <div class="eicr-info">
+    <p><strong>What is an EICR?</strong></p>
+    <p>An <em>Electrical Installation Condition Report</em> (EICR) is a formal inspection and test of your fixed wiring that checks the safety of sockets, lighting circuits, the consumer unit (fusebox) and earthing/bonding. You receive an <em>electrical safety certificate</em> summarising the condition, any risks and recommended actions so you can prove the installation is safe and compliant with BS 7671.</p>
+
+    <p><strong>Who needs an EICR?</strong></p>
+    <p><strong>Landlords:</strong> In England, landlords must have the electrical installation inspected and tested at least every 5 years (or at change of tenancy if the report has expired) and provide tenants with a copy of the EICR certificate. This is a legal requirement under the Electrical Safety Standards in the Private Rented Sector Regulations. <em>(book EICR with us for fixed pricing and fast turnaround)</em></p>
+    <p><strong>Homeowners &amp; Buyers/Sellers:</strong> If you’re selling, an up‑to‑date EICR helps reassure buyers and surveyors that the property is electrically safe, avoiding last‑minute renegotiations. If you’re buying, commissioning an EICR before exchange can uncover hidden faults and give leverage for remedial works or price adjustment. Many insurers also request recent evidence of electrical safety.</p>
+    <p><strong>Why this matters in rentals:</strong> Electrical faults are a significant cause of domestic fires. In England in 2023/24, there were over eleven thousand domestic electrical fires (around 18% of all domestic fires). Independent analyses consistently show electrical distribution and appliances as major contributors to home and workplace fire incidents. Staying on top of your EICR protects tenants and reduces risk in your portfolio.</p>
+
+    <div class="areas">
+      <strong>Areas we cover for EICR and electrical safety certificates:</strong>
+      <ul>
+        <li>Bradford, Leeds, Halifax, Huddersfield</li>
+        <li>Keighley, Skipton, Pudsey and surrounding West Yorkshire</li>
+      </ul>
+    </div>
+
+    <p><strong>What happens during an EICR?</strong></p>
+    <p>We visually inspect and test circuits from the consumer unit through to accessories. Tests include continuity and insulation resistance (dead testing), RCD trip times and earth fault loop impedance (live testing). Findings are documented in your <em>electrical installation condition report</em> with a clear “Satisfactory” or “Unsatisfactory” outcome and recommendations, including transparent <em>EICR cost</em> for any corrective work.</p>
+
+    <p><strong>EICR observation codes and what they mean</strong></p>
+    <p class="code-intro">Observations are coded so you know what to prioritise. We use codes to communicate risk clearly, help you comply with regulations and plan remedial work efficiently:</p>
+    <div class="codes-grid">
+      <div class="code-card c1">C1 – Danger Present
+        <small>Immediate risk of injury; we’ll make safe there and then (e.g., exposed live parts, severe heat damage).</small>
+      </div>
+      <div class="code-card c2">C2 – Potentially Dangerous
+        <small>Unsafe if a fault occurs; urgent remedial work advised (e.g., inadequate earthing/bonding, defective RCD protection).</small>
+      </div>
+      <div class="code-card c3">C3 – Improvement Recommended
+        <small>Not unsafe but below current standards (e.g., missing labels, older equipment that still functions but could be upgraded).</small>
+      </div>
+      <div class="code-card fi">FI – Further Investigation
+        <small>Something requires deeper checks before we can certify as satisfactory (e.g., inconsistent readings, restricted access).</small>
+      </div>
+    </div>
+
+    <p><strong>What happens if your EICR fails?</strong></p>
+    <p>If your report is “Unsatisfactory” due to any C1, C2 or FI items, we’ll provide a clear remedial list and fixed pricing. Once issues are rectified, we retest affected circuits and issue a “Satisfactory” <em>EICR certificate</em>. Many landlords pair remedials with the inspection for a faster turnaround and fewer visits.</p>
+
+    <p><strong>Remedial work we carry out</strong></p>
+    <p>From upgrading consumer units with modern RCD/RCBO protection to improving main earthing and bonding, replacing damaged accessories, correcting DIY wiring, and fault‑finding nuisance trips — our NAPIT‑certified team handles it all. You’ll get a no‑obligation quote, clear timelines and neat workmanship. When the work’s done, we’ll retest, update your electrical safety certificate and keep you compliant.</p>
+  </div>
+  <!-- ================= END EICR INFO ===================== -->
+
+  <div class="container">
+    <div id="contact-form">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/xqaldnbl" method="POST" onsubmit="return trackAndSubmit(event)">
+        <input type="text" name="_gotcha" style="display:none">
+        <label>Your Email:</label>
+        <input type="email" name="email" required>
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" required>
+        <label>Address:</label>
+        <input type="text" name="address" required>
+        <label>Further Information:</label>
+        <textarea name="moreInfo" rows="4" placeholder="Tell us anything useful (parking, access, preferred dates, tenancy status, etc.)"></textarea>
+        <button type="submit">Send Message &amp; Book</button>
+      </form>
+      <div id="form-message" style="display:none; padding:15px; background:#eaffea; margin-top:15px;">
+        Thank you! We'll contact you shortly.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-cert">NAPIT Certified | Fully Insured | Est. 2007 | A &amp; J Electricians</div>
+
+  <a class="floating-contact" href="#contact-form">✉️ Send a Message</a>
+  <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW-432117426/ui2RCM3JDu0aELKths4B'});">📞 Call 07837 184 672</a>
+
+  <!-- Load Elfsight last so it can find the container reliably -->
+  <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
+
+  <script>
+    function trackAndSubmit(event) {
+      event.preventDefault();
+      const phone = document.querySelector('input[name="phone"]').value;
+      if (!/^[\d\s+]{10,15}$/.test(phone)) {
+        alert("Please enter a valid phone number");
+        return false;
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'formsubmission' });
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-432117426/KAR5CNMWW4DlELkths4B'
+      });
+
+      document.getElementById('form-message').style.display = 'block';
+      setTimeout(() => {
+        event.target.submit();
+      }, 1500);
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.getElementById('burger'), mobileMenu = document.getElementById('mobileMenu');
+      burger.addEventListener('click', e => { e.stopPropagation(); mobileMenu.classList.toggle('open'); burger.textContent = mobileMenu.classList.contains('open') ? '✕' : '☰'; });
+      document.querySelectorAll('.mobile-menu .has-sub > span').forEach(span => span.addEventListener('click', e => { e.stopPropagation(); span.parentElement.classList.toggle('open'); }));
+      document.addEventListener('click', e => { if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && e.target !== burger) { mobileMenu.classList.remove('open'); burger.textContent = '☰'; } });
+      window.addEventListener('scroll', () => { if (mobileMenu.classList.contains('open')) { mobileMenu.classList.remove('open'); burger.textContent = '☰'; } });
+
+      const quoteWizard = document.getElementById('quoteWizard');
+      const residentialBtn = document.getElementById('residentialBtn');
+      const commercialBtn = document.getElementById('commercialBtn');
+      const wizardHeading = document.getElementById('wizardHeading');
+      const propTypeContainer = document.getElementById('propertyTypeOptions');
+      const bedFieldset = document.getElementById('bedFieldset');
+
+      function setButtons(active) {
+        residentialBtn.setAttribute('aria-pressed', active==='res');
+        commercialBtn.setAttribute('aria-pressed', active==='com');
+        residentialBtn.classList.toggle('active', active==='res');
+        commercialBtn.classList.toggle('active', active==='com');
+      }
+
+      function setMode(mode) {
+        quoteWizard.style.display = 'block';
+        setButtons(mode);
+        wizardHeading.textContent = 'Property Information:';
+
+        if (mode === 'com') {
+          propTypeContainer.innerHTML = `
+            <label class="option"><input type="radio" name="propType" value="Retail/Shop"> Retail / Shop</label>
+            <label class="option"><input type="radio" name="propType" value="Office"> Office</label>
+            <label class="option"><input type="radio" name="propType" value="Warehouse"> Warehouse</label>
+            <label class="option"><input type="radio" name="propType" value="Restaurant/Cafe"> Restaurant / Cafe</label>
+            <label class="option"><input type="radio" name="propType" value="Industrial Unit"> Industrial Unit</label>
+            <label class="option"><input type="radio" name="propType" value="Other Commercial"> Other Commercial</label>
+          `;
+          bedFieldset.style.display = 'none';
+        } else {
+          propTypeContainer.innerHTML = `
+            <label class="option"><input type="radio" name="propType" value="Mid Terraced House"> Mid Terraced House</label>
+            <label class="option"><input type="radio" name="propType" value="End Terraced / Semi House"> End Terraced / Semi House</label>
+            <label class="option"><input type="radio" name="propType" value="Detached House"> Detached House</label>
+            <label class="option"><input type="radio" name="propType" value="Detached Bungalow"> Detached Bungalow</label>
+            <label class="option"><input type="radio" name="propType" value="Semi Detached Bungalow"> Semi Detached Bungalow</label>
+            <label class="option"><input type="radio" name="propType" value="Flat / Maisonette / Other"> Flat / Maisonette / Other</label>
+          `;
+          bedFieldset.style.display = '';
+        }
+        quoteWizard.dataset.mode = mode;
+      }
+
+      function toggleMode(mode){
+        if (quoteWizard.style.display !== 'none' && quoteWizard.dataset.mode === mode){
+          quoteWizard.style.display = 'none';
+          setButtons(null);
+          return;
+        }
+        setMode(mode);
+      }
+
+      residentialBtn.addEventListener('click', () => toggleMode('res'));
+      commercialBtn.addEventListener('click', () => toggleMode('com'));
+
+      document.getElementById('findAddressBtn').addEventListener('click', () => {
+        document.getElementById('address').focus();
+      });
+      document.getElementById('clearAddr').addEventListener('click', () => {
+        document.getElementById('address').value = '';
+      });
+
+      const finalPriceBtn = document.getElementById('finalPriceBtn');
+      const finalPriceBox = document.getElementById('finalPriceBox');
+
+      function calcPrice(mode, bedrooms) {
+        let base = mode === 'com' ? 120 : 80;
+        let add = 0;
+        if (mode !== 'com') {
+          switch (bedrooms) {
+            case 'Studio': add = 0; break;
+            case '1': add = 10; break;
+            case '2': add = 20; break;
+            case '3': add = 35; break;
+            case '4': add = 55; break;
+            case '5+': add = 75; break;
+            default: add = 0;
+          }
+        }
+        return base + add;
+      }
+
+      finalPriceBtn.addEventListener('click', () => {
+        const mode = quoteWizard.dataset.mode || 'res';
+        const type = document.querySelector('input[name="propType"]:checked');
+        const bedsInput = document.querySelector('input[name="bedrooms"]:checked');
+        const bedsVal = mode === 'com' ? null : (bedsInput ? bedsInput.value : null);
+        const postcode = (document.getElementById('postcode').value || '').trim();
+        const address = (document.getElementById('address').value || '').trim();
+        const qName = (document.getElementById('qName').value || '').trim();
+        const qEmail = (document.getElementById('qEmail').value || '').trim();
+        const qMore = (document.getElementById('qMore').value || '').trim();
+
+        if (!type) {
+          alert('Please choose a property type to get a price.');
+          return;
+        }
+        if (mode !== 'com' && !bedsVal) {
+          alert('Please choose number of bedrooms to get a price.');
+          return;
+        }
+
+        const price = calcPrice(mode, bedsVal);
+        finalPriceBox.style.display = 'block';
+        finalPriceBox.textContent = `Estimated EICR Price: £${price}.00`;
+
+        const messageField = document.querySelector('#contact-form textarea[name="message"]');
+        const lines = [
+          `Instant Quote Request`,
+          `Category: ${mode === 'com' ? 'Commercial' : 'Residential'}`,
+          `Property Type: ${type.value}`,
+          mode === 'com' ? null : `Bedrooms: ${bedsVal}`,
+          `Postcode: ${postcode || '(not provided)'}`,
+          `Address: ${address || '(not provided)'}`,
+          `Name: ${qName || '(not provided)'}`,
+          `Email: ${qEmail || '(not provided)'}`,
+          qMore ? `More Info: ${qMore}` : null,
+          `Estimated Price: £${price}.00`
+        ].filter(Boolean);
+        if (messageField && !messageField.value) {
+          messageField.value = lines.join('\n');
+        }
+
+        document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
