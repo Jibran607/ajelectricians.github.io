@@ -6,15 +6,15 @@
   <title>A & J Electricians | EICR</title>
   <meta name="description" content="NAPIT‑certified EICR service in Bradford. Get your Electrical Safety Certificate from £80 with fixed pricing and fast delivery." />
   <meta name="keywords" content="Electrical safety certificate, Electrical Installation Condition Report, EICR certificate, book EICR, EICR cost, Bradford, Leeds, Halifax, Keighley, Skipton, Huddersfield" />
-  <!-- Updated CSP (fixed closing + Elfsight allowances) -->
+  <!-- Updated CSP to allow Elfsight (and its CDN), plus required Google image domains -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://stats.g.doubleclick.net https://*.elfsight.com https://lh3.googleusercontent.com https://maps.gstatic.com;
-    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com;
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://formspree.io https://*.elfsight.com;
-    frame-src https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com;
-    style-src 'self' 'unsafe-inline';
-    font-src 'self' data: https://*.elfsight.com;
+    img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://stats.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com https://*.elfsightcdn.com;
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://formspree.io https://*.elfsight.com https://*.elfsightcdn.com;
+    frame-src https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
+    style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
+    font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
     form-action 'self' https://formspree.io;
   " />
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-T84QRD6J'+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T84QRD6J');</script>
@@ -156,7 +156,7 @@
           <a href="https://ajelectricians.co.uk/Evchargers.html">EV Chargers</a>
           <a href="https://ajelectricians.co.uk/cctv.html">CCTV</a>
           <a href="https://ajelectricians.co.uk/alarm.html">Security Alarm</a>
-          <a href="https://ajelectricians.co.uk/fusebox-rewire.html">Rewires & Fusebox</a>
+          <a href="https://ajelectricians.co.uk/fusebox-rewire.html">Rewires &amp; Fusebox</a>
         </div>
       </div>
       <a href="https://ajelectricians.co.uk/blog.html">Blog</a>
@@ -178,7 +178,7 @@
         <a href="https://ajelectricians.co.uk/Evchargers.html">EV Chargers</a>
         <a href="https://ajelectricians.co.uk/cctv.html">CCTV</a>
         <a href="https://ajelectricians.co.uk/alarm.html">Security Alarm</a>
-        <a href="https://ajelectricians.co.uk/fusebox-rewire.html">Rewires & Fusebox</a>
+        <a href="https://ajelectricians.co.uk/fusebox-rewire.html">Rewires &amp; Fusebox</a>
       </div>
     </div>
     <a href="https://ajelectricians.co.uk/blog.html">Blog</a>
@@ -216,14 +216,7 @@
       </button>
     </div>
 
-    <!-- ===== Google Reviews Widget (simple container only) ===== -->
-    <section id="google-reviews">
-      <div class="elfsight-app-9413762b-e33b-478a-b7eb-99378643a156">
-        <p style="text-align:center;opacity:.7">Google Reviews loading…</p>
-      </div>
-    </section>
-    <!-- ===== End Google Reviews Widget ===== -->
-
+    <!-- (Widget moved to bottom for reliable load + CSP) -->
     <div class="quote-section" id="quoteWizard" style="display:none;">
       <h2 id="wizardHeading">Property Information:</h2>
 
@@ -346,7 +339,7 @@
         <input type="text" name="address" required>
         <label>Further Information:</label>
         <textarea name="moreInfo" rows="4" placeholder="Tell us anything useful (parking, access, preferred dates, tenancy status, etc.)"></textarea>
-        <button type="submit">Send Message & Book</button>
+        <button type="submit">Send Message &amp; Book</button>
       </form>
       <div id="form-message" style="display:none; padding:15px; background:#eaffea; margin-top:15px;">
         Thank you! We'll contact you shortly.
@@ -354,11 +347,18 @@
     </div>
   </div>
 
-  <div class="footer-cert">NAPIT Certified | Fully Insured | Est. 2007 | A & J Electricians</div>
+  <div class="footer-cert">NAPIT Certified | Fully Insured | Est. 2007 | A &amp; J Electricians</div>
   <a class="floating-contact" href="#contact-form">✉️ Send a Message</a>
   <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW-432117426/ui2RCM3JDu0aELKths4B'});">📞 Call 07837 184 672</a>
 
-  <!-- Load Elfsight at the very end -->
+  <!-- ===== Google Reviews Widget (moved to very bottom for init reliability) ===== -->
+  <section id="google-reviews" style="max-width:1000px;margin:20px auto;padding:0 20px;">
+    <div class="elfsight-app-9413762b-e33b-478a-b7eb-99378643a156">
+      <p style="text-align:center;opacity:.7">Google Reviews loading… If you don’t see them, please disable any ad blocker.</p>
+    </div>
+  </section>
+
+  <!-- Load Elfsight last -->
   <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
 
   <script>
