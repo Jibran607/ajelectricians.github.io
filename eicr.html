@@ -118,8 +118,11 @@
     .fieldset { margin:18px 0; }
     .fieldset legend { font-weight:bold; font-size:1.2em; margin-bottom:10px; color:#2b3a4b; }
     .options { display:grid; grid-template-columns:1fr; gap:12px; }
-    .option { display:flex; align-items:center; gap:10px; }
-    .option input { transform:scale(1.1); }
+
+    /* Keep each radio/label on one line and aligned */
+    .option { display:flex; align-items:flex-start; gap:12px; font-weight:normal; }
+    .option input { transform:scale(1.1); margin-top:2px; flex:0 0 auto; }
+
     .inline { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
     .inline input[type="text"], .inline input[type="email"] { flex:1 1 220px; padding:10px; border:1px solid #ccc; border-radius:4px; }
     .inline button { padding:11px 16px; border:none; background:#2b3a4b; color:#fff; border-radius:4px; cursor:pointer; }
@@ -130,32 +133,46 @@
 
     @media(min-width:640px){ .options{ grid-template-columns:1fr 1fr; } }
 
-    /* Forms (bottom + wizard) */
-    form input, form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
+    /* Forms (bottom + wizard) — scope 100% width to text-like inputs only */
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form input[type="number"],
+    form input[type="search"],
+    form input[type="url"],
+    form input[type="password"],
+    form textarea {
+      width:100%;
+      padding:10px;
+      margin-top:5px;
+      border:1px solid #ccc;
+      border-radius:4px;
+    }
+    /* Radios/checkboxes should not stretch */
+    form input[type="radio"],
+    form input[type="checkbox"] {
+      width:auto;
+      margin-top:0;
+      border:none;
+      border-radius:0;
+    }
+    /* Generic labels */
     form label { font-weight:bold; display:block; margin-top:15px; }
-    form button { background:#0047AB; color:#fff; border:none; padding:12px 20px; border-radius:4px; font-weight:bold; margin-top:10px; cursor:pointer; }
+    /* Override for the radio/option labels */
+    label.option { display:flex; align-items:flex-start; gap:12px; margin-top:0; font-weight:normal; }
 
     /* Floating CTAs – moved to LEFT and always visible */
     .floating-contact, .sticky-cta {
       position:fixed;
-      left:16px;          /* moved left */
-      right:auto;
-      text-decoration:none;
-      font-weight:700;
+      left:16px; right:auto;
+      text-decoration:none; font-weight:700;
       box-shadow:0 4px 8px rgba(0,0,0,0.2);
-      border-radius:999px;
-      padding:10px 14px;
-      font-size:14px;
-      color:#fff;
-      z-index:1100;
-      white-space:nowrap;
+      border-radius:999px; padding:10px 14px; font-size:14px;
+      color:#fff; z-index:1100; white-space:nowrap;
     }
     .floating-contact { bottom:180px; background:#FFD700; color:#333; }
     .sticky-cta { bottom:240px; background:#0047AB; }
-    @media (max-width: 480px){
-      .floating-contact { bottom:140px; }
-      .sticky-cta { bottom:200px; }
-    }
+    @media (max-width: 480px){ .floating-contact { bottom:140px; } .sticky-cta { bottom:200px; } }
 
     .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#f8f8f8; color:#444; }
 
@@ -411,9 +428,7 @@
       }
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'formsubmission' });
-
       gtag('event', 'conversion', {'send_to': 'AW-432117426/KAR5CNMWW4DlELkths4B'});
-
       document.getElementById('form-message').style.display = 'block';
       setTimeout(() => { event.target.submit(); }, 1200);
       return false;
@@ -518,14 +533,8 @@
         const qEmail = (document.getElementById('qEmail').value || '').trim();
         const qMore = (document.getElementById('qMore').value || '').trim();
 
-        if (!type) {
-          alert('Please choose a property type to get a price.');
-          return;
-        }
-        if (mode !== 'com' && !bedsVal) {
-          alert('Please choose number of bedrooms to get a price.');
-          return;
-        }
+        if (!type) { alert('Please choose a property type to get a price.'); return; }
+        if (mode !== 'com' && !bedsVal) { alert('Please choose number of bedrooms to get a price.'); return; }
 
         const price = calcPrice(mode, bedsVal);
         finalPriceBox.style.display = 'block';
@@ -561,3 +570,4 @@
   </script>
 </body>
 </html>
+```0
