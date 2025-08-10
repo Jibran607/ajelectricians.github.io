@@ -2,65 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A & J Electricians | Bradford, Leeds & Halifax</title>
+  <link rel="canonical" href="https://ajelectricians.co.uk/">
   <meta name="description" content="NAPIT‑registered electricians serving Bradford, Leeds, Halifax. EV chargers, CCTV, alarms, EICR tests & fusebox rewires since 2007.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="canonical" href="https://ajelectricians.co.uk/"/>
+
+  <!-- Updated CSP to allow Elfsight (and its CDN), plus required Google image/script domains -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    img-src 'self' data:;
-    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
-    connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net;
-    style-src 'self' 'unsafe-inline';"/>
-  <!-- GTM & GTAG -->
-  <script>/* GTM code omitted for brevity */</script>
-  <script>/* GTAG code omitted */</script>
-  <!-- Schema -->
-  <script type="application/ld+json">
-    {/* LocalBusiness schema JSON omitted for brevity */}
+    img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://stats.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com https://*.elfsightcdn.com;
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://formspree.io https://*.elfsight.com https://*.elfsightcdn.com;
+    frame-src https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
+    style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
+    font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
+    form-action 'self' https://formspree.io;
+  " />
+
+  <!-- GTM / GA -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T84QRD6J');
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-OBCD8VOZJ9');
+    gtag('config', 'AW-432117426');
+  </script>
+
+  <!-- LocalBusiness schema -->
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"LocalBusiness",
+      "name":"A & J Electricians",
+      "telephone":"07837184672",
+      "email":"ajelectriciansbradford@gmail.com",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"6 Crestville Close",
+        "addressLocality":"Bradford",
+        "addressRegion":"West Yorkshire",
+        "postalCode":"BD14 6DZ",
+        "addressCountry":"GB"
+      },
+      "areaServed":["Bradford","Leeds","Halifax","Huddersfield","Keighley","Pudsey","Skipton"],
+      "url":"https://ajelectricians.co.uk/",
+      "description":"NAPIT‑certified electricians offering EICR, EV chargers, CCTV, alarms and rewires across West Yorkshire.",
+      "priceRange":"££",
+      "image":"https://ajelectricians.co.uk/eicr1.jpg",
+      "openingHours":"Mo-Su 08:00-20:00",
+      "makesOffer":{"@type":"Offer","name":"EICR Certificate","price":"80","priceCurrency":"GBP"}
+    }
+  </script>
+
   <style>
-    body{margin:0;font-family:Arial,sans-serif;color:#333;line-height:1.6;}
-    nav{background:#0047AB;display:flex;justify-content:center;flex-wrap:wrap;padding:10px;}
-    nav a,nav span{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold;}
-    nav a:hover,nav span:hover{text-decoration:underline;}
-    .dropdown{position:relative;}
-    .dropdown-content{display:none;position:absolute;background:#0047AB;top:36px;min-width:160px;z-index:100;}
-    .dropdown-content a{display:block;color:#fff;padding:8px 20px;text-decoration:none;}
-    .dropdown:hover .dropdown-content{display:block;}
-    .top-bar{text-align:center;padding:20px;}
-    .top-bar img{width:200px;max-width:90%;height:auto;margin-bottom:10px;}
-    .top-bar .call-btn, .top-bar .contact-btn{display:inline-block;background:#0047AB;color:#fff;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:bold;margin:5px;}
-    .container{max-width:1000px;margin:auto;padding:40px 20px;}
-    h1,h2{color:#0047AB;margin-top:40px;}
-    .services-overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px;}
-    .service-box{background:#f4f4f4;padding:20px;border-left:4px solid #0047AB;text-align:center;}
-    .service-box img{width:100%;height:150px;object-fit:cover;margin-bottom:10px;}
-    .benefits{background:#f9f9f9;padding:30px 20px;margin-top:50px;border-left:4px solid #0047AB;}
-    .testimonials{margin-top:50px;}
-    .testimonial{background:#f9f9f9;padding:20px;margin-bottom:20px;border-left:4px solid #0047AB;}
-    .testimonial p{font-style:italic;margin:8px 0;}
-    .testimonial strong{display:block;margin-top:10px;}
-    .faq{background:#f9f9f9;padding:30px 20px;margin-top:50px;border-left:4px solid #0047AB;}
-    .contact,.contact-form{margin-top:50px;padding:30px 20px;border-left:4px solid #0047AB;background:#f8f8f8;}
-    form input,form textarea{width:100%;padding:10px;margin-top:5px;border:1px solid #ccc;border-radius:4px;}
-    form label{font-weight:bold;display:block;margin-top:15px;}
-    form button{background:#0047AB;color:#fff;border:none;padding:12px 20px;border-radius:4px;cursor:pointer;font-weight:bold;}
-    .cta{background:#0047AB;color:#fff;text-align:center;padding:40px 20px;margin-top:50px;}
-    .footer-logos{text-align:center;margin:40px 0;}
-    .footer-logos img{height:60px;margin:0 15px;vertical-align:middle;}
-    .sticky-cta{position:fixed;bottom:80px;right:20px;background:#0047AB;color:#fff;padding:12px 20px;border-radius:30px;text-decoration:none;box-shadow:0 4px 8px rgba(0,0,0,0.2);z-index:999;}
-    .floating-contact{position:fixed;bottom:20px;right:20px;background:#FFD700;color:#333;padding:12px 20px;border-radius:30px;text-decoration:none;font-weight:bold;box-shadow:0 4px 8px rgba(0,0,0,0.2);z-index:998;}
+    body { margin:0; font-family:Arial,sans-serif; color:#333; background:#fff; line-height:1.6; }
+
+    /* Header / Nav (logo left, menu right) */
+    header {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:15px 20px; background:#fff; position:relative; z-index:1000;
+    }
+    .logo { display:flex; align-items:center; }
+    .logo img { height:60px; width:auto; }
+
+    nav.desktop-menu { display:flex; gap:20px; align-items:center; }
+    nav.desktop-menu a, nav.desktop-menu .dropdown > span {
+      color:#000; text-decoration:none; font-weight:bold; position:relative;
+    }
+    nav.desktop-menu .dropdown-content {
+      display:none; position:absolute; background:#fff; top:100%; min-width:180px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+    nav.desktop-menu .dropdown-content a { display:block; padding:10px 12px; color:#000; text-decoration:none; }
+    nav.desktop-menu .dropdown:hover .dropdown-content { display:block; }
+
+    /* Burger hidden on desktop */
+    .burger { display:none; font-size:28px; cursor:pointer; color:#000; background:none; border:none; }
+    @media (max-width:768px){
+      nav.desktop-menu { display:none; }
+      .burger { display:block; }
+    }
+
+    /* Mobile menu */
+    nav.mobile-menu { display:none; position:fixed; top:0; left:0; width:100%; height:100vh; background:#fff; flex-direction:column; z-index:1002; overflow-y:auto; }
+    nav.mobile-menu.open { display:flex; }
+    nav.mobile-menu a, nav.mobile-menu span {
+      color:#000; padding:20px 26px; text-decoration:none; border-bottom:1px solid #ccc; font-size:1.05em; display:flex; justify-content:space-between; align-items:center;
+    }
+    nav.mobile-menu .submenu { display:none; flex-direction:column; }
+    nav.mobile-menu .has-sub.open .submenu { display:flex; }
+    nav.mobile-menu .submenu a { padding-left:40px; }
+    nav.mobile-menu .has-sub > span::after { content:'▾'; margin-left:6px; }
+    nav.mobile-menu .has-sub.open > span::after { content:'▴'; }
+
+    .social-bar { background:#f4f4f4; padding:10px; text-align:center; }
+    .social-bar img { height:40px; margin:0 10px; vertical-align:middle; }
+
+    .container { max-width:1000px; margin:auto; padding:40px 20px; }
+    h1,h2 { color:#0047AB; margin-top:40px; }
+
+    .services-overview { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .service-box { background:#f4f4f4; padding:20px; border-left:4px solid #0047AB; text-align:center; }
+    .service-box img { width:100%; height:150px; object-fit:cover; margin-bottom:10px; }
+    .service-box a { color:#0047AB; text-decoration:none; }
+
+    .benefits, .faq, .contact, .contact-form, .cta { margin-top:50px; }
+    .benefits, .faq, .contact, .contact-form { background:#f9f9f9; padding:30px 20px; border-left:4px solid #0047AB; }
+
+    form input, form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
+    form label { font-weight:bold; display:block; margin-top:15px; }
+    form button { background:#0047AB; color:#fff; border:none; padding:12px 20px; border-radius:4px; cursor:pointer; font-weight:bold; }
+
+    .cta { text-align:center; padding:40px 20px; background:#0047AB; color:#fff; border-radius:6px; }
+
+    .footer-logos { text-align:center; margin:40px 0; }
+    .footer-logos img { height:60px; margin:0 15px; vertical-align:middle; }
+
+    /* Floating CTAs – smaller and pinned right, high z-index */
+    .floating-contact, .sticky-cta {
+      position:fixed; right:16px; text-decoration:none; font-weight:700;
+      box-shadow:0 4px 8px rgba(0,0,0,0.2); border-radius:999px; padding:10px 14px;
+      font-size:14px; color:#fff; z-index:1100; white-space:nowrap;
+    }
+    .floating-contact { bottom:20px; background:#FFD700; color:#333; }
+    .sticky-cta { bottom:70px; background:#0047AB; }
+
+    .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#f8f8f8; color:#444; margin-top:40px; }
   </style>
 </head>
 <body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J" height="0" width="0" style="display:none"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <nav>
+  <header>
+    <div class="logo"><a href="index.html"><img src="Logo1.png" alt="A & J Electricians logo"></a></div>
+
+    <nav class="desktop-menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <span>Services ▾</span>
+        <div class="dropdown-content">
+          <a href="services.html">All Services</a>
+          <a href="Evchargers.html">EV Chargers</a>
+          <a href="fusebox-rewire.html">Fusebox & Rewire</a>
+          <a href="eicr.html">EICR</a>
+          <a href="cctv.html">CCTV</a>
+          <a href="alarm.html">Alarms</a>
+        </div>
+      </div>
+
+      <a href="blog.html">Blog</a>
+
+      <div class="dropdown">
+        <span>Areas We Cover ▾</span>
+        <div class="dropdown-content">
+          <a href="electrician-bradford.html">Bradford</a>
+          <a href="electricianleeds.html">Leeds</a>
+          <a href="electrician-halifax.html">Halifax</a>
+        </div>
+      </div>
+
+      <a href="#contact-form">Contact</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Menu Toggle" aria-controls="mobileMenu" aria-expanded="false">☰</button>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
     <a href="index.html">Home</a>
-    <div class="dropdown"><span>Services ▾</span>
-      <div class="dropdown-content">
+
+    <div class="has-sub"><span>Services</span>
+      <div class="submenu">
         <a href="services.html">All Services</a>
         <a href="Evchargers.html">EV Chargers</a>
         <a href="fusebox-rewire.html">Fusebox & Rewire</a>
@@ -69,93 +188,96 @@
         <a href="alarm.html">Alarms</a>
       </div>
     </div>
-    <a href="#contact-form">Contact</a>
+
     <a href="blog.html">Blog</a>
-    <div class="dropdown"><span>Areas We Cover ▾</span>
-      <div class="dropdown-content">
+
+    <div class="has-sub"><span>Areas We Cover</span>
+      <div class="submenu">
         <a href="electrician-bradford.html">Bradford</a>
         <a href="electricianleeds.html">Leeds</a>
         <a href="electrician-halifax.html">Halifax</a>
       </div>
     </div>
-    <div class="dropdown"><span>EICR ▾</span>
-      <div class="dropdown-content">
-        <a href="eicr.html">Main EICR Page</a>
-        <a href="eicr-bradford.html">Bradford EICR</a>
-        <a href="eicr-leeds.html">Leeds EICR</a>
-        <a href="eicr-halifax.html">Halifax EICR</a>
-      </div>
-    </div>
+
+    <a href="#contact-form">Contact</a>
   </nav>
 
-  <div class="top-bar">
-    <img src="logo.png" alt="A & J Electricians logo">
-    <a class="call-btn" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW‑432117426/ui2RCM3I0u0aELKths4B'});">📞 Call 07837 184 672</a>
-    <a class="contact-btn" href="#contact-form">📧 Contact Us</a>
+  <div class="social-bar">
+    <a href="https://maps.app.goo.gl/5X3nxv6HpEbKxgWp9" target="_blank" rel="noopener"><img src="googlelogo.png" alt="Google Reviews link"></a>
+    <a href="https://www.facebook.com/share/15tznYBNqR/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook page link"></a>
+    <a href="https://www.instagram.com/ajelectricians" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram profile link"></a>
+    <img src="napit.jpg" alt="NAPIT Approved Electrician badge"><img src="part-p.png" alt="Part P Compliant badge">
   </div>
 
   <div class="container">
-    <h1>Local Electricians in Bradford – Same Day Callouts | NAPIT Approved</h1>
-    <p><strong>Fast, Trusted & Fully Insured Electricians in Bradford.</strong><br>Your local team of certified professionals offering EICRs, rewires, EV charger installs, CCTV and alarms.</p>
-    <p>✅ Free Quotes – No Hidden Fees<br>✅ Over 15 Years’ Experience<br>✅ Serving Bradford, Halifax, Leeds, Huddersfield & Keighley</p>
+    <!-- H1: primary keyword-rich heading -->
+    <h1>Local Electricians in Bradford, Leeds & Halifax – EICR, EV Chargers, CCTV, Alarms & Rewires (NAPIT Approved)</h1>
 
+    <p><strong>Fast, trusted & fully insured electricians offering EICRs, rewires, EV chargers, CCTV & alarms.</strong></p>
+
+    <!-- H2: services overview section -->
+    <h2>Electrical Services in West Yorkshire</h2>
     <div class="services-overview">
-      <!-- preserved service-box entries -->
-      <div class="service-box"><img src="eicr1.jpg" alt="EICR safety inspection"><h3><a href="eicr.html">EICR Testing</a></h3><p>From £80</p></div>
-      <div class="service-box"><img src="ev1.jpg" alt="EV charger installation"><h3><a href="Evchargers.html">EV Charger Installation</a></h3><p>From £500</p></div>
-      <div class="service-box"><img src="alarm.jpg" alt="Alarm system installation"><h3><a href="alarm.html">Alarm Systems</a></h3><p>From £250</p></div>
-      <div class="service-box"><img src="cctv.jpg" alt="CCTV installation"><h3><a href="cctv.html">CCTV Installation</a></h3><p>From £600</p></div>
-      <div class="service-box"><img src="fusebox.jpg" alt="Fusebox & rewires"><h3><a href="fusebox-rewire.html">Fusebox & Home Rewires</a></h3><p>Fusebox from £250 • Rewires from £2,000</p></div>
+      <div class="service-box">
+        <img src="eicr1.jpg" alt="EICR testing and electrical safety certificates">
+        <h2><a href="eicr.html">EICR Testing & Electrical Safety Certificates</a></h2>
+        <p>From £80</p>
+      </div>
+      <div class="service-box">
+        <img src="ev1.jpg" alt="EV home charger installation">
+        <h2><a href="Evchargers.html">EV Charger Installation</a></h2>
+        <p>From £500</p>
+      </div>
+      <div class="service-box">
+        <img src="alarm.jpg" alt="Home and business alarm systems">
+        <h2><a href="alarm.html">Alarm Systems</a></h2>
+        <p>From £250</p>
+      </div>
+      <div class="service-box">
+        <img src="cctv.jpg" alt="Professional CCTV installation">
+        <h2><a href="cctv.html">CCTV Installation</a></h2>
+        <p>From £600</p>
+      </div>
+      <div class="service-box">
+        <img src="fusebox.jpg" alt="Fusebox upgrades and complete house rewiring">
+        <h2><a href="fusebox-rewire.html">Fusebox Upgrades & Rewiring</a></h2>
+        <p>Fusebox from £250 — Full rewires from £2,000</p>
+      </div>
     </div>
 
-    <h2>Emergency Electrician in Bradford – 24/7 Fast Response</h2>
-    <p>When you need help fast, our emergency electricians are available around the clock. We arrive promptly, diagnose and resolve the issue—fast, safe, and reliable.</p>
-
-    <h2>EICR Certificate in Bradford – For Landlords, Tenants & Businesses</h2>
-    <p>We provide Electrical Installation Condition Reports (EICRs) with fast digital PDF delivery, fully NAPIT approved and competitively priced.</p>
-    <p><strong>From just £80 – Get your EICR today</strong></p>
-
-    <h2>Rewiring Services – Domestic & Full Property Rewires</h2>
-    <p>Whether it's a socket or a full property rewire, we offer compliant, neat and certified rewiring for homes, HMOs and businesses.</p>
-
-    <h2>Landlord Electrical Safety Checks – Stay Compliant</h2>
-    <p>We work with landlords and estate agents to deliver quick-turnaround EICRs and compliance upgrades. <em>Need same‑day reports? Book a landlord electrician now.</em></p>
-
-    <h2>General Electrician Services</h2>
-    <p>Lighting upgrades, socket repairs, fuseboard replacements, garden electrics, kitchen/bathroom installations, EV charger installs—and more. No job too small.</p>
-
-    <h2>Areas We Cover</h2>
-    <p>Bradford (Main), Leeds, Halifax, Huddersfield and Keighley—same‑day electrician callouts available across all areas.</p>
+    <!-- Google Reviews Widget -->
+    <h2>Customer Reviews</h2>
+    <section id="google-reviews" style="max-width:1000px;margin:30px auto 0;">
+      <div class="elfsight-app-9413762b-e33b-478a-b7eb-99378643a156">
+        <p style="text-align:center;opacity:.7">Google Reviews loading… If you don’t see them, please disable any ad blocker.</p>
+      </div>
+    </section>
 
     <div class="benefits">
-      <h2>Why Choose AJ Electricians?</h2>
+      <h2>Why Choose A & J Electricians (NAPIT Registered)</h2>
       <ul>
-        <li>✅ NAPIT Approved & Fully Insured</li>
-        <li>✅ Local Electricians – No Agencies</li>
-        <li>✅ Emergency Callouts 24/7</li>
-        <li>✅ Honest, Transparent Quotes</li>
-        <li>✅ Excellent Reviews – 5 Stars</li>
+        <li>✅ NAPIT Registered & Fully Insured</li>
+        <li>✅ Local Team – No Agencies</li>
+        <li>✅ Emergency 24/7 Response</li>
+        <li>✅ Transparent Quotes & Excellent Reviews</li>
         <li>✅ Over 15 Years’ Experience</li>
       </ul>
     </div>
 
-    <div class="testimonials">
-      <h2>What Our Clients Say</h2>
-      <div class="testimonial"><p>⭐⭐⭐⭐⭐</p><p>“Best and honest electrician you’ll find around.”</p><strong>— Shaedur Rahman (Bradford)</strong></div>
-      <div class="testimonial"><p>⭐⭐⭐⭐⭐</p><p>“Happy with the alarm fitting in Halifax.”</p><strong>— Farzana Kaji</strong></div>
-      <div class="testimonial"><p>⭐⭐⭐⭐⭐</p><p>“Fixed my mum’s electrics in Leeds – efficient!”</p><strong>— Claire R</strong></div>
-    </div>
-
     <div class="faq">
-      <h2>FAQ</h2>
-      <h3>Do you cover my area?</h3><p>We serve Bradford, Leeds, Halifax, Keighley, Pudsey & surrounding areas.</p>
-      <h3>Are you certified?</h3><p>Yes – fully NAPIT‑registered and insured, compliant with UK regulations.</p>
-      <h3>Do you offer same‑day service?</h3><p>Yes, for most jobs—call <a href="tel:07837184672">07837 184 672</a>.</p>
-      <h3>Can I get a free quote?</h3><p>Absolutely—free estimates by phone or email.</p>
+      <h2>Electrician FAQs for Bradford, Leeds & Halifax</h2>
+      <h3>Do you cover my area?</h3>
+      <p>Yes — Bradford, Leeds, Halifax, Huddersfield & Keighley.</p>
+      <h3>Are you certified and insured?</h3>
+      <p>Yes — fully NAPIT‑registered and insured.</p>
+      <h3>Do you offer same‑day callouts?</h3>
+      <p>Yes — contact us to check availability.</p>
+      <h3>Do you provide free quotes?</h3>
+      <p>Absolutely — no hidden fees.</p>
     </div>
 
     <div class="contact" id="contact-form">
-      <h2>Contact Us</h2>
+      <h2>Contact a Qualified Electrician</h2>
       <p><strong>📍 Address:</strong> 6 Crestville Close, Bradford, BD14 6DZ</p>
       <p><strong>📞 Phone:</strong> <a href="tel:07837184672">07837 184 672</a></p>
       <p><strong>📧 Email:</strong> <a href="mailto:ajelectriciansbradford@gmail.com">ajelectriciansbradford@gmail.com</a></p>
@@ -163,45 +285,113 @@
     </div>
 
     <div class="contact-form">
-  <h2>Quick Contact Form</h2>
-  <form action="https://formspree.io/f/xqaldnbl" method="POST">
-    <label for="cname">Name:</label>
-    <input id="cname" type="text" name="name" required>
-
-    <label for="cemail">Email:</label>
-    <input id="cemail" type="email" name="email" required>
-
-    <label for="cphone">Phone:</label>
-    <input id="cphone" type="tel" name="phone">
-
-    <label for="cservice">Service needed:</label>
-    <input id="cservice" type="text" name="service">
-
-    <label for="clocation">Location:</label>
-    <input id="clocation" type="text" name="location">
-
-    <label for="cmessage">Message:</label>
-    <textarea id="cmessage" name="message" rows="4"></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
+      <h2>Quick Contact Form</h2>
+      <form action="https://formspree.io/f/xqaldnbl" method="POST" onsubmit="return trackAndSubmit(event)">
+        <input type="text" name="_gotcha" style="display:none">
+        <label>Name:</label><input type="text" name="name" required>
+        <label>Email:</label><input type="email" name="email" required>
+        <label>Phone:</label><input type="tel" name="phone" aria-label="Phone number (optional)">
+        <label>Service Needed:</label><input type="text" name="service">
+        <label>Location:</label><input type="text" name="location">
+        <label>Message:</label><textarea name="message" rows="4"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="form-message" style="display:none; padding:15px; background:#eaffea; margin-top:15px;">
+        Thank you! We'll contact you shortly.
+      </div>
     </div>
 
     <div class="cta">
-      <h2>Need a Qualified Electrician?</h2>
-      <p>📞 Call <strong>07837 184 672</strong> or <a href="mailto:ajelectriciansbradford@gmail.com">email us</a> for a free quote!</p>
+      <h2>Book a Local Electrician Today</h2>
+      <p>📞 Call <strong>07837 184 672</strong> or use the contact form above to request your free quote!</p>
     </div>
 
-    <div class="footer-logos">
-      <img src="napit.jpg" alt="NAPIT‑registered electrician badge">
-      <img src="part-p.png" alt="Part P building regulations compliance badge">
+    <div class="footer-logos" aria-label="Accreditations">
+      <img src="napit.jpg" alt="NAPIT Approved Contractor badge"><img src="part-p.png" alt="Part P Compliant badge">
     </div>
   </div>
 
+  <div class="footer-cert">NAPIT Certified | Fully Insured | Est. 2007 | A & J Electricians</div>
+
   <a class="floating-contact" href="#contact-form">✉️ Send a Message</a>
-  <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW‑432117426/ui2RCM3I0u0aELKths4B'});">📞 Call 07837 184 672</a>
+  <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW-432117426/ui2RCM3JDu0aELKths4B'});">📞 Call 07837 184 672</a>
+
+  <!-- Load Elfsight last so it can find the container reliably -->
+  <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
+
+  <script>
+    function closeMobileMenu() {
+      const burger = document.getElementById('burger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        burger.textContent = '☰';
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function trackAndSubmit(event) {
+      event.preventDefault();
+      const phone = (document.querySelector('input[name="phone"]')?.value || '').trim();
+      if (phone && !/^[\\d\\s+]{10,15}$/.test(phone)) {
+        alert("Please enter a valid phone number");
+        return false;
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'formsubmission' });
+      gtag('event', 'conversion', { 'send_to': 'AW-432117426/KAR5CNMWW4DlELkths4B' });
+
+      document.getElementById('form-message').style.display = 'block';
+      setTimeout(() => { event.target.submit(); }, 1200);
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.getElementById('burger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      burger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const open = mobileMenu.classList.toggle('open');
+        burger.textContent = open ? '✕' : '☰';
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      // Toggle submenus
+      document.querySelectorAll('.mobile-menu .has-sub > span').forEach(span => {
+        span.addEventListener('click', (e) => {
+          e.stopPropagation();
+          span.parentElement.classList.toggle('open');
+        });
+      });
+
+      // Close menu on any link click, and smooth scroll for same-page anchors
+      mobileMenu.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (!a) return;
+
+        const href = a.getAttribute('href') || '';
+        // Same-page anchor
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          closeMobileMenu();
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
+        // For navigation to another page, just close the menu and let the link work
+        closeMobileMenu();
+      });
+
+      // Close when clicking outside or scrolling
+      document.addEventListener('click', (e) => {
+        if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && e.target !== burger) {
+          closeMobileMenu();
+        }
+      });
+      window.addEventListener('scroll', () => { if (mobileMenu.classList.contains('open')) closeMobileMenu(); });
+    });
+  </script>
 </body>
 </html>
-
-
-
+```0
