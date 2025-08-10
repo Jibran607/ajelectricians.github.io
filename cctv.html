@@ -142,15 +142,38 @@
     ul { padding-left:20px; }
     .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#f8f8f8; color:#444; margin-top:40px; }
 
-    /* Floating CTAs */
+    /* Floating CTAs (robust on scroll + left on mobile to avoid widget overlap) */
     .floating-contact, .sticky-cta {
-      position:fixed; right:16px; text-decoration:none; font-weight:700;
-      box-shadow:0 4px 8px rgba(0,0,0,0.2); border-radius:999px; padding:10px 14px;
-      font-size:14px; color:#fff; z-index:1100; white-space:nowrap;
+      position: fixed;
+      right: 16px;                 /* default (tablet/desktop) */
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #fff;
+      z-index: 1100;
+      white-space: nowrap;
+      will-change: transform;
+      backface-visibility: hidden;
     }
-    .floating-contact { bottom:20px; background:#FFD700; color:#333; }
-    .sticky-cta { bottom:70px; background:#0047AB; }
+    .floating-contact { bottom: 20px; background: #FFD700; color: #333; }
+    .sticky-cta { bottom: 70px; background: #0047AB; }
 
+    /* Move CTAs to left on mobile so they don't collide with Reviews widget */
+    @media (max-width: 768px){
+      .floating-contact, .sticky-cta{
+        left: calc(env(safe-area-inset-left, 0px) + 14px);
+        right: auto;
+      }
+    }
+
+    /* Guard against anything breaking position: fixed */
+    html, body { transform: none !important; }
+    /* Optional: keep the page from horizontal jank on tiny screens */
+    body { overflow-x: hidden; }
+    
     /* Form */
     form input, form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
     form label { font-weight:bold; display:block; margin-top:15px; }
@@ -335,14 +358,13 @@
     function trackAndSubmit(event) {
       event.preventDefault();
       const phone = (document.querySelector('input[name="phone"]')?.value || '').trim();
-      if (phone && !/^[\d\s+]{10,15}$/.test(phone)) {   // fixed regex
+      if (phone && !/^[\d\s+]{10,15}$/.test(phone)) {
         alert("Please enter a valid phone number");
         return false;
       }
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'formsubmission' });
       gtag('event','conversion',{'send_to':'AW-432117426/KAR5CNMWW4DlELkths4B'});
-
       document.getElementById('form-message').style.display = 'block';
       setTimeout(() => { event.target.submit(); }, 1200);
       return false;
