@@ -83,27 +83,36 @@
     }
 
     .container { max-width:1000px; margin:auto; padding:20px; }
+
+    /* QUOTE WIZARD */
     .quote-wrap { max-width:1000px; margin:20px auto 10px; padding:0 20px; }
     .quote-hero { background:#2b3a4b; color:#fff; border-radius:8px; padding:22px; box-shadow:0 10px 24px rgba(0,0,0,0.12); text-align:center; }
     .quote-hero h1 { margin:0; font-size:1.4em; letter-spacing:1px; }
     .quote-sub { text-align:center; margin:18px auto 22px; max-width:760px; font-size:1.1em; }
-    .quote-grid { display:grid; grid-template-columns:1fr; gap:16px; }
+
+    .quote-grid { display:grid; grid-template-columns:1fr; gap:12px; }
+    @media(min-width:640px){ .quote-grid{ grid-template-columns:1fr 1fr; } }
+
+    /* Button-like tabs */
     .quote-choice { 
-      border:0; border-radius:10px; padding:18px 20px; 
-      display:flex; align-items:center; justify-content:center; gap:12px; 
+      border:0; border-radius:10px; padding:16px 18px; 
+      display:flex; align-items:center; justify-content:center; gap:10px; 
       cursor:pointer; font-weight:800; 
-      background:linear-gradient(180deg,#ffffff, #f3f6fb); 
-      box-shadow:0 6px 16px rgba(0,0,0,0.08), inset 0 0 0 2px #e3e8ef; 
+      background:#e8f0fe;            /* light blue base */
+      color:#0b2e57;
+      box-shadow:0 6px 16px rgba(0,0,0,0.08), inset 0 0 0 2px #c7d3f5; 
       transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
-      font-size:1.05em;
-      text-transform:uppercase;
+      font-size:1.05em; text-transform:uppercase;
+    }
+    .quote-choice:hover { transform:translateY(-1px); }
+    .quote-choice.active { 
+      background:#ffe082;            /* highlighted */
+      box-shadow:0 10px 24px rgba(0,0,0,0.12), inset 0 0 0 2px #e0b800;
+      color:#2b3a4b;
     }
     .quote-choice span.emoji { font-size:1.2em; }
     .quote-choice .label { letter-spacing:.3px; }
-    .quote-choice.active { background:#c8d100; box-shadow:0 10px 24px rgba(0,0,0,0.12), inset 0 0 0 2px #9aa300; }
-    .quote-choice:hover { transform:translateY(-1px); }
-    .quote-cta { background:#c8d100; color:#111; font-weight:800; border:none; padding:16px 20px; border-radius:6px; cursor:pointer; width:100%; letter-spacing:.5px; }
-    .quote-cta:disabled { opacity:.6; cursor:not-allowed; }
+
     .quote-section { background:#fff; border-radius:8px; padding:24px; box-shadow:0 6px 16px rgba(0,0,0,0.08); margin-top:20px; }
     .quote-section h2 { color:#2b3a4b; margin-top:10px; font-size:1.6em; font-weight:800; }
     .fieldset { margin:18px 0; }
@@ -115,51 +124,40 @@
     .inline input[type="text"], .inline input[type="email"] { flex:1 1 220px; padding:10px; border:1px solid #ccc; border-radius:4px; }
     .inline button { padding:11px 16px; border:none; background:#2b3a4b; color:#fff; border-radius:4px; cursor:pointer; }
     .divider { height:1px; background:#e7e7e7; margin:18px 0; }
+    .quote-cta { background:#c8d100; color:#111; font-weight:800; border:none; padding:16px 20px; border-radius:6px; cursor:pointer; width:100%; letter-spacing:.5px; }
+    .quote-cta:disabled { opacity:.6; cursor:not-allowed; }
     .final-price { text-align:center; padding:18px; background:#f7faff; border:1px solid #dfe7f5; border-radius:6px; font-weight:bold; display:none; }
-    @media(min-width:640px){
-      .quote-grid{ grid-template-columns:1fr 1fr; }
-      .options{ grid-template-columns:1fr 1fr; }
-    }
 
+    @media(min-width:640px){ .options{ grid-template-columns:1fr 1fr; } }
+
+    /* Forms (bottom + wizard) */
     form input, form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
     form label { font-weight:bold; display:block; margin-top:15px; }
     form button { background:#0047AB; color:#fff; border:none; padding:12px 20px; border-radius:4px; font-weight:bold; margin-top:10px; cursor:pointer; }
 
-    /* Floating CTAs – smaller and pinned on the right */
+    /* Floating CTAs – moved to LEFT and always visible */
     .floating-contact, .sticky-cta {
       position:fixed;
-      right:16px;
+      left:16px;          /* moved left */
+      right:auto;
       text-decoration:none;
       font-weight:700;
       box-shadow:0 4px 8px rgba(0,0,0,0.2);
       border-radius:999px;
-      padding:10px 14px;            /* smaller */
-      font-size:14px;               /* smaller */
+      padding:10px 14px;
+      font-size:14px;
       color:#fff;
       z-index:1100;
       white-space:nowrap;
     }
-    .floating-contact { 
-      bottom:180px; /* was 20px */
-      background:#FFD700; color:#333;
-    }
-    .sticky-cta { 
-      bottom:240px; /* was 70px */
-      background:#0047AB;
-    }
+    .floating-contact { bottom:180px; background:#FFD700; color:#333; }
+    .sticky-cta { bottom:240px; background:#0047AB; }
     @media (max-width: 480px){
       .floating-contact { bottom:140px; }
       .sticky-cta { bottom:200px; }
     }
 
     .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#f8f8f8; color:#444; }
-
-    .quote-section input[type="text"],
-    .quote-section input[type="email"],
-    .quote-section textarea {
-      width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; margin-top:6px;
-    }
-    .quote-section label { font-weight:bold; display:block; margin-top:12px; color:#2b3a4b; }
 
     .eicr-info { max-width:1000px; margin:25px auto 10px; padding:0 20px; }
     .eicr-info p { margin:10px 0; }
@@ -252,9 +250,13 @@
       </button>
     </div>
 
-    <!-- Quote wizard -->
-    <div class="quote-section" id="quoteWizard" style="display:none;">
+    <!-- Quote wizard is now a real form posting to Formspree -->
+    <form class="quote-section" id="quoteWizard" style="display:none;"
+          action="https://formspree.io/f/xqaldnbl" method="POST">
       <h2 id="wizardHeading">Property Information:</h2>
+
+      <!-- send the chosen mode -->
+      <input type="hidden" name="category" id="qCategory" value="Residential">
 
       <fieldset class="fieldset" id="typeFieldset">
         <legend>Property Type:</legend>
@@ -282,16 +284,14 @@
 
       <div class="divider"></div>
 
-      <!-- postcode only (removed button) -->
       <div class="fieldset">
         <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Property Postcode</legend>
-        <input type="text" id="postcode" placeholder="Enter full postcode">
+        <input type="text" id="postcode" name="postcode" placeholder="Enter full postcode">
       </div>
 
-      <!-- address only (removed Clear Address) -->
       <div class="fieldset">
         <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Property Address</legend>
-        <input type="text" id="address" placeholder="Enter full address here">
+        <input type="text" id="address" name="address" placeholder="Enter full address here">
       </div>
 
       <div class="divider"></div>
@@ -299,29 +299,31 @@
       <div class="fieldset">
         <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Your Details</legend>
         <label for="qName">Name</label>
-        <input type="text" id="qName" placeholder="Your full name">
+        <input type="text" id="qName" name="name" placeholder="Your full name">
         <label for="qEmail">Email Address</label>
-        <input type="email" id="qEmail" placeholder="name@example.com">
+        <input type="email" id="qEmail" name="email" placeholder="name@example.com">
         <label for="qMore">More Info</label>
-        <textarea id="qMore" rows="4" placeholder="Anything we should know (access, parking, preferred times, etc.)"></textarea>
+        <textarea id="qMore" name="moreInfo" rows="4" placeholder="Access, parking, preferred times, tenancy status, etc."></textarea>
       </div>
 
       <div class="divider"></div>
 
-      <button class="quote-cta" id="finalPriceBtn">GET FINAL PRICE</button>
+      <!-- hidden message we’ll build before submit for readability in the email -->
+      <textarea name="message" id="qMessage" style="display:none;"></textarea>
+
+      <button type="button" class="quote-cta" id="finalPriceBtn">GET FINAL PRICE & SEND</button>
 
       <div class="final-price" id="finalPriceBox" aria-live="polite"></div>
-    </div>
+    </form>
   </div>
   <!-- ================= END INSTANT QUOTE SECTION ===================== -->
 
-  <!-- ===== Google Reviews Widget (moved up just above “What is an EICR?”) ===== -->
+  <!-- ===== Google Reviews Widget ===== -->
   <section id="google-reviews" style="max-width:1000px;margin:10px auto 0;padding:0 20px;">
     <div class="elfsight-app-9413762b-e33b-478a-b7eb-99378643a156">
       <p style="text-align:center;opacity:.7">Google Reviews loading… If you don’t see them, please disable any ad blocker.</p>
     </div>
   </section>
-  <!-- ===== End Google Reviews Widget ===== -->
 
   <!-- =================== EICR INFO (SEO-FRIENDLY) =================== -->
   <div class="eicr-info">
@@ -392,10 +394,11 @@
 
   <div class="footer-cert">NAPIT Certified | Fully Insured | Est. 2007 | A &amp; J Electricians</div>
 
+  <!-- Floating CTAs (left) -->
   <a class="floating-contact" href="#contact-form">✉️ Send a Message</a>
   <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW-432117426/ui2RCM3JDu0aELKths4B'});">📞 Call 07837 184 672</a>
 
-  <!-- Load Elfsight last so it can find the container reliably -->
+  <!-- Elfsight -->
   <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
 
   <script>
@@ -409,14 +412,10 @@
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'formsubmission' });
 
-      gtag('event', 'conversion', {
-        'send_to': 'AW-432117426/KAR5CNMWW4DlELkths4B'
-      });
+      gtag('event', 'conversion', {'send_to': 'AW-432117426/KAR5CNMWW4DlELkths4B'});
 
       document.getElementById('form-message').style.display = 'block';
-      setTimeout(() => {
-        event.target.submit();
-      }, 1500);
+      setTimeout(() => { event.target.submit(); }, 1200);
       return false;
     }
 
@@ -427,12 +426,14 @@
       document.addEventListener('click', e => { if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && e.target !== burger) { mobileMenu.classList.remove('open'); burger.textContent = '☰'; } });
       window.addEventListener('scroll', () => { if (mobileMenu.classList.contains('open')) { mobileMenu.classList.remove('open'); burger.textContent = '☰'; } });
 
+      /* ===== Quote wizard logic ===== */
       const quoteWizard = document.getElementById('quoteWizard');
       const residentialBtn = document.getElementById('residentialBtn');
       const commercialBtn = document.getElementById('commercialBtn');
       const wizardHeading = document.getElementById('wizardHeading');
       const propTypeContainer = document.getElementById('propertyTypeOptions');
       const bedFieldset = document.getElementById('bedFieldset');
+      const qCategory = document.getElementById('qCategory');
 
       function setButtons(active) {
         residentialBtn.setAttribute('aria-pressed', active==='res');
@@ -456,6 +457,7 @@
             <label class="option"><input type="radio" name="propType" value="Other Commercial"> Other Commercial</label>
           `;
           bedFieldset.style.display = 'none';
+          qCategory.value = 'Commercial';
         } else {
           propTypeContainer.innerHTML = `
             <label class="option"><input type="radio" name="propType" value="Mid Terraced House"> Mid Terraced House</label>
@@ -466,6 +468,7 @@
             <label class="option"><input type="radio" name="propType" value="Flat / Maisonette / Other"> Flat / Maisonette / Other</label>
           `;
           bedFieldset.style.display = '';
+          qCategory.value = 'Residential';
         }
         quoteWizard.dataset.mode = mode;
       }
@@ -482,10 +485,10 @@
       residentialBtn.addEventListener('click', () => toggleMode('res'));
       commercialBtn.addEventListener('click', () => toggleMode('com'));
 
-      /* Removed listeners for findAddressBtn and clearAddr since those controls were removed */
-
       const finalPriceBtn = document.getElementById('finalPriceBtn');
       const finalPriceBox = document.getElementById('finalPriceBox');
+      const quoteForm = document.getElementById('quoteWizard');
+      const qMessage = document.getElementById('qMessage');
 
       function calcPrice(mode, bedrooms) {
         let base = mode === 'com' ? 120 : 80;
@@ -517,31 +520,42 @@
 
         if (!type) {
           alert('Please choose a property type to get a price.');
-        } else if (mode !== 'com' && !bedsVal) {
-          alert('Please choose number of bedrooms to get a price.');
-        } else {
-          const price = calcPrice(mode, bedsVal);
-          finalPriceBox.style.display = 'block';
-          finalPriceBox.textContent = `Estimated EICR Price: £${price}.00`;
-
-          const messageField = document.querySelector('#contact-form textarea[name="message"]');
-          const lines = [
-            `Instant Quote Request`,
-            `Category: ${mode === 'com' ? 'Commercial' : 'Residential'}`,
-            `Property Type: ${type.value}`,
-            mode === 'com' ? null : `Bedrooms: ${bedsVal}`,
-            `Postcode: ${postcode || '(not provided)'}`,
-            `Address: ${address || '(not provided)'}`,
-            `Name: ${qName || '(not provided)'}`,
-            `Email: ${qEmail || '(not provided)'}`,
-            qMore ? `More Info: ${qMore}` : null,
-            `Estimated Price: £${price}.00`
-          ].filter(Boolean);
-          if (messageField && !messageField.value) {
-            messageField.value = lines.join('\n');
-          }
-          document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+          return;
         }
+        if (mode !== 'com' && !bedsVal) {
+          alert('Please choose number of bedrooms to get a price.');
+          return;
+        }
+
+        const price = calcPrice(mode, bedsVal);
+        finalPriceBox.style.display = 'block';
+        finalPriceBox.textContent = `Estimated EICR Price: £${price}.00`;
+
+        // Build a readable message for the Formspree email
+        const lines = [
+          `Instant Quote Request`,
+          `Category: ${mode === 'com' ? 'Commercial' : 'Residential'}`,
+          `Property Type: ${type.value}`,
+          mode === 'com' ? null : `Bedrooms: ${bedsVal}`,
+          `Postcode: ${postcode || '(not provided)'}`,
+          `Address: ${address || '(not provided)'}`,
+          `Name: ${qName || '(not provided)'}`,
+          `Email: ${qEmail || '(not provided)'}`,
+          qMore ? `More Info: ${qMore}` : null,
+          `Estimated Price: £${price}.00`
+        ].filter(Boolean).join('\n');
+
+        qMessage.value = lines;
+
+        // Fire GTM/Ads conversion event similar to the bottom form
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'formsubmission' });
+        if (typeof gtag === 'function') {
+          gtag('event','conversion',{'send_to':'AW-432117426/KAR5CNMWW4DlELkths4B'});
+        }
+
+        // Submit the wizard form directly to Formspree
+        quoteForm.submit();
       });
     });
   </script>
