@@ -7,7 +7,7 @@
   <link rel="canonical" href="https://ajelectricians.co.uk/">
   <meta name="description" content="NAPIT‑registered electricians serving Bradford, Leeds, Halifax. EV chargers, CCTV, alarms, EICR tests & fusebox rewires since 2007.">
 
-  <!-- Updated CSP to allow Elfsight (and its CDN), plus required Google image/script domains -->
+  <!-- CSP -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://stats.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
@@ -35,7 +35,7 @@
     gtag('config', 'AW-432117426');
   </script>
 
-  <!-- LocalBusiness schema -->
+  <!-- Schema -->
   <script type="application/ld+json">
     {
       "@context":"https://schema.org",
@@ -74,14 +74,17 @@
 
     nav.desktop-menu { display:flex; gap:20px; align-items:center; }
     nav.desktop-menu a, nav.desktop-menu .dropdown > span {
-      color:#000; text-decoration:none; font-weight:bold; position:relative;
+      color:#000; text-decoration:none; font-weight:bold; position:relative; cursor:pointer;
     }
+    .dropdown { position:relative; }
     nav.desktop-menu .dropdown-content {
-      display:none; position:absolute; background:#fff; top:100%; min-width:180px;
-      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+      display:none; position:absolute; background:#fff; top:100%; left:0; min-width:180px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:6px 0;
     }
-    nav.desktop-menu .dropdown-content a { display:block; padding:10px 12px; color:#000; text-decoration:none; }
-    nav.desktop-menu .dropdown:hover .dropdown-content { display:block; }
+    /* Keep submenu open on hover AND while focused/clicked */
+    nav.desktop-menu .dropdown:hover .dropdown-content,
+    nav.desktop-menu .dropdown:focus-within .dropdown-content { display:block; }
+    nav.desktop-menu .dropdown-content a { display:block; padding:10px 12px; color:#000; text-decoration:none; white-space:nowrap; }
 
     /* Burger hidden on desktop */
     .burger { display:none; font-size:28px; cursor:pointer; color:#000; background:none; border:none; }
@@ -108,9 +111,16 @@
     .container { max-width:1000px; margin:auto; padding:40px 20px; }
     h1,h2 { color:#0047AB; margin-top:40px; }
 
+    /* Big blue headline like EICR page */
+    .hero-title {
+      background:#0b2f66; color:#fff; padding:18px 20px; border-radius:18px;
+      text-align:center; margin-top:20px; font-weight:800;
+      font-size: clamp(1.6rem, 4.8vw, 2.2rem);
+    }
+
     .services-overview { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
     .service-box { background:#f4f4f4; padding:20px; border-left:4px solid #0047AB; text-align:center; }
-    .service-box img { width:100%; height:150px; object-fit:cover; margin-bottom:10px; }
+    .service-box img { width:100%; height:150px; object-fit:cover; margin-bottom:10px; border:1px solid #e5e5e5; }
     .service-box a { color:#0047AB; text-decoration:none; }
 
     .benefits, .faq, .contact, .contact-form, .cta { margin-top:50px; }
@@ -125,14 +135,21 @@
     .footer-logos { text-align:center; margin:40px 0; }
     .footer-logos img { height:60px; margin:0 15px; vertical-align:middle; }
 
-    /* Floating CTAs – smaller and pinned right, high z-index */
+    /* Floating CTAs – mobile left by default */
     .floating-contact, .sticky-cta {
-      position:fixed; right:16px; text-decoration:none; font-weight:700;
+      position:fixed; left:16px; right:auto; text-decoration:none; font-weight:700;
       box-shadow:0 4px 8px rgba(0,0,0,0.2); border-radius:999px; padding:10px 14px;
       font-size:14px; color:#fff; z-index:1100; white-space:nowrap;
     }
     .floating-contact { bottom:20px; background:#FFD700; color:#333; }
     .sticky-cta { bottom:70px; background:#0047AB; }
+
+    /* Desktop: bigger and on the right */
+    @media (min-width: 992px){
+      .floating-contact, .sticky-cta {
+        left:auto; right:20px; padding:14px 20px; font-size:16px;
+      }
+    }
 
     .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#f8f8f8; color:#444; margin-top:40px; }
   </style>
@@ -146,21 +163,20 @@
     <nav class="desktop-menu" aria-label="Primary">
       <a href="index.html">Home</a>
 
-      <div class="dropdown">
+      <div class="dropdown" tabindex="0">
         <span>Services ▾</span>
         <div class="dropdown-content">
-          <a href="services.html">All Services</a>
           <a href="Evchargers.html">EV Chargers</a>
           <a href="fusebox-rewire.html">Fusebox & Rewire</a>
           <a href="eicr.html">EICR</a>
           <a href="cctv.html">CCTV</a>
-          <a href="alarm.html">Alarms</a>
+          <a href="alarm.html">Security Alarms</a>
         </div>
       </div>
 
       <a href="blog.html">Blog</a>
 
-      <div class="dropdown">
+      <div class="dropdown" tabindex="0">
         <span>Areas We Cover ▾</span>
         <div class="dropdown-content">
           <a href="electrician-bradford.html">Bradford</a>
@@ -175,17 +191,18 @@
     <button class="burger" id="burger" aria-label="Menu Toggle" aria-controls="mobileMenu" aria-expanded="false">☰</button>
   </header>
 
+  <!-- Mobile Nav -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
     <a href="index.html">Home</a>
 
     <div class="has-sub"><span>Services</span>
       <div class="submenu">
-        <a href="services.html">All Services</a>
+        <!-- Removed 'All Services' as requested -->
         <a href="Evchargers.html">EV Chargers</a>
         <a href="fusebox-rewire.html">Fusebox & Rewire</a>
         <a href="eicr.html">EICR</a>
         <a href="cctv.html">CCTV</a>
-        <a href="alarm.html">Alarms</a>
+        <a href="alarm.html">Security Alarms</a>
       </div>
     </div>
 
@@ -210,36 +227,36 @@
   </div>
 
   <div class="container">
-    <!-- H1: primary keyword-rich heading -->
-    <h1>Local Electricians in Bradford, Leeds & Halifax – EICR, EV Chargers, CCTV, Alarms & Rewires (NAPIT Approved)</h1>
+    <!-- Blue hero headline like EICR -->
+    <h1 class="hero-title">A &amp; J Electricians</h1>
 
-    <p><strong>Fast, trusted & fully insured electricians offering EICRs, rewires, EV chargers, CCTV & alarms.</strong></p>
+    <p><strong>Fast, trusted & fully insured electricians offering EICRs, rewires, EV chargers, CCTV & security alarms.</strong></p>
 
-    <!-- H2: services overview section -->
+    <!-- Services overview -->
     <h2>Electrical Services in West Yorkshire</h2>
     <div class="services-overview">
       <div class="service-box">
-        <img src="eicr1.jpg" alt="EICR testing and electrical safety certificates">
+        <a href="eicr.html"><img src="eicr1.jpg" alt="EICR testing and electrical safety certificates"></a>
         <h2><a href="eicr.html">EICR Testing & Electrical Safety Certificates</a></h2>
         <p>From £80</p>
       </div>
       <div class="service-box">
-        <img src="ev1.jpg" alt="EV home charger installation">
+        <a href="Evchargers.html"><img src="ev1.jpg" alt="EV home charger installation"></a>
         <h2><a href="Evchargers.html">EV Charger Installation</a></h2>
         <p>From £500</p>
       </div>
       <div class="service-box">
-        <img src="alarm.jpg" alt="Home and business alarm systems">
-        <h2><a href="alarm.html">Alarm Systems</a></h2>
+        <a href="alarm.html"><img src="alarm.jpg" alt="Home and business security alarms"></a>
+        <h2><a href="alarm.html">Security Alarms</a></h2>
         <p>From £250</p>
       </div>
       <div class="service-box">
-        <img src="cctv.jpg" alt="Professional CCTV installation">
+        <a href="cctv.html"><img src="cctv.jpg" alt="Professional CCTV installation"></a>
         <h2><a href="cctv.html">CCTV Installation</a></h2>
         <p>From £600</p>
       </div>
       <div class="service-box">
-        <img src="fusebox.jpg" alt="Fusebox upgrades and complete house rewiring">
+        <a href="fusebox-rewire.html"><img src="fusebox.jpg" alt="Fusebox upgrades and complete house rewiring"></a>
         <h2><a href="fusebox-rewire.html">Fusebox Upgrades & Rewiring</a></h2>
         <p>Fusebox from £250 — Full rewires from £2,000</p>
       </div>
@@ -313,10 +330,11 @@
 
   <div class="footer-cert">NAPIT Certified | Fully Insured | Est. 2007 | A & J Electricians</div>
 
+  <!-- Floating CTAs -->
   <a class="floating-contact" href="#contact-form">✉️ Send a Message</a>
   <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW-432117426/ui2RCM3JDu0aELKths4B'});">📞 Call 07837 184 672</a>
 
-  <!-- Load Elfsight last so it can find the container reliably -->
+  <!-- Elfsight last -->
   <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
 
   <script>
@@ -333,7 +351,7 @@
     function trackAndSubmit(event) {
       event.preventDefault();
       const phone = (document.querySelector('input[name="phone"]')?.value || '').trim();
-      if (phone && !/^[\\d\\s+]{10,15}$/.test(phone)) {
+      if (phone && !/^[\d\s+]{10,15}$/.test(phone)) {
         alert("Please enter a valid phone number");
         return false;
       }
@@ -357,7 +375,7 @@
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
 
-      // Toggle submenus
+      // Toggle submenus (mobile)
       document.querySelectorAll('.mobile-menu .has-sub > span').forEach(span => {
         span.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -365,13 +383,11 @@
         });
       });
 
-      // Close menu on any link click, and smooth scroll for same-page anchors
+      // Close menu on link click + smooth scroll for anchors
       mobileMenu.addEventListener('click', (e) => {
         const a = e.target.closest('a');
         if (!a) return;
-
         const href = a.getAttribute('href') || '';
-        // Same-page anchor
         if (href.startsWith('#')) {
           e.preventDefault();
           const target = document.querySelector(href);
@@ -379,7 +395,6 @@
           if (target) target.scrollIntoView({ behavior: 'smooth' });
           return;
         }
-        // For navigation to another page, just close the menu and let the link work
         closeMobileMenu();
       });
 
@@ -393,5 +408,4 @@
     });
   </script>
 </body>
-</html>
-```0
+  </html>
