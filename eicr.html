@@ -14,17 +14,17 @@
   <meta property="og:image" content="https://ajelectricians.co.uk/eicr1.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Updated CSP to allow Elfsight (and its CDN), plus required Google image domains -->
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://stats.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
-    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com https://*.elfsightcdn.com;
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://formspree.io https://*.elfsight.com https://*.elfsightcdn.com;
-    frame-src https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
-    style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
-    font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
-    form-action 'self' https://formspree.io;
-  " />
+<!-- CSP: allows Elfsight + Google Ads/Analytics conversion endpoints -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://www.googleadservices.com https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com https://*.elfsightcdn.com;
+  connect-src 'self' https://www.google.com https://www.google.co.uk https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://formspree.io https://*.elfsight.com https://*.elfsightcdn.com;
+  frame-src https://www.google.com https://www.google.co.uk https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
+  style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
+  font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
+  form-action 'self' https://formspree.io;
+" />
 
   <!-- GTM / GA -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-T84QRD6J'+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T84QRD6J');</script>
@@ -708,4 +708,5 @@
   
 </body>
 </html>
+
 
