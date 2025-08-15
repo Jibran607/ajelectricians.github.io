@@ -26,18 +26,12 @@
     form-action 'self' https://formspree.io;
   " />
 
-  <!-- GTM / GA -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-T84QRD6J'+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T84QRD6J');</script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
+  <!-- GTM (single source of truth; GA4 + Ads fire via GTM) -->
   <script>
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js',new Date());
-    gtag('config','G-OBCD8VOZJ9');
-    gtag('config','AW-432117426');
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T84QRD6J');
   </script>
 
-  <!-- LocalBusiness schema (name with &) -->
+  <!-- LocalBusiness schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -51,7 +45,7 @@
   }
   </script>
 
-  <!-- Product schema for this service page (use reviews + aggregateRating) -->
+  <!-- Product schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -123,7 +117,7 @@
     /* QUOTE WIZARD */
     .quote-wrap { max-width:1000px; margin:20px auto 10px; padding:0 20px; }
     .quote-hero { background:#2b3a4b; color:#fff; border-radius:8px; padding:22px; box-shadow:0 10px 24px rgba(0,0,0,0.12); text-align:center; }
-    .quote-hero h2 { margin:0; font-size:1.4em; letter-spacing:1px; } /* was h1; keep a single real H1 for SEO */
+    .quote-hero h2 { margin:0; font-size:1.4em; letter-spacing:1px; }
     .quote-sub { text-align:center; margin:18px auto 22px; max-width:760px; font-size:1.1em; }
 
     .quote-grid { display:grid; grid-template-columns:1fr; gap:12px; }
@@ -157,7 +151,6 @@
     form input[type="text"], form input[type="email"], form input[type="tel"], form input[type="number"], form input[type="search"], form input[type="url"], form input[type="password"], form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
     form input[type="radio"], form input[type="checkbox"] { width:auto; margin-top:0; border:none; border-radius:0; }
     form label { font-weight:bold; display:block; margin-top:15px; }
-    label.option { display:flex; align-items:flex-start; gap:12px; margin-top:0; font-weight:normal; }
 
     /* Floating CTAs – left */
     .floating-contact, .sticky-cta {
@@ -175,7 +168,7 @@
 
     .eicr-info { max-width:1000px; margin:25px auto 10px; padding:0 20px; }
     .eicr-info p { margin:10px 0; }
-    .eicr-info p strong { font-size:1.25em; display:block; margin:14px 0 6px; color:#0b2e57; }
+    .eicr-info p strong { display:block; margin:14px 0 6px; color:#0b2e57; font-size:1.25em; }
     .codes-grid { display:grid; grid-template-columns:1fr; gap:12px; margin-top:10px; }
     .code-intro { margin:6px 0 10px; }
     .code-card { padding:12px 14px; border-radius:6px; color:#fff; font-weight:bold; }
@@ -312,12 +305,11 @@
         <input type="text" id="address" name="address" placeholder="Enter full address here">
       </div>
 
-      <!-- ADDED: Telephone box for the quote wizard -->
+      <!-- Telephone box for the quote wizard -->
       <div class="fieldset">
         <legend style="font-weight:bold; color:#2b3a4b; display:block; margin-bottom:8px;">Telephone</legend>
         <input type="tel" id="qTel" name="tel" placeholder="Mobile or landline (optional)">
       </div>
-      <!-- END ADDED -->
 
       <div class="divider"></div>
 
@@ -461,6 +453,7 @@
   <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
 
   <script>
+    // Form submit -> push event; GTM handles Ads/GA4
     function trackAndSubmit(event) {
       event.preventDefault();
       const phone = document.querySelector('input[name="phone"]').value;
@@ -470,13 +463,13 @@
       }
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'formsubmission' });
-      // FORM submission conversion
-      gtag('event', 'conversion', {'send_to': 'AW-432117426/KAR5CNMWW4DlELkths4B'});
+
       document.getElementById('form-message').style.display = 'block';
-      setTimeout(() => { event.target.submit(); }, 1200);
+      setTimeout(() => { event.target.submit(); }, 800);
       return false;
     }
 
+    // Mobile menu + quote wizard (unchanged logic except dataLayer pushes)
     document.addEventListener('DOMContentLoaded', () => {
       const burger = document.getElementById('burger'), mobileMenu = document.getElementById('mobileMenu');
       burger.addEventListener('click', e => { e.stopPropagation(); mobileMenu.classList.toggle('open'); burger.textContent = mobileMenu.classList.contains('open') ? '✕' : '☰'; });
@@ -484,7 +477,6 @@
       document.addEventListener('click', e => { if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && e.target !== burger) { mobileMenu.classList.remove('open'); burger.textContent = '☰'; } });
       window.addEventListener('scroll', () => { if (mobileMenu.classList.contains('open')) { mobileMenu.classList.remove('open'); burger.textContent = '☰'; } });
 
-      /* ===== Quote wizard logic (unchanged) ===== */
       const quoteWizard = document.getElementById('quoteWizard');
       const residentialBtn = document.getElementById('residentialBtn');
       const commercialBtn = document.getElementById('commercialBtn');
@@ -603,16 +595,13 @@
 
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: 'formsubmission' });
-        if (typeof gtag === 'function') {
-          gtag('event','conversion',{'send_to':'AW-432117426/KAR5CNMWW4DlELkths4B'});
-        }
 
         quoteForm.submit();
       });
     });
   </script>
-  
-  <!-- Intercept tel: clicks so conversions fire before the dialer opens -->
+
+  <!-- Intercept tel: clicks so GTM can fire conversion before dialer -->
   <script>
     (function() {
       if (window.telHandlerBound) return;
@@ -626,20 +615,13 @@
         var phoneNumber = link.getAttribute('href');
 
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'telClick', phoneNumber: phoneNumber });
-
-        if (typeof gtag === 'function') {
-          // Calls from website conversion
-          gtag('event','conversion',{'send_to':'AW-432117426/cOe0COfPkYcbELKths4B'});
-        }
+        window.dataLayer.push({ event: 'tel_click', phoneNumber: phoneNumber });
 
         setTimeout(function() {
           window.location.href = phoneNumber;
-        }, 1500);
+        }, 400);
       });
     })();
   </script>
-  
 </body>
-         </html>
-
+                                                                          </html>
