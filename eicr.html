@@ -14,22 +14,28 @@
   <meta property="og:image" content="https://ajelectricians.co.uk/eicr1.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
-<!-- CSP: allows Elfsight + Google Ads/Analytics conversion endpoints -->
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://www.googleadservices.com https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com https://*.elfsightcdn.com;
-  connect-src 'self' https://www.google.com https://www.google.co.uk https://www.google.com/pagead/ https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://formspree.io https://*.elfsight.com https://*.elfsightcdn.com;
-  frame-src https://www.google.com https://www.google.co.uk https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
-  style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
-  font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
-  form-action 'self' https://formspree.io;
-" />
+  <!-- CSP: allows Elfsight + Google Ads/Analytics conversion endpoints -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://www.googleadservices.com https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com https://*.elfsightcdn.com;
+    connect-src 'self' https://www.google.com https://www.google.co.uk https://www.google.com/pagead/ https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://formspree.io https://*.elfsight.com https://*.elfsightcdn.com;
+    frame-src https://www.google.com https://www.google.co.uk https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
+    style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
+    font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
+    form-action 'self' https://formspree.io;
+  " />
 
   <!-- GTM / GA -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id=GTM-T84QRD6J'+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T84QRD6J');</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-OBCD8VOZJ9');gtag('config','AW-432117426');</script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date());
+    gtag('config','G-OBCD8VOZJ9');
+    gtag('config','AW-432117426');
+  </script>
 
   <!-- LocalBusiness schema (name with &) -->
   <script type="application/ld+json">
@@ -41,12 +47,7 @@
     "alternateName":["A&J Electricians","AJ Electricians","A and J Electricians"],
     "url":"https://ajelectricians.co.uk",
     "telephone":"+447837184672",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Bradford",
-      "addressRegion":"West Yorkshire",
-      "addressCountry":"GB"
-    }
+    "address":{"@type":"PostalAddress","addressLocality":"Bradford","addressRegion":"West Yorkshire","addressCountry":"GB"}
   }
   </script>
 
@@ -62,42 +63,12 @@
     "image":"https://ajelectricians.co.uk/eicr1.jpg",
     "sku":"EICR-STD",
     "url":"https://ajelectricians.co.uk/eicr.html",
-    "offers":{
-      "@type":"Offer",
-      "priceCurrency":"GBP",
-      "price":"80",
-      "availability":"https://schema.org/InStock",
-      "areaServed":["Bradford","Leeds","Halifax","Huddersfield","Keighley"]
-    },
-    "aggregateRating":{
-      "@type":"AggregateRating",
-      "ratingValue":"5",
-      "reviewCount":"3",
-      "bestRating":"5",
-      "worstRating":"1"
-    },
+    "offers":{"@type":"Offer","priceCurrency":"GBP","price":"80","availability":"https://schema.org/InStock","areaServed":["Bradford","Leeds","Halifax","Huddersfield","Keighley"]},
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"3","bestRating":"5","worstRating":"1"},
     "review":[
-      {
-        "@type":"Review",
-        "datePublished":"2025-07-15",
-        "reviewBody":"Quick but thorough service which was well priced. Took the time to explain the results of my EICR certificate clearly.",
-        "author":{"@type":"Person","name":"Niamh"},
-        "reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}
-      },
-      {
-        "@type":"Review",
-        "datePublished":"2025-08-08",
-        "reviewBody":"Very prompt at responding to request and completing work. Very professional. Would recommend.",
-        "author":{"@type":"Person","name":"Sonja"},
-        "reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}
-      },
-      {
-        "@type":"Review",
-        "datePublished":"2025-07-01",
-        "reviewBody":"Prompt response for an electrical installation condition report to aid our house sale. Explained the procedure and documentation clearly. Highly recommend.",
-        "author":{"@type":"Person","name":"Mercedes"},
-        "reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}
-      }
+      {"@type":"Review","datePublished":"2025-07-15","reviewBody":"Quick but thorough service which was well priced. Took the time to explain the results of my EICR certificate clearly.","author":{"@type":"Person","name":"Niamh"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}},
+      {"@type":"Review","datePublished":"2025-08-08","reviewBody":"Very prompt at responding to request and completing work. Very professional. Would recommend.","author":{"@type":"Person","name":"Sonja"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}},
+      {"@type":"Review","datePublished":"2025-07-01","reviewBody":"Prompt response for an electrical installation condition report to aid our house sale. Explained the procedure and documentation clearly. Highly recommend.","author":{"@type":"Person","name":"Mercedes"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5","worstRating":"1"}}
     ]
   }
   </script>
@@ -108,14 +79,10 @@
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"What is an EICR and does it give me an electrical safety certificate?",
-       "acceptedAnswer":{"@type":"Answer","text":"An EICR is an electrical installation condition report. It checks the fixed wiring and, when satisfactory, provides an electrical safety certificate you can share with tenants, buyers or insurers."}},
-      {"@type":"Question","name":"How do I book an EICR in Bradford, Leeds or Halifax?",
-       "acceptedAnswer":{"@type":"Answer","text":"Use the instant quote form on this page or call us. We cover Bradford, Leeds, Halifax, Huddersfield and Keighley and can usually attend within a few days."}},
-      {"@type":"Question","name":"How long does an EICR take and will power be off?",
-       "acceptedAnswer":{"@type":"Answer","text":"Most homes take around 2–3 hours. Power is switched off briefly during testing and we keep disruption to a minimum."}},
-      {"@type":"Question","name":"What happens if the EICR is unsatisfactory?",
-       "acceptedAnswer":{"@type":"Answer","text":"If your report has C1, C2 or FI items we’ll provide a clear remedial quote. Once fixed, we retest and issue a satisfactory certificate."}}
+      {"@type":"Question","name":"What is an EICR and does it give me an electrical safety certificate?","acceptedAnswer":{"@type":"Answer","text":"An EICR is an electrical installation condition report. It checks the fixed wiring and, when satisfactory, provides an electrical safety certificate you can share with tenants, buyers or insurers."}},
+      {"@type":"Question","name":"How do I book an EICR in Bradford, Leeds or Halifax?","acceptedAnswer":{"@type":"Answer","text":"Use the instant quote form on this page or call us. We cover Bradford, Leeds, Halifax, Huddersfield and Keighley and can usually attend within a few days."}},
+      {"@type":"Question","name":"How long does an EICR take and will power be off?","acceptedAnswer":{"@type":"Answer","text":"Most homes take around 2–3 hours. Power is switched off briefly during testing and we keep disruption to a minimum."}},
+      {"@type":"Question","name":"What happens if the EICR is unsatisfactory?","acceptedAnswer":{"@type":"Answer","text":"If your report has C1, C2 or FI items we’ll provide a clear remedial quote. Once fixed, we retest and issue a satisfactory certificate."}}
     ]
   }
   </script>
@@ -146,15 +113,8 @@
     .social-bar img { height:40px; width:40px; margin:0 12px; vertical-align:middle; }
 
     .headline {
-      max-width:1000px;
-      margin:40px auto;
-      font-size:1.4em;
-      text-align:center;
-      color:#fff;
-      font-weight:800;
-      background:#0b2e57;
-      padding:14px 18px;
-      border-radius:14px;
+      max-width:1000px; margin:40px auto; font-size:1.4em; text-align:center;
+      color:#fff; font-weight:800; background:#0b2e57; padding:14px 18px; border-radius:14px;
       box-shadow:0 10px 24px rgba(0,0,0,0.12);
     }
 
@@ -170,23 +130,9 @@
     @media(min-width:640px){ .quote-grid{ grid-template-columns:1fr 1fr; } }
 
     /* Button-like tabs */
-    .quote-choice { 
-      border:0; border-radius:10px; padding:16px 18px; 
-      display:flex; align-items:center; justify-content:center; gap:10px; 
-      cursor:pointer; font-weight:800; 
-      background:#e8f0fe;
-      color:#0b2e57;
-      box-shadow:0 6px 16px rgba(0,0,0,0.08), inset 0 0 0 2px #c7d3f5; 
-      transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
-      font-size:1.05em; text-transform:uppercase;
-    }
+    .quote-choice { border:0; border-radius:10px; padding:16px 18px; display:flex; align-items:center; justify-content:center; gap:10px; cursor:pointer; font-weight:800; background:#e8f0fe; color:#0b2e57; box-shadow:0 6px 16px rgba(0,0,0,0.08), inset 0 0 0 2px #c7d3f5; transition:transform .08s ease, box-shadow .2s ease, background .2s ease; font-size:1.05em; text-transform:uppercase; }
     .quote-choice:hover { transform:translateY(-1px); }
-    .quote-choice.active { 
-      background:#ffe082;
-      box-shadow:0 10px 24px rgba(0,0,0,0.12), inset 0 0 0 2px #e0b800;
-      color:#2b3a4b;
-    }
-    .quote-choice .label { letter-spacing:.3px; }
+    .quote-choice.active { background:#ffe082; box-shadow:0 10px 24px rgba(0,0,0,0.12), inset 0 0 0 2px #e0b800; color:#2b3a4b; }
 
     .quote-section { background:#fff; border-radius:8px; padding:24px; box-shadow:0 6px 16px rgba(0,0,0,0.08); margin-top:20px; }
     .quote-section h2 { color:#2b3a4b; margin-top:10px; font-size:1.6em; font-weight:800; }
@@ -208,14 +154,7 @@
     @media(min-width:640px){ .options{ grid-template-columns:1fr 1fr; } }
 
     /* Forms */
-    form input[type="text"],
-    form input[type="email"],
-    form input[type="tel"],
-    form input[type="number"],
-    form input[type="search"],
-    form input[type="url"],
-    form input[type="password"],
-    form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
+    form input[type="text"], form input[type="email"], form input[type="tel"], form input[type="number"], form input[type="search"], form input[type="url"], form input[type="password"], form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
     form input[type="radio"], form input[type="checkbox"] { width:auto; margin-top:0; border:none; border-radius:0; }
     form label { font-weight:bold; display:block; margin-top:15px; }
     label.option { display:flex; align-items:flex-start; gap:12px; margin-top:0; font-weight:normal; }
@@ -531,6 +470,7 @@
       }
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'formsubmission' });
+      // FORM submission conversion
       gtag('event', 'conversion', {'send_to': 'AW-432117426/KAR5CNMWW4DlELkths4B'});
       document.getElementById('form-message').style.display = 'block';
       setTimeout(() => { event.target.submit(); }, 1200);
@@ -544,7 +484,7 @@
       document.addEventListener('click', e => { if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && e.target !== burger) { mobileMenu.classList.remove('open'); burger.textContent = '☰'; } });
       window.addEventListener('scroll', () => { if (mobileMenu.classList.contains('open')) { mobileMenu.classList.remove('open'); burger.textContent = '☰'; } });
 
-      /* ===== Quote wizard logic ===== */
+      /* ===== Quote wizard logic (unchanged) ===== */
       const quoteWizard = document.getElementById('quoteWizard');
       const residentialBtn = document.getElementById('residentialBtn');
       const commercialBtn = document.getElementById('commercialBtn');
@@ -633,10 +573,7 @@
         const postcode = (document.getElementById('postcode').value || '').trim();
         const address = (document.getElementById('address').value || '').trim();
 
-        // ADDED: read the new telephone value
         const qTel = (document.getElementById('qTel').value || '').trim();
-        // END ADDED
-
         const qName = (document.getElementById('qName').value || '').trim();
         const qEmail = (document.getElementById('qEmail').value || '').trim();
         const qMore = (document.getElementById('qMore').value || '').trim();
@@ -655,11 +592,7 @@
           mode === 'com' ? null : `Bedrooms: ${bedsVal}`,
           `Postcode: ${postcode || '(not provided)'}`,
           `Address: ${address || '(not provided)'}`,
-
-          // ADDED: include phone in the email body
           `Telephone: ${qTel || '(not provided)'}`,
-          // END ADDED
-
           `Name: ${qName || '(not provided)'}`,
           `Email: ${qEmail || '(not provided)'}`,
           qMore ? `More Info: ${qMore}` : null,
@@ -680,35 +613,32 @@
   </script>
   
   <!-- Intercept tel: clicks so conversions fire before the dialer opens -->
-<script>
-  (function() {
-    if (window.telHandlerBound) return;
-    window.telHandlerBound = true;
+  <script>
+    (function() {
+      if (window.telHandlerBound) return;
+      window.telHandlerBound = true;
 
-    document.addEventListener('click', function(e) {
-      var link = e.target.closest && e.target.closest('a[href^="tel:"]');
-      if (!link) return;
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest && e.target.closest('a[href^="tel:"]');
+        if (!link) return;
 
-      e.preventDefault();
-      var phoneNumber = link.getAttribute('href');
+        e.preventDefault();
+        var phoneNumber = link.getAttribute('href');
 
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'telClick', phoneNumber: phoneNumber });
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'telClick', phoneNumber: phoneNumber });
 
-      if (typeof gtag === 'function') {
-        gtag('event','conversion',{'send_to':'AW-432117426/KAR5CNMWW4DlELkths4B'});
-      }
+        if (typeof gtag === 'function') {
+          // Calls from website conversion
+          gtag('event','conversion',{'send_to':'AW-432117426/ui2RCM3I0u0aELKths4B'});
+        }
 
-      setTimeout(function() {
-        window.location.href = phoneNumber;
-      }, 1500);
-    });
-  })();
-</script>
+        setTimeout(function() {
+          window.location.href = phoneNumber;
+        }, 1500);
+      });
+    })();
+  </script>
   
 </body>
-</html>
-
-
-
-
+         </html>
