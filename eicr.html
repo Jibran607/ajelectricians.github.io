@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EICR (Electrical Installation Condition Report) — Bradford, Leeds, Halifax & Keighley from £80 | A & J Electricians</title>
   <link rel="canonical" href="https://ajelectricians.co.uk/eicr.html">
-  <meta name="description" content="NAPIT‑certified electrical installation condition report (EICR) and electrical safety certificate across Bradford, Leeds, Halifax, Huddersfield & Keighley. Fixed pricing from £80, fast digital reports. Book EICR today." />
+  <meta name="description" content="NAPIT-certified electrical installation condition report (EICR) and electrical safety certificate across Bradford, Leeds, Halifax, Huddersfield & Keighley. Fixed pricing from £80, fast digital reports. Book EICR today." />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="EICR (Electrical Installation Condition Report) — Bradford, Leeds, Halifax & Keighley from £80 | A & J Electricians">
-  <meta property="og:description" content="EICR Bradford, Leeds, Halifax & Keighley. NAPIT‑certified electrical safety certificate from £80. Fast digital turnaround. Book EICR online.">
+  <meta property="og:description" content="EICR Bradford, Leeds, Halifax & Keighley. NAPIT-certified electrical safety certificate from £80. Fast digital turnaround. Book EICR online.">
   <meta property="og:url" content="https://ajelectricians.co.uk/eicr.html">
   <meta property="og:image" content="https://ajelectricians.co.uk/eicr1.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -52,7 +52,7 @@
     "@type":"Product",
     "@id":"https://ajelectricians.co.uk/eicr.html#product",
     "name":"EICR – Electrical Installation Condition Report",
-    "description":"NAPIT‑certified electrical installation condition report (EICR) and electrical safety certificate. Fixed pricing from £80 across Bradford, Leeds, Halifax, Huddersfield and Keighley. Book EICR online.",
+    "description":"NAPIT-certified electrical installation condition report (EICR) and electrical safety certificate. Fixed pricing from £80 across Bradford, Leeds, Halifax, Huddersfield and Keighley. Book EICR online.",
     "brand":{"@type":"Brand","name":"A & J Electricians"},
     "image":"https://ajelectricians.co.uk/eicr1.jpg",
     "sku":"EICR-STD",
@@ -248,7 +248,7 @@
 
   <!-- Local intro -->
   <div class="container" style="margin-top:-10px;">
-    <p><strong>Need an electrical safety certificate fast?</strong> Our NAPIT‑certified engineers carry out the full <em>electrical installation condition report</em> (EICR) for landlords, homeowners and businesses across <strong>Bradford</strong>, <strong>Leeds</strong>, <strong>Halifax</strong>, <strong>Huddersfield</strong> and <strong>Keighley</strong>. Fixed pricing from £80 and a clear digital report so you can prove compliance. Use the form below to <strong>book EICR</strong> today.</p>
+    <p><strong>Need an electrical safety certificate fast?</strong> Our NAPIT-certified engineers carry out the full <em>electrical installation condition report</em> (EICR) for landlords, homeowners and businesses across <strong>Bradford</strong>, <strong>Leeds</strong>, <strong>Halifax</strong>, <strong>Huddersfield</strong> and <strong>Keighley</strong>. Fixed pricing from £80 and a clear digital report so you can prove compliance. Use the form below to <strong>book EICR</strong> today.</p>
   </div>
 
   <!-- =================== INSTANT QUOTE SECTION =================== -->
@@ -264,8 +264,8 @@
     </div>
 
     <!-- Quote wizard -->
-    <form class="quote-section" id="quoteWizard" style="display:none;"
-          action="https://formspree.io/f/xqaldnbl" method="POST">
+    <form class="formspree-io quote-section" id="quoteWizard" style="display:none;"
+          action="https://formspree.io/f/xqaldnbl" method="POST" onsubmit="return quoteSubmit(event)">
       <h2 id="wizardHeading">Property Information:</h2>
       <input type="hidden" name="category" id="qCategory" value="Residential">
 
@@ -325,7 +325,7 @@
 
       <div class="divider"></div>
       <textarea name="message" id="qMessage" style="display:none;"></textarea>
-      <button type="button" class="quote-cta" id="finalPriceBtn">GET FINAL PRICE &amp; SEND</button>
+      <button type="submit" class="quote-cta" id="finalPriceBtn">GET FINAL PRICE &amp; SEND</button>
       <div class="final-price" id="finalPriceBox" aria-live="polite"></div>
     </form>
   </div>
@@ -366,7 +366,7 @@
 
     <p><strong>Who needs an EICR?</strong></p>
     <p><strong>Landlords:</strong> In England, landlords must have the electrical installation inspected and tested at least every 5 years (or at change of tenancy if the report has expired) and provide tenants with a copy of the EICR certificate. This is a legal requirement under the Electrical Safety Standards in the Private Rented Sector Regulations. <em>(Book EICR with us for fixed pricing and fast turnaround.)</em></p>
-    <p><strong>Homeowners &amp; Buyers/Sellers:</strong> If you’re selling, an up‑to‑date EICR reassures buyers and surveyors that the property is electrically safe, avoiding last‑minute renegotiations. If you’re buying, commissioning an EICR before exchange can uncover hidden faults and give leverage for remedial works or price adjustment. Many insurers also request recent evidence of an electrical safety certificate.</p>
+    <p><strong>Homeowners &amp; Buyers/Sellers:</strong> If you’re selling, an up-to-date EICR reassures buyers and surveyors that the property is electrically safe, avoiding last-minute renegotiations. If you’re buying, commissioning an EICR before exchange can uncover hidden faults and give leverage for remedial works or price adjustment. Many insurers also request recent evidence of an electrical safety certificate.</p>
 
     <div class="areas">
       <strong>Areas we cover for EICR and electrical safety certificates:</strong>
@@ -421,7 +421,7 @@
   <div class="container">
     <div id="contact-form">
       <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/xqaldnbl" method="POST" onsubmit="return trackAndSubmit(event)">
+      <form class="formspree-io" action="https://formspree.io/f/xqaldnbl" method="POST" onsubmit="return trackAndSubmit(event)">
         <input type="text" name="_gotcha" style="display:none">
         <label>Your Email:</label>
         <input type="email" name="email" required>
@@ -447,29 +447,76 @@
 
   <!-- Floating CTAs (left) -->
   <a class="floating-contact" href="#contact-form">✉️ Send a Message</a>
-  <a class="sticky-cta" href="tel:07837184672">📞 Call 07837 184 672</a>
+  <a class="sticky-cta" href="tel:078371184672">📞 Call 07837 118 4672</a>
 
   <!-- Elfsight -->
   <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
 
   <script>
-    // Form submit -> push event; GTM handles Ads/GA4
+    // CONTACT FORM — validate phone; allow native submit if valid (so GTM sees it)
     function trackAndSubmit(event) {
-      event.preventDefault();
-      const phone = document.querySelector('input[name="phone"]').value;
+      const phone = document.querySelector('input[name="phone"]').value.trim();
       if (!/^[\d\s+]{10,15}$/.test(phone)) {
+        event.preventDefault();
         alert("Please enter a valid phone number");
         return false;
       }
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'formsubmission' });
-
+      // No preventDefault: native submit continues, GTM Form Submission trigger can fire.
       document.getElementById('form-message').style.display = 'block';
-      setTimeout(() => { event.target.submit(); }, 800);
-      return false;
+      return true;
     }
 
-    // Mobile menu + quote wizard (unchanged logic except dataLayer pushes)
+    // QUOTE FORM — prepare message & price; allow native submit (no preventDefault)
+    function quoteSubmit(event){
+      const form = event.target;
+      const mode = form.dataset.mode || 'res';
+      const type = form.querySelector('input[name="propType"]:checked');
+      const bedsInput = form.querySelector('input[name="bedrooms"]:checked');
+      const bedsVal = (mode === 'com') ? null : (bedsInput ? bedsInput.value : null);
+
+      if (!type) { event.preventDefault(); alert('Please choose a property type.'); return false; }
+      if (mode !== 'com' && !bedsVal) { event.preventDefault(); alert('Please choose number of bedrooms.'); return false; }
+
+      function calcPrice(m,b){
+        let base = (m === 'com') ? 120 : 80, add = 0;
+        if (m !== 'com') {
+          switch(b){ case '1': add=10; break; case '2': add=20; break; case '3': add=35; break;
+            case '4': add=55; break; case '5+': add=75; break; default: add=0; }
+        }
+        return base + add;
+      }
+
+      const price = calcPrice(mode, bedsVal);
+      const postcode = (document.getElementById('postcode').value || '').trim();
+      const address  = (document.getElementById('address').value || '').trim();
+      const qTel     = (document.getElementById('qTel').value || '').trim();
+      const qName    = (document.getElementById('qName').value || '').trim();
+      const qEmail   = (document.getElementById('qEmail').value || '').trim();
+      const qMore    = (document.getElementById('qMore').value || '').trim();
+
+      const finalPriceBox = document.getElementById('finalPriceBox');
+      finalPriceBox.style.display = 'block';
+      finalPriceBox.textContent = `Estimated EICR Price: £${price}.00`;
+
+      document.getElementById('qMessage').value = [
+        `Instant Quote Request`,
+        `Category: ${mode === 'com' ? 'Commercial' : 'Residential'}`,
+        `Property Type: ${type.value}`,
+        (mode === 'com' ? null : `Bedrooms: ${bedsVal}`),
+        `Postcode: ${postcode || '(not provided)'}`,
+        `Address: ${address || '(not provided)'}`,
+        `Telephone: ${qTel || '(not provided)'}`,
+        `Name: ${qName || '(not provided)'}`,
+        `Email: ${qEmail || '(not provided)'}`,
+        (qMore ? `More Info: ${qMore}` : null),
+        `Estimated Price: £${price}.00`
+      ].filter(Boolean).join('\n');
+
+      // Do not preventDefault; let the browser submit so GTM detects the native submit.
+      return true;
+    }
+
+    // Mobile menu + quote wizard toggling
     document.addEventListener('DOMContentLoaded', () => {
       const burger = document.getElementById('burger'), mobileMenu = document.getElementById('mobileMenu');
       burger.addEventListener('click', e => { e.stopPropagation(); mobileMenu.classList.toggle('open'); burger.textContent = mobileMenu.classList.contains('open') ? '✕' : '☰'; });
@@ -480,7 +527,6 @@
       const quoteWizard = document.getElementById('quoteWizard');
       const residentialBtn = document.getElementById('residentialBtn');
       const commercialBtn = document.getElementById('commercialBtn');
-      const wizardHeading = document.getElementById('wizardHeading');
       const propTypeContainer = document.getElementById('propertyTypeOptions');
       const bedFieldset = document.getElementById('bedFieldset');
       const qCategory = document.getElementById('qCategory');
@@ -495,7 +541,6 @@
       function setMode(mode) {
         quoteWizard.style.display = 'block';
         setButtons(mode);
-        wizardHeading.textContent = 'Property Information:';
 
         if (mode === 'com') {
           propTypeContainer.innerHTML = `
@@ -531,73 +576,8 @@
         }
         setMode(mode);
       }
-
       residentialBtn.addEventListener('click', () => toggleMode('res'));
       commercialBtn.addEventListener('click', () => toggleMode('com'));
-
-      const finalPriceBtn = document.getElementById('finalPriceBtn');
-      const finalPriceBox = document.getElementById('finalPriceBox');
-      const quoteForm = document.getElementById('quoteWizard');
-      const qMessage = document.getElementById('qMessage');
-
-      function calcPrice(mode, bedrooms) {
-        let base = mode === 'com' ? 120 : 80;
-        let add = 0;
-        if (mode !== 'com') {
-          switch (bedrooms) {
-            case 'Studio': add = 0; break;
-            case '1': add = 10; break;
-            case '2': add = 20; break;
-            case '3': add = 35; break;
-            case '4': add = 55; break;
-            case '5+': add = 75; break;
-            default: add = 0;
-          }
-        }
-        return base + add;
-      }
-
-      finalPriceBtn.addEventListener('click', () => {
-        const mode = quoteWizard.dataset.mode || 'res';
-        const type = document.querySelector('input[name="propType"]:checked');
-        const bedsInput = document.querySelector('input[name="bedrooms"]:checked');
-        const bedsVal = mode === 'com' ? null : (bedsInput ? bedsInput.value : null);
-        const postcode = (document.getElementById('postcode').value || '').trim();
-        const address = (document.getElementById('address').value || '').trim();
-
-        const qTel = (document.getElementById('qTel').value || '').trim();
-        const qName = (document.getElementById('qName').value || '').trim();
-        const qEmail = (document.getElementById('qEmail').value || '').trim();
-        const qMore = (document.getElementById('qMore').value || '').trim();
-
-        if (!type) { alert('Please choose a property type to get a price.'); return; }
-        if (mode !== 'com' && !bedsVal) { alert('Please choose number of bedrooms to get a price.'); return; }
-
-        const price = calcPrice(mode, bedsVal);
-        finalPriceBox.style.display = 'block';
-        finalPriceBox.textContent = `Estimated EICR Price: £${price}.00`;
-
-        const lines = [
-          `Instant Quote Request`,
-          `Category: ${mode === 'com' ? 'Commercial' : 'Residential'}`,
-          `Property Type: ${type.value}`,
-          mode === 'com' ? null : `Bedrooms: ${bedsVal}`,
-          `Postcode: ${postcode || '(not provided)'}`,
-          `Address: ${address || '(not provided)'}`,
-          `Telephone: ${qTel || '(not provided)'}`,
-          `Name: ${qName || '(not provided)'}`,
-          `Email: ${qEmail || '(not provided)'}`,
-          qMore ? `More Info: ${qMore}` : null,
-          `Estimated Price: £${price}.00`
-        ].filter(Boolean).join('\n');
-
-        qMessage.value = lines;
-
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'formsubmission' });
-
-        quoteForm.submit();
-      });
     });
   </script>
 
@@ -624,4 +604,4 @@
     })();
   </script>
 </body>
-                                                                          </html>
+</html>
