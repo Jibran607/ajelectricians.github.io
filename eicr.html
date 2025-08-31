@@ -20,15 +20,20 @@
     img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://www.googleadservices.com https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com https://*.elfsightcdn.com;
     connect-src 'self' https://www.google.com https://www.google.co.uk https://www.google.com/pagead/ https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://formspree.io https://*.elfsight.com https://*.elfsightcdn.com;
-    frame-src https://www.google.com https://www.google.co.uk https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
+    frame-src https://www.google.com https://www.google.co.uk https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
     style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
     font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
     form-action 'self' https://formspree.io;
   " />
 
-  <!-- GTM (single source of truth; GA4 + Ads fire via GTM) -->
+  <!-- gtag (direct) — GA4 + Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T84QRD6J');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-OBCD8VOZJ9');       // GA4
+    gtag('config', 'AW-432117426');       // Google Ads account
   </script>
 
   <!-- LocalBusiness schema -->
@@ -123,7 +128,6 @@
     .quote-grid { display:grid; grid-template-columns:1fr; gap:12px; }
     @media(min-width:640px){ .quote-grid{ grid-template-columns:1fr 1fr; } }
 
-    /* Button-like tabs */
     .quote-choice { border:0; border-radius:10px; padding:16px 18px; display:flex; align-items:center; justify-content:center; gap:10px; cursor:pointer; font-weight:800; background:#e8f0fe; color:#0b2e57; box-shadow:0 6px 16px rgba(0,0,0,0.08), inset 0 0 0 2px #c7d3f5; transition:transform .08s ease, box-shadow .2s ease, background .2s ease; font-size:1.05em; text-transform:uppercase; }
     .quote-choice:hover { transform:translateY(-1px); }
     .quote-choice.active { background:#ffe082; box-shadow:0 10px 24px rgba(0,0,0,0.12), inset 0 0 0 2px #e0b800; color:#2b3a4b; }
@@ -188,7 +192,7 @@
   </style>
 </head>
 <body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- (Removed GTM <noscript> iframe as we’re not using GTM here) -->
 
   <header>
     <div class="logo"><a href="https://ajelectricians.co.uk/"><img src="Logo1.png" alt="A & J Electricians logo" width="180" height="90"></a></div>
@@ -421,7 +425,7 @@
   <div class="container">
     <div id="contact-form">
       <h2>Contact Us</h2>
-      <form class="formspree-io" action="https://formspree.io/f/xqaldnbl" method="POST" onsubmit="return trackAndSubmit(event)">
+      <form class="formspree-io" action="https://formspree.io/f/xqaldnbl" method="POST" onsubmit="return contactSubmit(event)">
         <input type="text" name="_gotcha" style="display:none">
         <label>Your Email:</label>
         <input type="email" name="email" required>
@@ -447,26 +451,48 @@
 
   <!-- Floating CTAs (left) -->
   <a class="floating-contact" href="#contact-form">✉️ Send a Message</a>
-  <a class="sticky-cta" href="tel:078371184672">📞 Call 07837 118 4672</a>
+  <a class="sticky-cta" href="tel:07837184672">📞 Call 07837 184 672</a>
 
   <!-- Elfsight -->
   <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
 
   <script>
-    // CONTACT FORM — validate phone; allow native submit if valid (so GTM sees it)
-    function trackAndSubmit(event) {
-      const phone = document.querySelector('input[name="phone"]').value.trim();
+    // CONTACT FORM — validate; fire Ads conversion (with event_callback); submit
+    function contactSubmit(event) {
+      const form = event.target;
+      const phone = (form.querySelector('input[name="phone"]')?.value || '').trim();
       if (!/^[\d\s+]{10,15}$/.test(phone)) {
         event.preventDefault();
         alert("Please enter a valid phone number");
         return false;
       }
-      // No preventDefault: native submit continues, GTM Form Submission trigger can fire.
+      event.preventDefault(); // hold navigation while we send the hit
       document.getElementById('form-message').style.display = 'block';
-      return true;
+      let submitted = false;
+
+      try {
+        gtag('event','conversion',{
+          'send_to':'AW-432117426/KAR5CNMWW4DlELkths4B',
+          'event_callback': function(){
+            if (submitted) return;
+            submitted = true;
+            form.submit();
+          }
+        });
+      } catch(e){}
+
+      // Fallback in case callback never fires
+      setTimeout(function(){
+        if (!submitted) {
+          submitted = true;
+          form.submit();
+        }
+      }, 1500);
+
+      return false;
     }
 
-    // QUOTE FORM — prepare message & price; allow native submit (no preventDefault)
+    // QUOTE FORM — build message; show price; fire Ads conversion (with event_callback); submit
     function quoteSubmit(event){
       const form = event.target;
       const mode = form.dataset.mode || 'res';
@@ -512,8 +538,28 @@
         `Estimated Price: £${price}.00`
       ].filter(Boolean).join('\n');
 
-      // Do not preventDefault; let the browser submit so GTM detects the native submit.
-      return true;
+      event.preventDefault();
+      let submitted = false;
+
+      try {
+        gtag('event','conversion',{
+          'send_to':'AW-432117426/KAR5CNMWW4DlELkths4B',
+          'event_callback': function(){
+            if (submitted) return;
+            submitted = true;
+            form.submit();
+          }
+        });
+      } catch(e){}
+
+      setTimeout(function(){
+        if (!submitted) {
+          submitted = true;
+          form.submit();
+        }
+      }, 1500);
+
+      return false;
     }
 
     // Mobile menu + quote wizard toggling
@@ -581,7 +627,7 @@
     });
   </script>
 
-  <!-- Intercept tel: clicks so GTM can fire conversion before dialer -->
+  <!-- Tel: delegated handler — fires Google Ads phone conversion on any phone click (uses event_callback + fallback) -->
   <script>
     (function() {
       if (window.telHandlerBound) return;
@@ -593,15 +639,27 @@
 
         e.preventDefault();
         var phoneNumber = link.getAttribute('href');
+        var navigated = false;
 
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'tel_click', phoneNumber: phoneNumber });
+        try {
+          gtag('event','conversion',{
+            'send_to':'AW-432117426/cOe0COfPkYcbELKths4B',
+            'event_callback': function(){
+              if (navigated) return;
+              navigated = true;
+              window.location.href = phoneNumber;
+            }
+          });
+        } catch(e){}
 
-        setTimeout(function() {
-          window.location.href = phoneNumber;
-        }, 400);
-      });
+        setTimeout(function(){
+          if (!navigated) {
+            navigated = true;
+            window.location.href = phoneNumber;
+          }
+        }, 1500);
+      }, { capture: true });
     })();
   </script>
 </body>
-</html>
+  </html>
