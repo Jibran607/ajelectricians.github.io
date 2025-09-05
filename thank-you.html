@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T84QRD6J');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thanks — A & J Electricians</title>
+  <meta name="description" content="Thanks for your enquiry. A & J Electricians will be in touch shortly.">
+  <meta name="robots" content="noindex,follow">
+
+  <!-- Minimal CSP for this page (allows GTM/GA + common Ads beacons) -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://stats.g.doubleclick.net https://googleads.g.doubleclick.net https://www.googleadservices.com;
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
+    frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net;
+    style-src 'self' 'unsafe-inline';
+  ">
+
+  <style>
+    :root { --blue:#0b2e57; --muted:#666; }
+    body { margin:0; font-family:Arial, sans-serif; color:#111; background:#fff; }
+    .wrap { max-width:760px; margin:40px auto; padding:0 20px; }
+    .card { background:#fff; border:1px solid #eee; border-radius:14px; padding:28px; box-shadow:0 10px 24px rgba(0,0,0,.06); }
+    h1 { margin:0 0 8px; color:var(--blue); font-size:clamp(1.4rem,3vw,2rem); }
+    p { margin:6px 0; color:#222; }
+    .muted{ color:var(--muted); }
+    .cta-row { margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; }
+    .btn { display:inline-block; padding:12px 16px; border-radius:8px; text-decoration:none; font-weight:700; }
+    .btn-primary { background:#0047AB; color:#fff; }
+    .btn-ghost { border:1px solid #ddd; color:#111; }
+    .tiny { font-size:.92rem; color:var(--muted); margin-top:12px; }
+    .tag { display:inline-block; background:#f5f7ff; border:1px solid #e2e8ff; color:#223; padding:4px 8px; border-radius:999px; font-size:.85rem; margin-left:6px; }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="wrap">
+    <div class="card">
+      <h1>Thanks — we’ve got your enquiry</h1>
+      <p class="muted">One of our NAPIT-registered electricians will be in touch shortly.</p>
+      <p id="formBadge" class="muted" style="display:none;">Source:<span class="tag" id="formNameTag"></span></p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/">← Back to home</a>
+        <a class="btn btn-ghost" href="tel:07837184672">📞 Call 07837 184 672</a>
+      </div>
+
+      <p class="tiny">Did you submit by mistake? Just call or email and we’ll sort it.</p>
+    </div>
+  </div>
+
+  <script>
+    // Read ?form_name=... and push a GTM event
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var formName = params.get('form_name') || '';
+      if (formName) {
+        var badge = document.getElementById('formBadge');
+        var tag = document.getElementById('formNameTag');
+        tag.textContent = formName;
+        badge.style.display = 'block';
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'form_submit_success',
+        form_name: formName || '(unknown)'
+      });
+    })();
+  </script>
+</body>
+</html>
