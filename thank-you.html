@@ -15,15 +15,41 @@
   <meta name="description" content="Thanks for your enquiry. A & J Electricians will be in touch shortly.">
   <meta name="robots" content="noindex,follow">
 
-  <!-- Minimal CSP for this page (allows GTM/GA + common Ads beacons) -->
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://stats.g.doubleclick.net https://googleads.g.doubleclick.net https://www.googleadservices.com;
-    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.googleadservices.com;
-    frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net;
-    style-src 'self' 'unsafe-inline';
-  ">
+   <!-- CSP: allows Elfsight + Google Ads/Analytics + Formspree -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: blob: https://ajelectricians.co.uk
+    https://www.googletagmanager.com
+    https://www.google.com https://www.google.co.uk
+    https://www.google.com/ccm/collect
+    https://www.google-analytics.com https://region1.google-analytics.com
+    https://googleads.g.doubleclick.net https://stats.g.doubleclick.net
+    https://www.googleadservices.com
+    https://*.elfsight.com https://*.elfsightcdn.com
+    https://lh3.googleusercontent.com https://maps.gstatic.com;
+  script-src 'self' 'unsafe-inline'
+    https://www.googletagmanager.com
+    https://www.google-analytics.com https://ssl.google-analytics.com
+    https://www.gstatic.com
+    https://googleads.g.doubleclick.net https://www.googleadservices.com
+    https://static.elfsight.com https://*.elfsightcdn.com;
+  connect-src 'self'
+    https://www.googletagmanager.com
+    https://www.google.com https://www.google.co.uk https://www.google.com/pagead/
+    https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com
+    https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net
+    https://www.google.com/ccm/collect
+    https://formspree.io
+    https://*.elfsight.com https://*.elfsightcdn.com;
+  frame-src
+    https://www.google.com https://www.google.co.uk
+    https://www.googletagmanager.com
+    https://td.doubleclick.net https://googleads.g.doubleclick.net
+    https://*.elfsight.com https://*.elfsightcdn.com;
+  style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
+  font-src  'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
+  form-action 'self' https://formspree.io;
+" />
 
   <style>
     :root { --blue:#0b2e57; --muted:#666; }
@@ -80,4 +106,5 @@
     })();
   </script>
 </body>
+
 </html>
