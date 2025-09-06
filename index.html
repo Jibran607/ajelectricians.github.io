@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-T84QRD6J');</script>
-  <!-- End Google Tag Manager -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A & J Electricians | Bradford, Leeds & Halifax</title>
   <link rel="canonical" href="https://ajelectricians.co.uk/">
-  <meta name="description" content="NAPIT-registered electricians serving Bradford, Leeds, Halifax. EV chargers, CCTV, alarms, EICR tests & fusebox rewires since 2007.">
+  <meta name="description" content="NAPIT‑registered electricians serving Bradford, Leeds, Halifax. EV chargers, CCTV, alarms, EICR tests & fusebox rewires since 2007.">
 
-  <!-- CSP (forms post to same-origin /api/contact) -->
-  <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://www.googleadservices.com https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
-    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com https://*.elfsightcdn.com;
-    connect-src 'self' https://www.google.com https://www.google.co.uk https://www.google.com/pagead/ https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://*.elfsight.com https://*.elfsightcdn.com;
-    frame-src https://www.google.com https://www.google.co.uk https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
-    style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
-    font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
-    form-action 'self';
-  " />
+<!-- CSP: allows Elfsight + Google Ads/Analytics conversion endpoints -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https://ajelectricians.co.uk https://www.googletagmanager.com https://www.google.com https://www.google.co.uk https://www.google.com/ccm/collect https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://www.googleadservices.com https://*.elfsight.com https://*.elfsightcdn.com https://lh3.googleusercontent.com https://maps.gstatic.com;
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://ssl.google-analytics.com https://static.elfsight.com https://*.elfsightcdn.com;
+  connect-src 'self' https://www.google.com https://www.google.co.uk https://www.google.com/pagead/ https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com/ccm/collect https://formspree.io https://*.elfsight.com https://*.elfsightcdn.com;
+  frame-src https://www.google.com https://www.google.co.uk https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://*.elfsight.com https://*.elfsightcdn.com;
+  style-src 'self' 'unsafe-inline' https://*.elfsight.com https://*.elfsightcdn.com;
+  font-src 'self' data: https://*.elfsight.com https://*.elfsightcdn.com;
+  form-action 'self' https://formspree.io;
+" />
+
+  <!-- GTM / GA -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T84QRD6J');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-OBCD8VOZJ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-OBCD8VOZJ9');
+    gtag('config', 'AW-432117426');
+  </script>
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -45,7 +53,7 @@
       },
       "areaServed":["Bradford","Leeds","Halifax","Huddersfield","Keighley","Pudsey","Skipton"],
       "url":"https://ajelectricians.co.uk/",
-      "description":"NAPIT-certified electricians offering EICR, EV chargers, CCTV, alarms and rewires across West Yorkshire.",
+      "description":"NAPIT‑certified electricians offering EICR, EV chargers, CCTV, alarms and rewires across West Yorkshire.",
       "priceRange":"££",
       "image":"https://ajelectricians.co.uk/eicr1.jpg",
       "openingHours":"Mo-Su 08:00-20:00",
@@ -54,50 +62,42 @@
   </script>
 
   <style>
-    :root{
-      --blue:#0047AB;
-      --ink:#0b2f66;
-      --panel:#111418;
-      --panel2:#161a1f;
-      --text:#e7eefb;
-      --muted:#a7b2c5;
-      --accent:#c5cf2c;
-      --gold:#8a6b00;
-    }
-    *{box-sizing:border-box}
-    body { margin:0; font-family:Arial,sans-serif; color:#dfe6f2; background:#0c0f13; line-height:1.6; }
+    body { margin:0; font-family:Arial,sans-serif; color:#333; background:#fff; line-height:1.6; }
 
-    /* Header / Nav */
+    /* Header / Nav (logo left, menu right) */
     header {
       display:flex; align-items:center; justify-content:space-between;
-      padding:12px 20px; background:#0f1318; position:relative; z-index:1000; border-bottom:1px solid #1a222c;
+      padding:15px 20px; background:#fff; position:relative; z-index:1000;
     }
     .logo { display:flex; align-items:center; }
-    .logo img { height:56px; width:auto; display:block; }
+    .logo img { height:60px; width:auto; }
+
     nav.desktop-menu { display:flex; gap:20px; align-items:center; }
     nav.desktop-menu a, nav.desktop-menu .dropdown > span {
-      color:#fff; text-decoration:none; font-weight:700; position:relative; cursor:pointer;
+      color:#000; text-decoration:none; font-weight:bold; position:relative; cursor:pointer;
     }
     .dropdown { position:relative; }
     nav.desktop-menu .dropdown-content {
-      display:none; position:absolute; background:#141a22; top:100%; left:0; min-width:180px;
-      box-shadow:0 4px 10px rgba(0,0,0,.4); padding:6px 0; border:1px solid #1e2733;
+      display:none; position:absolute; background:#fff; top:100%; left:0; min-width:180px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:6px 0;
     }
+    /* Keep submenu open on hover AND while focused/clicked */
     nav.desktop-menu .dropdown:hover .dropdown-content,
     nav.desktop-menu .dropdown:focus-within .dropdown-content { display:block; }
-    nav.desktop-menu .dropdown-content a { display:block; padding:10px 12px; color:#dfe6f2; text-decoration:none; white-space:nowrap; }
+    nav.desktop-menu .dropdown-content a { display:block; padding:10px 12px; color:#000; text-decoration:none; white-space:nowrap; }
 
-    .burger { display:none; font-size:28px; cursor:pointer; color:#fff; background:none; border:none; }
+    /* Burger hidden on desktop */
+    .burger { display:none; font-size:28px; cursor:pointer; color:#000; background:none; border:none; }
     @media (max-width:768px){
       nav.desktop-menu { display:none; }
       .burger { display:block; }
     }
 
     /* Mobile menu */
-    nav.mobile-menu { display:none; position:fixed; top:0; left:0; width:100%; height:100vh; background:#0f1318; flex-direction:column; z-index:1002; overflow-y:auto; border-left:1px solid #1a222c;}
+    nav.mobile-menu { display:none; position:fixed; top:0; left:0; width:100%; height:100vh; background:#fff; flex-direction:column; z-index:1002; overflow-y:auto; }
     nav.mobile-menu.open { display:flex; }
     nav.mobile-menu a, nav.mobile-menu span {
-      color:#fff; padding:20px 26px; text-decoration:none; border-bottom:1px solid #1a222c; font-size:1.05em; display:flex; justify-content:space-between; align-items:center;
+      color:#000; padding:20px 26px; text-decoration:none; border-bottom:1px solid #ccc; font-size:1.05em; display:flex; justify-content:space-between; align-items:center;
     }
     nav.mobile-menu .submenu { display:none; flex-direction:column; }
     nav.mobile-menu .has-sub.open .submenu { display:flex; }
@@ -105,100 +105,37 @@
     nav.mobile-menu .has-sub > span::after { content:'▾'; margin-left:6px; }
     nav.mobile-menu .has-sub.open > span::after { content:'▴'; }
 
-    .social-bar { background:#0f1318; padding:10px; text-align:center; border-top:1px solid #1a222c; border-bottom:1px solid #1a222c;}
-    .social-bar img { height:40px; margin:0 10px; vertical-align:middle; filter:grayscale(.1) brightness(.95); }
+    .social-bar { background:#f4f4f4; padding:10px; text-align:center; }
+    .social-bar img { height:40px; margin:0 10px; vertical-align:middle; }
 
     .container { max-width:1000px; margin:auto; padding:40px 20px; }
-    h1,h2 { color:#b9d6ff; margin-top:40px; }
+    h1,h2 { color:#0047AB; margin-top:40px; }
 
+    /* Big blue headline like EICR page */
     .hero-title {
       background:#0b2f66; color:#fff; padding:18px 20px; border-radius:18px;
       text-align:center; margin-top:20px; font-weight:800;
-      font-size: clamp(1.4rem, 4.8vw, 2.1rem);
-      box-shadow:0 10px 24px rgba(0,0,0,.35);
+      font-size: clamp(1.6rem, 4.8vw, 2.2rem);
     }
 
-    /* ===== Quote section ===== */
-    .quote-wrap { max-width:1000px; margin:24px auto 8px; padding:0 20px; }
-    .quote-hero { background:#07101a; color:#fff; border:1px solid #1a2533; border-radius:18px; padding:22px; text-align:center; box-shadow:0 10px 24px rgba(0,0,0,.4);}
-    .quote-hero h2 { margin:0; font-size:1.45rem; letter-spacing:.5px; }
-
-    /* Two big buttons */
-    .quote-tabs { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px auto 0; max-width:680px; }
-    .quote-tab {
-      display:flex; align-items:center; justify-content:center; gap:10px;
-      border:2px solid #2c3a4c; background:#1a2230; color:#dfe6f2;
-      border-radius:14px; padding:16px 18px; cursor:pointer; font-weight:900; text-transform:uppercase;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.03), 0 8px 20px rgba(0,0,0,.35);
-      transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
-    }
-    .quote-tab:hover { transform:translateY(-1px); }
-    .quote-tab.active { background:#6b5f1a; border-color:#8b7e2a; color:#fff; }
-
-    /* Form panel is CLOSED by default */
-    .quote-section {
-      display:none;
-      background:#0f141b; border:1px solid #1a2533; border-radius:16px; padding:20px;
-      box-shadow:0 8px 18px rgba(0,0,0,.35); margin-top:18px;
-    }
-    .quote-section.open{ display:block; }
-
-    .quote-section h3 { color:#cfe3ff; font-size:1.6rem; margin:4px 0 12px; }
-
-    .fieldset { margin:16px 0; }
-    .fieldset legend {
-      font-weight:900; color:#cfe3ff; margin-bottom:10px; display:block; border-top:1px solid #1a2533; padding-top:14px;
-    }
-
-    /* Property type list */
-    .prop-grid { display:grid; grid-template-columns:1fr; gap:12px; }
-    @media (min-width:640px){ .prop-grid{ grid-template-columns:1fr 1fr; } }
-
-    .prop-card{
-      display:grid; grid-template-columns:28px 1fr; align-items:center;
-      column-gap:14px; padding:14px 16px; border-radius:12px;
-      border:1px solid #2a3444; background:#111826; color:#e9f0ff;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.03);
-    }
-    .prop-card input{ margin:0; width:18px; height:18px; justify-self:center; align-self:center; accent-color:#8b7e2a; }
-    .prop-card span{ font-weight:800; line-height:1.25; }
-
-    /* 2-col fields */
-    .two-col { display:grid; grid-template-columns:1fr; gap:12px; }
-    @media (min-width:640px){ .two-col{ grid-template-columns:1fr 1fr; } }
-
-    .quote-section input[type="text"],
-    .quote-section input[type="email"],
-    .quote-section input[type="tel"],
-    .quote-section textarea {
-      width:100%; padding:12px; border:1px solid #2a3444; border-radius:10px; background:#0c1118; color:#e9f0ff;
-    }
-    .quote-section textarea{ min-height:110px; }
-
-    .quote-cta {
-      width:100%; padding:16px; border:0; border-radius:12px; font-weight:900; cursor:pointer;
-      background:#8b960f; color:#111; letter-spacing:.3px; margin-top:6px;
-    }
-
-    /* Services grid / rest of page */
     .services-overview { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .service-box { background:#0f141b; padding:20px; border-left:4px solid var(--blue); text-align:center; border:1px solid #1a2533; }
-    .service-box img { width:100%; height:150px; object-fit:cover; margin-bottom:10px; border:1px solid #1a2533; }
-    .service-box a { color:#9fc3ff; text-decoration:none; }
+    .service-box { background:#f4f4f4; padding:20px; border-left:4px solid #0047AB; text-align:center; }
+    .service-box img { width:100%; height:150px; object-fit:cover; margin-bottom:10px; border:1px solid #e5e5e5; }
+    .service-box a { color:#0047AB; text-decoration:none; }
 
     .benefits, .faq, .contact, .contact-form, .cta { margin-top:50px; }
-    .benefits, .faq, .contact, .contact-form { background:#0f141b; padding:30px 20px; border-left:4px solid var(--blue); border:1px solid #1a2533; }
+    .benefits, .faq, .contact, .contact-form { background:#f9f9f9; padding:30px 20px; border-left:4px solid #0047AB; }
 
-    form input, form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #2a3444; border-radius:6px; background:#0c1118; color:#e9f0ff; }
+    form input, form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; }
     form label { font-weight:bold; display:block; margin-top:15px; }
-    form button { background:var(--blue); color:#fff; border:none; padding:12px 20px; border-radius:6px; cursor:pointer; font-weight:bold; }
+    form button { background:#0047AB; color:#fff; border:none; padding:12px 20px; border-radius:4px; cursor:pointer; font-weight:bold; }
 
-    .cta { text-align:center; padding:40px 20px; background:#0f141b; color:#fff; border-radius:10px; border:1px solid #1a2533; }
+    .cta { text-align:center; padding:40px 20px; background:#0047AB; color:#fff; border-radius:6px; }
 
     .footer-logos { text-align:center; margin:40px 0; }
-    .footer-logos img { height:60px; margin:0 15px; vertical-align:middle; filter:grayscale(.05) brightness(.95); }
+    .footer-logos img { height:60px; margin:0 15px; vertical-align:middle; }
 
-    /* Floating CTAs (UNCHANGED per your request) */
+    /* Floating CTAs – mobile left by default */
     .floating-contact, .sticky-cta {
       position:fixed; left:16px; right:auto; text-decoration:none; font-weight:700;
       box-shadow:0 4px 8px rgba(0,0,0,0.2); border-radius:999px; padding:10px 14px;
@@ -206,26 +143,22 @@
     }
     .floating-contact { bottom:20px; background:#FFD700; color:#333; }
     .sticky-cta { bottom:70px; background:#0047AB; }
+
+    /* Desktop: bigger and on the right */
     @media (min-width: 992px){
-      .floating-contact, .sticky-cta { left:auto; right:20px; padding:14px 20px; font-size:16px; }
+      .floating-contact, .sticky-cta {
+        left:auto; right:20px; padding:14px 20px; font-size:16px;
+      }
     }
 
-    .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#0f1318; color:#c7d4ea; margin-top:40px; border-top:1px solid #1a222c; }
+    .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#f8f8f8; color:#444; margin-top:40px; }
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T84QRD6J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <header>
-    <!-- Restored LOGO block -->
-    <div class="logo">
-      <a href="https://ajelectricians.co.uk/">
-        <img src="Logo1.png" alt="A & J Electricians">
-      </a>
-    </div>
+    <div class="logo"><a href="index.html"><img src="Logo1.png" alt="A & J Electricians logo"></a></div>
 
     <nav class="desktop-menu" aria-label="Primary">
       <a href="index.html">Home</a>
@@ -261,8 +194,10 @@
   <!-- Mobile Nav -->
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
     <a href="index.html">Home</a>
+
     <div class="has-sub"><span>Services</span>
       <div class="submenu">
+        <!-- Removed 'All Services' as requested -->
         <a href="Evchargers.html">EV Chargers</a>
         <a href="fusebox-rewire.html">Fusebox & Rewire</a>
         <a href="eicr.html">EICR</a>
@@ -270,7 +205,9 @@
         <a href="alarm.html">Security Alarms</a>
       </div>
     </div>
+
     <a href="blog.html">Blog</a>
+
     <div class="has-sub"><span>Areas We Cover</span>
       <div class="submenu">
         <a href="electrician-bradford.html">Bradford</a>
@@ -278,6 +215,7 @@
         <a href="electrician-halifax.html">Halifax</a>
       </div>
     </div>
+
     <a href="#contact-form">Contact</a>
   </nav>
 
@@ -289,69 +227,11 @@
   </div>
 
   <div class="container">
-    <h1 class="hero-title">NAPIT-Registered Electricians in Bradford, Leeds &amp; Halifax — EICR, Rewires, EV Chargers</h1>
+    <!-- Blue hero headline like EICR -->
+    <h1 class="hero-title">A &amp; J Electricians</h1>
+
     <p><strong>Fast, trusted & fully insured electricians offering EICRs, rewires, EV chargers, CCTV & security alarms.</strong></p>
-  </div>
 
-  <!-- ===== Instant Quote (closed by default, toggle with tabs) ===== -->
-  <section class="quote-wrap" id="quote">
-    <div class="quote-hero">
-      <h2>Get Free Instant Quote</h2>
-
-      <div class="quote-tabs" role="tablist" aria-label="Choose property category">
-        <button type="button" id="tabRes" class="quote-tab" role="tab" aria-selected="false" aria-controls="quoteForm">Residential Property</button>
-        <button type="button" id="tabCom" class="quote-tab" role="tab" aria-selected="false" aria-controls="quoteForm">Commercial Property</button>
-      </div>
-    </div>
-
-    <form id="quoteForm" class="quote-section" action="/api/contact" method="POST" onsubmit="return buildQuoteMessage(event)" aria-hidden="true">
-      <h3>Property Information</h3>
-      <input type="hidden" name="form" value="quote-index">
-      <input type="hidden" name="category" id="qCategory" value="">
-      <input type="hidden" name="message" id="qMessage">
-
-      <fieldset class="fieldset" id="typeFieldset">
-        <legend>Property Type</legend>
-        <div class="prop-grid" id="propTypeGrid"></div>
-      </fieldset>
-
-      <div class="two-col">
-        <div class="fieldset">
-          <legend>Property Address</legend>
-          <input type="text" name="address" placeholder="Enter full address">
-        </div>
-        <div class="fieldset">
-          <legend>Property Postcode</legend>
-          <input type="text" name="postcode" placeholder="Enter full postcode">
-        </div>
-      </div>
-
-      <div class="fieldset">
-        <legend>Telephone</legend>
-        <input type="tel" name="tel" placeholder="Mobile or landline (optional)">
-      </div>
-
-      <div class="fieldset">
-        <legend>Service and job information</legend>
-        <textarea name="service_info" rows="4" placeholder="Tell us what you need (EICR, fusebox, CCTV, alarm, EV charger, fault, etc.)."></textarea>
-      </div>
-
-      <div class="two-col">
-        <div class="fieldset">
-          <legend>Name</legend>
-          <input type="text" name="name" placeholder="Your full name" required>
-        </div>
-        <div class="fieldset">
-          <legend>Email address</legend>
-          <input type="email" name="email" placeholder="name@example.com" required>
-        </div>
-      </div>
-
-      <button type="submit" class="quote-cta">Get Free Instant Quote</button>
-    </form>
-  </section>
-
-  <div class="container">
     <!-- Services overview -->
     <h2>Electrical Services in West Yorkshire</h2>
     <div class="services-overview">
@@ -406,8 +286,8 @@
       <h3>Do you cover my area?</h3>
       <p>Yes — Bradford, Leeds, Halifax, Huddersfield & Keighley.</p>
       <h3>Are you certified and insured?</h3>
-      <p>Yes — fully NAPIT-registered and insured.</p>
-      <h3>Do you offer same-day callouts?</h3>
+      <p>Yes — fully NAPIT‑registered and insured.</p>
+      <h3>Do you offer same‑day callouts?</h3>
       <p>Yes — contact us to check availability.</p>
       <h3>Do you provide free quotes?</h3>
       <p>Absolutely — no hidden fees.</p>
@@ -415,15 +295,15 @@
 
     <div class="contact" id="contact-form">
       <h2>Contact a Qualified Electrician</h2>
-      <p><strong>📍 Address:</strong> 6 Crestville Close, Bradford, BD14 6DZ</p>
-      <p><strong>📞 Phone:</strong> <a href="tel:07837184672">07837 184 672</a></p>
+      <p><strong>📍 Address:</strong> 6 Crestville Close, Bradford, BD14 6DZ</p>
+      <p><strong>📞 Phone:</strong> <a href="tel:07837184672">07837 184 672</a></p>
       <p><strong>📧 Email:</strong> <a href="mailto:ajelectriciansbradford@gmail.com">ajelectriciansbradford@gmail.com</a></p>
-      <p><strong>Hours:</strong> Mon–Fri, 9 am–5 pm</p>
+      <p><strong>Hours:</strong> Mon–Fri, 9 am–5 pm</p>
     </div>
 
     <div class="contact-form">
       <h2>Quick Contact Form</h2>
-      <form action="/api/contact" method="POST" onsubmit="return trackAndSubmit(event)">
+      <form action="https://formspree.io/f/xqaldnbl" method="POST" onsubmit="return trackAndSubmit(event)">
         <input type="text" name="_gotcha" style="display:none">
         <label>Name:</label><input type="text" name="name" required>
         <label>Email:</label><input type="email" name="email" required>
@@ -433,14 +313,14 @@
         <label>Message:</label><textarea name="message" rows="4"></textarea>
         <button type="submit">Send Message</button>
       </form>
-      <div id="form-message" style="display:none; padding:15px; background:#12351a; margin-top:15px; color:#e9f6ed;">
+      <div id="form-message" style="display:none; padding:15px; background:#eaffea; margin-top:15px;">
         Thank you! We'll contact you shortly.
       </div>
     </div>
 
     <div class="cta">
       <h2>Book a Local Electrician Today</h2>
-      <p>📞 Call <strong>07837 184 672</strong> or use the contact form above to request your free quote!</p>
+      <p>📞 Call <strong>07837 184 672</strong> or use the contact form above to request your free quote!</p>
     </div>
 
     <div class="footer-logos" aria-label="Accreditations">
@@ -450,9 +330,9 @@
 
   <div class="footer-cert">NAPIT Certified | Fully Insured | Est. 2007 | A & J Electricians</div>
 
-  <!-- Floating CTAs (UNCHANGED) -->
+  <!-- Floating CTAs -->
   <a class="floating-contact" href="#contact-form">✉️ Send a Message</a>
-  <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW-432117426/cOe0COfPkYcbELKths4B'});">📞 Call 07837 184 672</a>
+  <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW-432117426/cOe0COfPkYcbELKths4B'});">📞 Call 07837 184 672</a>
 
   <!-- Elfsight last -->
   <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
@@ -468,7 +348,6 @@
       }
     }
 
-    // Keep your conversion snippet behaviour
     function trackAndSubmit(event) {
       event.preventDefault();
       const phone = (document.querySelector('input[name="phone"]')?.value || '').trim();
@@ -485,36 +364,6 @@
       return false;
     }
 
-    // Build message for the quote form and allow native submit
-    function buildQuoteMessage(e){
-      const form = e.target;
-      const type = form.querySelector('input[name="propType"]:checked');
-      if(!type){ alert('Please choose a property type.'); return false; }
-
-      const postcode = (form.querySelector('input[name="postcode"]').value || '').trim();
-      const address  = (form.querySelector('input[name="address"]').value || '').trim();
-      const tel      = (form.querySelector('input[name="tel"]').value || '').trim();
-      const name     = (form.querySelector('input[name="name"]').value || '').trim();
-      const email    = (form.querySelector('input[name="email"]').value || '').trim();
-      const info     = (form.querySelector('textarea[name="service_info"]').value || '').trim();
-      const cat      = document.getElementById('qCategory').value;
-
-      form.querySelector('#qMessage').value = [
-        'Instant Quote Request',
-        `Category: ${cat || '(not set)'}`,
-        `Property Type: ${type.value}`,
-        `Postcode: ${postcode || '(not provided)'}`,
-        `Address: ${address || '(not provided)'}`,
-        `Telephone: ${tel || '(not provided)'}`,
-        `Name: ${name || '(not provided)'}`,
-        `Email: ${email || '(not provided)'}`,
-        info ? `Services/Info: ${info}` : null
-      ].filter(Boolean).join('\n');
-
-      return true;
-    }
-
-    // Mobile menu + Quote tab switching & toggle open/close
     document.addEventListener('DOMContentLoaded', () => {
       const burger = document.getElementById('burger');
       const mobileMenu = document.getElementById('mobileMenu');
@@ -526,6 +375,7 @@
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
 
+      // Toggle submenus (mobile)
       document.querySelectorAll('.mobile-menu .has-sub > span').forEach(span => {
         span.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -533,83 +383,32 @@
         });
       });
 
+      // Close menu on link click + smooth scroll for anchors
+      mobileMenu.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (!a) return;
+        const href = a.getAttribute('href') || '';
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          closeMobileMenu();
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+          return;
+        }
+        closeMobileMenu();
+      });
+
+      // Close when clicking outside or scrolling
       document.addEventListener('click', (e) => {
         if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && e.target !== burger) {
           closeMobileMenu();
         }
       });
       window.addEventListener('scroll', () => { if (mobileMenu.classList.contains('open')) closeMobileMenu(); });
-
-      // Quote tabs
-      const tabRes = document.getElementById('tabRes');
-      const tabCom = document.getElementById('tabCom');
-      const grid   = document.getElementById('propTypeGrid');
-      const catInp = document.getElementById('qCategory');
-      const form   = document.getElementById('quoteForm');
-
-      function setResidential(){
-        catInp.value = 'Residential';
-        grid.innerHTML = `
-          <label class="prop-card"><input type="radio" name="propType" value="Mid Terraced House"><span>Mid Terraced House</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="End Terraced / Semi House"><span>End Terraced / Semi House</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="Detached House"><span>Detached House</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="Detached Bungalow"><span>Detached Bungalow</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="Semi Detached Bungalow"><span>Semi Detached Bungalow</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="Flat / Maisonette / Other"><span>Flat / Maisonette / Other</span></label>
-        `;
-      }
-      function setCommercial(){
-        catInp.value = 'Commercial';
-        grid.innerHTML = `
-          <label class="prop-card"><input type="radio" name="propType" value="Retail / Shop"><span>Retail / Shop</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="Office"><span>Office</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="Warehouse"><span>Warehouse</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="Restaurant / Cafe"><span>Restaurant / Cafe</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="Industrial Unit"><span>Industrial Unit</span></label>
-          <label class="prop-card"><input type="radio" name="propType" value="Other Commercial"><span>Other Commercial</span></label>
-        `;
-      }
-
-      let isOpen = false;
-      let active = null; // 'res' | 'com' | null
-
-      function openForm(){
-        if(!isOpen){
-          form.classList.add('open');
-          form.setAttribute('aria-hidden','false');
-          isOpen = true;
-          form.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      }
-      function closeForm(){
-        if(isOpen){
-          form.classList.remove('open');
-          form.setAttribute('aria-hidden','true');
-          isOpen = false;
-          form.querySelectorAll('input[name="propType"]').forEach(r=>r.checked=false);
-        }
-      }
-      function setActive(which){
-        if(which==='res'){
-          tabRes.classList.add('active'); tabRes.setAttribute('aria-selected','true');
-          tabCom.classList.remove('active'); tabCom.setAttribute('aria-selected','false');
-          setResidential(); active='res';
-        }else{
-          tabCom.classList.add('active'); tabCom.setAttribute('aria-selected','true');
-          tabRes.classList.remove('active'); tabRes.setAttribute('aria-selected','false');
-          setCommercial(); active='com';
-        }
-      }
-
-      tabRes.addEventListener('click', () => {
-        if(active==='res' && isOpen){ closeForm(); active=null; tabRes.classList.remove('active'); tabRes.setAttribute('aria-selected','false'); catInp.value=''; grid.innerHTML=''; return; }
-        setActive('res'); openForm();
-      });
-      tabCom.addEventListener('click', () => {
-        if(active==='com' && isOpen){ closeForm(); active=null; tabCom.classList.remove('active'); tabCom.setAttribute('aria-selected','false'); catInp.value=''; grid.innerHTML=''; return; }
-        setActive('com'); openForm();
-      });
     });
   </script>
 </body>
-                                                                                                                        </html>
+  </html>
+
+
+
