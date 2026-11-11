@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A & J Electricians | Bradford, Leeds & Halifax</title>
   <link rel="canonical" href="https://ajelectricians.co.uk/">
-  <meta name="description" content="Local Electricians Serving Bradford, Leeds, Halifax. EV chargers, CCTV, alarms, EICR tests & fusebox rewires since 2007.">
+  <meta name="description" content="Local Electricians Serving Bradford, Leeds, Halifax. EICR tests, rewires, fusebox upgrades, EV chargers and general electrical work since 2007.">
 
  <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
@@ -44,7 +44,7 @@
       },
       "areaServed":["Bradford","Leeds","Halifax","Huddersfield","Keighley","Pudsey","Skipton"],
       "url":"https://ajelectricians.co.uk/",
-      "description":"NAPIT-certified electricians offering EICR, EV chargers, CCTV, alarms and rewires across West Yorkshire.",
+      "description":"NAPIT-certified electricians offering EICR, EV chargers, rewires, fusebox upgrades and general electrical work across West Yorkshire.",
       "priceRange":"££",
       "image":"https://ajelectricians.co.uk/eicr1.jpg",
       "openingHours":"Mo-Su 08:00-20:00",
@@ -192,18 +192,24 @@
     .footer-logos { text-align:center; margin:40px 0; }
     .footer-logos img { height:60px; margin:0 15px; vertical-align:middle; filter:grayscale(.05) brightness(.95); }
 
-    .floating-contact, .sticky-cta {
-      position:fixed; left:16px; right:auto; text-decoration:none; font-weight:700;
-      box-shadow:0 4px 8px rgba(0,0,0,0.2); border-radius:999px; padding:10px 14px;
-      font-size:14px; color:#fff; z-index:1100; white-space:nowrap;
+    .top-call-strip {
+      position:sticky; top:0; z-index:999;
+      background:#0b2e57; color:#fff; text-align:center;
+      font-weight:700; padding:11px 16px;
+      box-shadow:0 4px 10px rgba(0,0,0,.2);
     }
-    .floating-contact { bottom:20px; background:#FFD700; color:#333; }
-    .sticky-cta { bottom:70px; background:#0047AB; }
-    @media (min-width: 992px){
-      .floating-contact, .sticky-cta { left:auto; right:20px; padding:14px 20px; font-size:16px; }
-    }
+    .top-call-strip a { color:#fff; text-decoration:none; display:inline-block; padding:4px 8px; }
+    .top-call-strip a:focus-visible { outline:3px solid #FFD700; outline-offset:2px; }
+    #quoteForm { scroll-margin-top:80px; }
 
     .footer-cert { text-align:center; padding:20px; font-weight:bold; background:#0f1318; color:#c7d4ea; margin-top:40px; border-top:1px solid #1a222c; }
+
+    .general-electrical { margin-top:40px; padding:24px; background:#0f141b; border:1px solid #1a2533; border-radius:16px; }
+    .general-electrical h2 { margin-top:0; }
+    .general-electrical ul { padding-left:22px; }
+    .general-electrical li { margin:10px 0; }
+    .general-enquiry-button { display:inline-block; max-width:100%; padding:14px 20px; border:0; border-radius:10px; background:var(--blue); color:#fff; font:inherit; font-weight:700; cursor:pointer; }
+    .general-enquiry-button:focus-visible { outline:3px solid #FFD700; outline-offset:4px; }
   </style>
 </head>
 <body>
@@ -228,8 +234,6 @@
           <a href="Evchargers.html">EV Chargers</a>
           <a href="fusebox-rewire.html">Fusebox & Rewire</a>
           <a href="eicr.html">EICR</a>
-          <a href="cctv.html">CCTV</a>
-          <a href="alarm.html">Security Alarms</a>
         </div>
       </div>
 
@@ -258,8 +262,6 @@
         <a href="Evchargers.html">EV Chargers</a>
         <a href="fusebox-rewire.html">Fusebox & Rewire</a>
         <a href="eicr.html">EICR</a>
-        <a href="cctv.html">CCTV</a>
-        <a href="alarm.html">Security Alarms</a>
       </div>
     </div>
     <a href="blog.html">Blog</a>
@@ -273,6 +275,10 @@
     <a href="#contact-form">Contact</a>
   </nav>
 
+  <div class="top-call-strip" aria-label="Call A and J Electricians">
+    <a href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW-432117426/cOe0COfPkYcbELKths4B'});">📞 Call 07837 184 672</a>
+  </div>
+
   <div class="social-bar">
     <a href="https://maps.app.goo.gl/5X3nxv6HpEbKxgWp9" target="_blank" rel="noopener"><img src="googlelogo.png" alt="Google Reviews link"></a>
     <a href="https://www.facebook.com/share/15tznYBNqR/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook page link"></a>
@@ -282,13 +288,13 @@
 
   <div class="container">
     <h1 class="hero-title">NAPIT-Registered Electricians in Bradford, Leeds &amp; Halifax — EICR, Rewires, EV Chargers</h1>
-    <p><strong>Fast, trusted & fully insured electricians offering EICRs, rewires, EV chargers, CCTV & security alarms.</strong></p>
+    <p><strong>Fast, trusted & fully insured electricians offering EICRs, rewires, fusebox upgrades, EV chargers & general electrical work.</strong></p>
   </div>
 
   <!-- ===== Instant Quote (closed by default, toggle with tabs) ===== -->
   <section class="quote-wrap" id="quote">
     <div class="quote-hero">
-      <h2>Get Free Instant Quote</h2>
+      <h2>Request a Free Quote</h2>
 
       <div class="quote-tabs" role="tablist" aria-label="Choose property category">
         <button type="button" id="tabRes" class="quote-tab" role="tab" aria-selected="false" aria-controls="quoteForm">Residential Property</button>
@@ -331,7 +337,7 @@
 
       <div class="fieldset">
         <legend>Service and job information</legend>
-        <textarea name="service_info" rows="4" placeholder="Tell us what you need (EICR, fusebox, CCTV, alarm, EV charger, fault, etc.)."></textarea>
+        <textarea name="service_info" rows="4" placeholder="Tell us what you need (EICR, fusebox, rewire, EV charger, lighting, sockets, fault, etc.)."></textarea>
       </div>
 
       <div class="two-col">
@@ -345,7 +351,7 @@
         </div>
       </div>
 
-      <button type="submit" class="quote-cta">Get Free Instant Quote</button>
+      <button type="submit" class="quote-cta">Request a Free Quote</button>
     </form>
   </section>
 
@@ -364,21 +370,25 @@
         <p>From £500</p>
       </div>
       <div class="service-box">
-        <a href="alarm.html"><img src="alarm.jpg" alt="Home and business security alarms"></a>
-        <h2><a href="alarm.html">Security Alarms</a></h2>
-        <p>From £250</p>
-      </div>
-      <div class="service-box">
-        <a href="cctv.html"><img src="cctv.jpg" alt="Professional CCTV installation"></a>
-        <h2><a href="cctv.html">CCTV Installation</a></h2>
-        <p>From £600</p>
-      </div>
-      <div class="service-box">
         <a href="fusebox-rewire.html"><img src="fusebox.jpg" alt="Fusebox upgrades and complete house rewiring"></a>
         <h2><a href="fusebox-rewire.html">Fusebox Upgrades & Rewiring</a></h2>
         <p>Fusebox from £250 — Full rewires from £2,000</p>
       </div>
     </div>
+
+    <section class="general-electrical" aria-labelledby="general-electrical-heading">
+      <h2 id="general-electrical-heading">General Electrical Work</h2>
+      <p>Need help with a smaller electrical job? We also carry out general electrical work across Bradford, Leeds, Halifax and surrounding areas.</p>
+      <ul>
+        <li>Lighting installations and repairs</li>
+        <li>Additional sockets and socket replacements</li>
+        <li>Switch replacements</li>
+        <li>Electrical fault finding</li>
+        <li>General electrical repairs</li>
+      </ul>
+      <p>Tell us what you need using our enquiry form, and we’ll get in touch to discuss the job and provide a quote.</p>
+      <button type="button" class="general-enquiry-button" id="generalEnquiry">Enquire About Electrical Work</button>
+    </section>
 
     <!-- Google Reviews Widget -->
     <h2>Customer Reviews</h2>
@@ -449,10 +459,6 @@
 
   <div class="footer-cert">NAPIT Certified | Fully Insured | Est. 2007 | A & J Electricians</div>
 
-  <!-- Floating CTAs -->
-  <a class="floating-contact" href="#contact-form">✉️ Send a Message</a>
-  <a class="sticky-cta" href="tel:07837184672" onclick="gtag('event','conversion',{'send_to':'AW-432117426/cOe0COfPkYcbELKths4B'});">📞 Call 07837184672</a>
-
   <!-- Elfsight last -->
   <script src="https://static.elfsight.com/platform/platform.js" async defer></script>
 
@@ -487,11 +493,10 @@
           headers: { 'Accept': 'application/json' }
         });
 
-        // Push GTM event as backup
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'form_submit_success', form_name: formName });
-
         if (res.ok) {
+          // Only record an enquiry after Formspree accepts it.
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'form_submit_success', form_name: formName });
           window.location.href = `https://ajelectricians.co.uk/thank-you?form_name=${encodeURIComponent(formName)}`;
           return false;
         }
@@ -629,6 +634,13 @@
         }
       }
 
+      document.getElementById('generalEnquiry').addEventListener('click', () => {
+        // Keep an existing property choice when the form is already open.
+        if (!active) setActive('res');
+        openForm();
+        form.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+
       tabRes.addEventListener('click', () => {
         if(active==='res' && isOpen){ closeForm(); active=null; tabRes.classList.remove('active'); tabRes.setAttribute('aria-selected','false'); catInp.value=''; grid.innerHTML=''; return; }
         setActive('res'); openForm();
@@ -639,8 +651,27 @@
       });
     });
   </script>
+  <!-- Intercept tel: clicks so GTM can fire conversion before dialer -->
+  <script>
+    (function() {
+      if (window.telHandlerBound) return;
+      window.telHandlerBound = true;
+
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest && e.target.closest('a[href^="tel:"]');
+        if (!link) return;
+
+        e.preventDefault();
+        var phoneNumber = link.getAttribute('href');
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'tel_click', phoneNumber: phoneNumber });
+
+        setTimeout(function() {
+          window.location.href = phoneNumber;
+        }, 400);
+      });
+    })();
+  </script>
 </body>
 </html>
-
-
-
